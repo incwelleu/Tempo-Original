@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this user login view theme -->
+  <skin id="default">
+    <!-- The HTML code for the logged in text -->
+    <code id="loggedin">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS font overrides.
+      {$TABINDEX}:        Tab index override.
+      {$DISPLAYNAME}:     Display name of the logged-in user.
+      {$USERNAME}:        Username of the logged-in user.
+      -->
+      <![CDATA[
+<span class="jtfont jtuserloginloggedin" style="{$STYLE}">{$StrWelcomeBack}, {$DISPLAYNAME}</span>
+      ]]>
+    </code>
+    <!-- The HTML code for the not logged in text -->
+    <code id="notloggedin">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS font overrides.
+      {$TABINDEX}:        Tab index override.
+      {$DISPLAYNAME}:     Display name of the logged-in user.
+      {$USERNAME}:        Username of the logged-in user.
+      -->
+      <![CDATA[
+<span class="jtfont jtuserloginloggedin" style="{$STYLE}">{$StrNotLoggedIn}</span>
+      ]]>
+    </code>
+    <!-- The HTML code for the logout text -->
+    <code id="logout">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS font overrides.
+      {$TABINDEX}:        Tab index override.
+      {$DISPLAYNAME}:     Display name of the logged-in user.
+      {$USERNAME}:        Username of the logged-in user.
+      -->
+      <![CDATA[
+<span class="jtfont jtuserloginlogout" style="{$STYLE}"> | <a href="{$URL}" tabindex="{$TABINDEX}" onclick="return {$NAME}LogoutClickHandler(event);">{$StrLogout}</a>
+      ]]>
+    </code>
+    <!-- The HTML code for the login text -->
+    <code id="login">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS font overrides.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<span class="jtfont jtuserloginlogin" style="{$STYLE}"> | <a href="{$URL}" tabindex="{$TABINDEX}" onclick="return {$NAME}LoginClickHandler(event);">{$StrLogin}</a>
+      ]]>
+    </code>
+    <!-- The HTML code for the register text -->
+    <code id="register">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS font overrides.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<span class="jtfont jtuserloginlogin" style="{$STYLE}"> | <a href="{$URL}" tabindex="{$TABINDEX}" onclick="return {$NAME}RegisterClickHandler(event);">{$StrRegister}</a>
+      ]]>
+    </code>
+    <!-- The HTML code for the entire control text -->
+    <code id="userloginview">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Contents of the user login view.
+      {$STYLE}:           CSS font overrides.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtuserloginview {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}; {$STYLE}">
+  {$CONTENT}
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,15 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtclear {
+  clear: both;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.jtfont {
+  font-family: Tahoma, Geneva, sans-serif;
+}

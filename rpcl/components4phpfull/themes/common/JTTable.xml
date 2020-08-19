@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular bevel skin -->
+    <code id="table">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ATTRIBUTES}:      Table attributes.
+      {$CONTENT}:         Content of components dropped on this bevel.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<table id="{$NAME}" class="jttable {$CSSCLASS}" {$ATTRIBUTES}style="width: {$WIDTH}; height: {$HEIGHT};{$STYLE}">
+  {$CONTENT}
+</table>
+      ]]>
+    </code>
+  </skin>
+</skins>

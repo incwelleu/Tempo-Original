@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for each item in the drop-down combobox -->
+    <code id="item-with-key">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Item data.
+      {$VALUE}            Item value.
+      {$SELECTED}:        State of this item. (' selected','')
+      -->
+      <![CDATA[
+<li data-value="{$VALUE}">{$CONTENT}&nbsp;</li>
+      ]]>
+    </code>
+    <!-- The HTML code for each item in the drop-down combobox -->
+    <code id="item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Item data.
+      {$VALUE}            Item value.
+      {$SELECTED}:        State of this item. (' selected','')
+      -->
+      <![CDATA[
+<li>{$CONTENT}&nbsp;</li>
+      ]]>
+    </code>
+    <!-- The HTML code for the drop-down combobox -->
+    <code id="combobox">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$CONTENT}:         Content of components dropped on this bevel.
+      {$EVENTS}:          JavaScript events for this combobox.
+      {$DISABLED}:        Specifies whether this edit control is disabled. (' disabled="disabled"')
+      {$READONLY}:        Specifies whether this control is read-only.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<div id="{$NAME}_container" class="jtcombobox {$CSSCLASS}" style="width: {$WIDTH};"><table id="{$NAME}_table" border="0" cellpadding="0" cellspacing="0"><tr>
+<td class="cbi"><input name="{$NAME}_view" id="{$NAME}_view" tabindex="{$TABINDEX}" readonly="readonly" value="{$TEXT}" class="jtfont" style="{$STYLES}"{$DISABLED} autocomplete="off" /></td>
+<td class="cba" onclick="JTComboBoxShowDropDownBox('{$NAME}')"><div id="{$NAME}_arrowinner"></div></td>
+</tr></table></div><div id="{$NAME}_dropdownbox" class="jtfont jtcomboboxdropdownbox"><ul style="{$STYLES}">{$CONTENT}</ul></div>
+<input name="{$NAME}" id="{$NAME}" type="hidden" value="{$VALUE}" />
+<input name="{$NAME}_Index" id="{$NAME}_Index" type="hidden" value="{$SELECTEDINDEX}" />
+<!--<div id="{$NAME}_dropdownboxsizer" class="cbz"></div>-->
+      ]]>
+    </code>
+  </skin>
+</skins>

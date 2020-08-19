@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this toolbar line theme -->
+  <skin id="default">
+    <!-- The HTML code for the toolbar -->
+    <code id="toolbar_back">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$CONTENT}:         The HTML code for the tool buttons.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jttoolbar {$CSSCLASS}" style="width: {$WIDTH};">
+  <div id="{$NAME}_inner2" class="jtbb jttoolbarinner2">
+    <div id="{$NAME}_scroller" class="jtbb jttoolbarscroller">
+      <table border="0" cellpadding="0" cellspacing="0" class="jtbb jttoolbaritemtable">
+        <tr>
+          {$CONTENT}
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="{$NAME}_fwdscroller" class="jtbb jttoolbarfwdscroller" onmouseover="JTToolBarScrollLeftStart('{$NAME}');" onmouseout="JTToolBarScrollLeftStop('{$NAME}');">&nbsp;</div>
+  <div id="{$NAME}_revscroller" class="jtbb jttoolbarrevscroller" onmouseover="JTToolBarScrollRightStart('{$NAME}');" onmouseout="JTToolBarScrollRightStop('{$NAME}');">&nbsp;</div>
+</div>
+      ]]>
+    </code>
+    <code id="toolbar_item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this tool button.
+      {$STYLE}:           CSS font style override for the toolbar.
+      {$EVENTS}:          JavaScript events used by the toolbar.
+      {$CONTENT}:         The caption of this tool button.
+      -->
+      <![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jtfont jttoolbarbutton"{$STYLE}{$EVENTS}>{$CONTENT}</td>
+      ]]>
+    </code>
+    <code id="toolbar_item_img">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this tool button.
+      {$STYLE}:           CSS font style override for the toolbar.
+      {$EVENTS}:          JavaScript events used by the toolbar.
+      {$CONTENT}:         The caption of this tool button.
+      -->
+      <![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jtfont jttoolbarbutton"{$STYLE}{$EVENTS}>
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="{$ITEMNAME}_imagecell" style="padding-right: 5px;">
+			<img id="{$ITEMNAME}_image" src="{$IMAGE}" />
+		</td>
+		<td id="{$ITEMNAME}_content">
+			{$CONTENT}
+		</td>
+	</tr></table>
+</td>
+      ]]>
+    </code>
+  </skin>
+</skins>

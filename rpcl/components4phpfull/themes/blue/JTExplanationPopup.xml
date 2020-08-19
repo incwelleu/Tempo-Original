@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this explanation popup theme -->
+  <skin id="default">
+    <!-- The HTML code for the popup -->
+    <code id="popup">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtexppopup">
+  <div id="{$NAME}_bevel" class="jtbb jtepbevel" style="width: 100%; height: 100%;">
+    <div id="{$NAME}_shadow" class="jtbb jtepshadow">
+      <div class="jtbb jtepshadow_inner">
+        <div class="jtbb jtepshadow_tl">&nbsp;</div>
+        <div class="jtbb jtepshadow_tr">&nbsp;</div>
+        <div id="{$NAME}_shadbl" class="jtbb jtepshadow_bl">&nbsp;</div>
+        <div class="jtbb jtepshadow_l">&nbsp;</div>
+        <div class="jtbb jtepshadow_t">&nbsp;</div>
+      </div>
+    </div>
+    <div class="jtbb jtepbevel_border_container">
+      <div class="jtbb jtfont jtepbevel_border_frame">
+        <div class="jtbb jtepbevel_border jtepbevel_border_l">&nbsp;</div>
+        <div class="jtbb jtepbevel_border jtepbevel_border_t">&nbsp;</div>
+        <div class="jtbb jtepbevel_border jtepbevel_border_r">&nbsp;</div>
+        <div class="jtbb jtepbevel_border jtepbevel_border_b">&nbsp;</div>
+        <div class="jtbb jtepbevel_border_inner jtepbevel_border_inner_l">&nbsp;</div>
+        <div class="jtbb jtepbevel_border_inner jtepbevel_border_inner_t">&nbsp;</div>
+        <div class="jtbb jtepbevel_border_inner jtepbevel_border_inner_r">&nbsp;</div>
+        <div class="jtbb jtepbevel_border_inner jtepbevel_border_inner_b">&nbsp;</div>
+        <span id="{$NAME}_inner">&nbsp</span>
+      </div>
+    </div>
+    <div id="{$NAME}_tl" class="jtbb jtepbevel_corner jtepbevel_corner_tl">&nbsp;</div>
+    <div id="{$NAME}_tr" class="jtbb jtepbevel_corner jtepbevel_corner_tr">&nbsp;</div>
+    <div id="{$NAME}_bl" class="jtbb jtepbevel_corner jtepbevel_corner_bl">&nbsp;</div>
+    <div id="{$NAME}_br" class="jtbb jtepbevel_corner jtepbevel_corner_br">&nbsp;</div>
+  </div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

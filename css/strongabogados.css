@@ -1,0 +1,38 @@
+body
+{ background: white url(../images/strongabogados/bg.gif) repeat-x;
+  font-family: Century Gothic, Verdana, Arial;
+  font-weight: normal; font-size: 11px;
+  text-align:left;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+/*  width: 600px; */
+}
+
+.logo
+{
+  background: transparent url(../images/strongabogados/logo.gif) no-repeat;
+  position: absolute; left: 15px; top: 20px; height:28px; width: 400px;
+  cursor:pointer;
+}
+
+.subtitle
+{
+  position: absolute; left: 45px; top: 48px; width: 400px;
+  font-family: Century Gothic, Verdana, Arial;
+  color: white; font-weight: normal;
+  font-size: 14px;
+}
+
+
+.label {
+    color: #fff; font-size: 12px; display: block; cursor:default;
+}
+
+.label-ref {
+    color: #fff; font-size: 12px; display: block; cursor:pointer;
+}
+
+.label-ref:hover { color:#FF6600; }
+
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="1,26" />
+  <!-- The default skin for this page control theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular tab button skin -->
+    <code id="tabbutton">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$TABNAME}:         Name of this particular tab.
+      {$LEFTCLASSTYPE}:   CSS state class for the left side of the tab button, used to differentiate between the states and positions of the tab buttons. (end/active/afteractive/mid)
+      {$CENTERCLASSTYPE}: CSS state class for the center section of the tab button. (active/inactive)
+      {$RIGHTCLASSTYPE}:  CSS state class for the right section of the tab button. (mid/beforeactive/active/end)
+      {$TABCLASSTYPE}:    CSS state class for the position of the tab button. (before/active/after)
+      {$STYLE}:           CSS font override for the tab button.
+      {$CONTENT}:         Caption of the tab button.
+      {$TABWIDTH}:        Proportional tab size.
+      -->
+      <![CDATA[
+      <td id="jttabbutton_{$TABNAME}" class="jtbb jtfont jttab jttab_{$CENTERCLASSTYPE}"{$STYLE} valign="top" width="{$TABWIDTH}%" onClick="JTPageControlTabClick('{$NAME}','{$TABNAME}')">
+        <div id="jttabinner_{$TABNAME}" class="jtbb jtfont jttabinner jttabinner_{$TABCLASSTYPE}">
+          <div id="jttabinner2_{$TABNAME}" class="jtbb jttabinner2 jttabinner2_{$CENTERCLASSTYPE}">
+            {$CONTENT}
+          </div>
+        </div>
+      </td>
+      ]]>
+    </code>
+    <code id="tabcontrol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$TABBUTTONCODE}:   HTML code for the tab buttons.
+      {$TABSHEETCODE}:    HTML code for tab sheets.
+      -->
+      <![CDATA[
+<table id="{$NAME}" cellspacing="0" cellpadding="0" style="width: {$WIDTH}; height: {$HEIGHT};" class="jtpagecontrol {$CSSCLASS}">
+  <tr class="jtpagecontroltabs">
+{$TABBUTTONCODE}
+  </tr>
+  <tr class="jtpagecontrolcontent">
+    <td class="jtpagecontrolcontentcell" colspan="{$TABCOUNT}">
+      <div class="jttabcontainer">
+        <div class="jttabcontainerinner">
+{$TABSHEETCODE}
+          <!-- IE6- hack to fix <select> tags from floating above everything else. -->
+          <!--[if lte IE 6]>
+          <iframe scrolling="no" frameborder="0" class="jttabsheet" style="z-index: 2;" width="100%" height="100%"></iframe>
+          <![endif]-->
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<input type="hidden" id="{$NAME}_Index" name="{$NAME}_Index" value="{$TABINDEX}" />
+      ]]>
+    </code>
+    <code id="tabsheet">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SHEETNAME}:       Name of this tab sheet.
+      {$DISPLAY}:         State of this tabsheet. (block/none)
+      {$VISIBILITY}:      State of this tabsheet. (visible/hidden)
+      {$ZINDEX}:          State of this tabsheet in the z-order. (3/1)
+      {$CONTENT}:         Content of this tabsheet.
+      -->
+      <![CDATA[
+<div id="{$SHEETNAME}" class="jttabsheet dc" style="display: {$DISPLAY}; z-index: {$ZINDEX};">
+  {$CONTENT}
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

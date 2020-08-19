@@ -1,0 +1,47 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtexppopup
+{
+  position: absolute;
+  visibility: hidden;
+  width: 210px;
+  z-index: 100;
+}
+
+.jtexppopupframe
+{
+  background: white;
+  border: solid 1px #C1C1C1;
+  height: 100%;
+  padding: 1px;
+  width: 100%;
+}
+
+.jtexppopupinner
+{
+  background: #EEEDED;
+  font-size: 8pt;
+  height: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
+.jtexppopuparrow
+{
+  height: 29px;
+  left: 1px;
+  position: absolute;
+  width: 56px;
+}
+
+.jtexppopuparrowup
+{
+  background-image: url(images/exppopup_arrow_up.gif);
+}
+
+.jtexppopuparrowdown
+{
+  background-image: url(images/exppopup_arrow.gif);
+}

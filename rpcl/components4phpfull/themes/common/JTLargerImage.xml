@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this JTLargerImage theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular JTLargerImage skin -->
+    <code id="image">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$SMALLSRC}:        Image source location for the small image.
+      {$LARGESRC}:        Image source location for the large image.
+      {$TABINDEX}:        Tab index for this control.
+      -->
+      <![CDATA[
+<a href="{$LARGESRC}" tabindex="{$TABINDEX}" class="{$CSSCLASS}"><img src="{$SMALLSRC}" style="width: {$WIDTH}; height: {$HEIGHT};" alt="{$StrClickForLarger}" border="0"></a>
+      ]]>
+    </code>
+  </skin>
+</skins>

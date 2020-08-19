@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this clock theme -->
+  <skin id="default">
+    <!-- The HTML code for the digital clock -->
+    <code id="digital">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$TEXTCLASS}:       Text class selected by the user for the clock font.
+      {$STYLE}:           CSS font overrides for the clock.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtdigitalclock {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <div id="{$NAME}_h1" class="jtdigitalclock_digit jtdigitalclock_h1">&nbsp;</div>
+  <div id="{$NAME}_h2" class="jtdigitalclock_digit jtdigitalclock_h2">&nbsp;</div>
+  <div id="{$NAME}_m1" class="jtdigitalclock_digit jtdigitalclock_m1">&nbsp;</div>
+  <div id="{$NAME}_m2" class="jtdigitalclock_digit jtdigitalclock_m2">&nbsp;</div>
+  <div id="{$NAME}_s1" class="jtdigitalclock_digit jtdigitalclock_s1">&nbsp;</div>
+  <div id="{$NAME}_s2" class="jtdigitalclock_digit jtdigitalclock_s2">&nbsp;</div>
+  <div id="{$NAME}_apm" class="jtdigitalclock_apm">&nbsp;</div>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the analog clock -->
+    <code id="analog">
+      <![CDATA[
+<div id="{$NAME}" class="{$CSSCLASS}" style="position: absolute; z-index: -1; width: {$WIDTH}; height: {$HEIGHT};">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="135" height="135" id="{$NAME}_clock">
+     <param name="movie" value="{$THEMEWEBDIR}images/analogclock.swf" />
+     <param name="quality" VALUE="high" />
+     <param name="bgcolor" VALUE="#FFFFFF" />
+     <param name="wmode" value="transparent" />
+     <embed src="{$THEMEWEBDIR}images/analogclock.swf" quality="high" bgcolor="#FFFFFF" wmode="transparent" width="135" height="135" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+  </object>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

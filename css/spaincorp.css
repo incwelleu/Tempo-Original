@@ -1,0 +1,35 @@
+body
+{ background: white url(../images/spaincorp/bg.gif) repeat-x;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: normal; font-size: 14px;
+  text-align:left;
+  color:#282828;
+  margin: 0px; padding: 0px; overflow: auto; height: 100%; width: 100%;
+}
+
+.logo
+{
+  background: transparent url(../images/spaincorp/spaincorp-logo.png) no-repeat;
+	position: absolute; left: 15px; top: 5px; height:60px; width: 400px;
+  cursor:pointer;
+}
+
+.subtitle
+{
+	position: absolute; left: -5000px; top: 45px; width: 400px;
+  font-family: Century Gothic, Verdana, Arial;
+  color: white; font-weight: normal;
+  font-size: 14px;
+  text-indent:-9999px
+}
+
+.label {
+    color: #fff; font-size: 12px; display: block; cursor:default;
+}
+
+.label-ref {
+    color: #fff; font-size: 12px; display: block; cursor:pointer;
+}
+
+.label-ref:hover { color:#FF6600; }
+

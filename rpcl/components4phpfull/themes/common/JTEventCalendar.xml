@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this event calendar theme -->
+  <skin id="default">
+    <!-- The HTML code for each event. -->
+    <code id="event">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+        {$TITLE}:           Title of the event.
+        {$DATE}:            Event date.
+      -->
+      <![CDATA[<span class="jtbb jtfont jteventcalendarevent" title="{$TITLE} @ {$DATE}">{$TITLE}</span><br>]]>
+    </code>
+    <!-- The HTML code for each event's link. -->
+    <code id="eventlink">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+        {$TITLE}:           Title of the event.
+        {$DATE}:            Event date.
+        {$LINK}:            Event link.
+        {$CONTENT}:         Content of the event link.
+      -->
+      <![CDATA[<a href="{$LINK}">{$CONTENT}</a>]]>
+    </code>
+    <!-- The HTML code for each calendar cell. -->
+    <code id="cell">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+        {$DAY}:             The day that this cell is for.
+        {$MONTH}:           The month that this cell is part of.
+        {$YEAR}:            The year.
+        {$CONTENT}:         Content of the event link.
+      -->
+      <![CDATA[
+  <div class="jteventcalendarcellday">{$DAY}</div>
+  {$CONTENT}
+      ]]>
+    </code>
+    <!-- The HTML code for the calendar. -->
+    <code id="calendar">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+        {$MONTH}:           The selected month.
+        {$MONTHSTR}:        The selected month in name form.
+        {$YEAR}:            The year.
+        {$CONTENT}:         Content of the calendar.
+      -->
+      <![CDATA[
+<div class="jtbb jtfont jteventcalendar {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+    <tr>
+      <td colspan="7" class="jtbb jtfont jteventcalendartitle" height="1">
+        <div>{$MONTHSTR} {$YEAR}</div>
+      </td>
+    </tr>
+    <tr class="jtbb jtfont jteventcalendarheadrow">
+      <td><div>{$StrSunday}</div></td>
+      <td><div>{$StrMonday}</div></td>
+      <td><div>{$StrTuesday}</div></td>
+      <td><div>{$StrWednesday}</div></td>
+      <td><div>{$StrThursday}</div></td>
+      <td><div>{$StrFriday}</div></td>
+      <td class="jtbb jtfont jteventcalendarheadlastcell"><div>{$StrSaturday}</div></td
+    </tr>
+{$CONTENT}
+  </table>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

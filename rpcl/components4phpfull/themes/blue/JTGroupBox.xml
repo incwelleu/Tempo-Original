@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="1,6" />
+  <!-- The default skin for this groupbox theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular groupbox skin -->
+    <code id="groupbox">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$CAPTION}:         Groupbox caption.
+      {$CONTENT}:         Content of components dropped on this group-box.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtgroupbox {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+<table border="0" cellpadding="0" cellspacing="0" class="jtbb jtbevel jtgroupboxcaptioncontainer" style="">
+  <tr>
+    <td class="jtbevelcorner_tl"><div></div></td>
+    <td class="jtbevelborder_t" valign="top"><div></div></td>
+    <td class="jtbevelcorner_tr"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelborder_l" align="left"><div></div></td>
+    <td class="jtbevelcontent"><div class="jtfont jtbevelcontentinner jtgroupboxcaption">{$CAPTION}</div></td>
+    <td class="jtbevelborder_r" align="right"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelcorner_bl"><div></div></td>
+    <td class="jtbevelborder_b" valign="bottom"><div></div></td>
+    <td class="jtbevelcorner_br"><div></div></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="jtbb jtbevel" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <tr>
+    <td class="jtbevelcorner_tl"><div></div></td>
+    <td class="jtbevelborder_t" valign="top"><div></div></td>
+    <td class="jtbevelcorner_tr"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelborder_l" align="left"><div></div></td>
+    <td class="jtbevelcontent"><div class="jtbevelcontentinner">{$CONTENT}</div></td>
+    <td class="jtbevelborder_r" align="right"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelcorner_bl"><div></div></td>
+    <td class="jtbevelborder_b" valign="bottom"><div></div></td>
+    <td class="jtbevelcorner_br"><div></div></td>
+  </tr>
+</table>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

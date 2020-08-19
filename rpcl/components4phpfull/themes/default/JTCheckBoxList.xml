@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this check box list theme -->
+  <skin id="default">
+    <!-- The HTML code for each checkbox -->
+    <code id="checkbox">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$INDEX}:           Index of this checkbox in the list.
+      {$EVENTS}:          Optional JavaScript events.
+      {$TEXTCLASS}:       Text class selected by the user for the checkbox font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Check box caption.
+      {$STATE}:           Initial state of the checkbox. ('checked'/'')
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<p class="jtcheckbox">
+  <input id="{$NAME}_{$INDEX}" name="{$NAME}_{$INDEX}" type="checkbox" value="1" tabindex="{$TABINDEX}" {$STATE}{$EVENTS}>
+  <label for="{$NAME}_{$INDEX}" class="{$TEXTCLASS}"{$STYLE}>{$CONTENT}</label>
+</p>
+      ]]>
+    </code>
+    <code id="checkbox-td">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$INDEX}:           Index of this checkbox in the list.
+      {$EVENTS}:          Optional JavaScript events.
+      {$TEXTCLASS}:       Text class selected by the user for the checkbox font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Check box caption.
+      {$STATE}:           Initial state of the checkbox. ('checked'/'')
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<td class="jtcheckbox">
+  <input id="{$NAME}_{$INDEX}" name="{$NAME}_{$INDEX}" type="checkbox" value="1" tabindex="{$TABINDEX}" {$STATE}{$EVENTS}>
+  <label for="{$NAME}_{$INDEX}" class="{$TEXTCLASS}"{$STYLE}>{$CONTENT}</label>
+</td>
+      ]]>
+    </code>
+    <code id="checkboxlist">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Check box list contents.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtcheckboxlist {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <input name="{$NAME}" type="hidden" value="1">
+  {$CONTENT}
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

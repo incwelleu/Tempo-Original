@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this date time picker theme -->
+  <skin id="default">
+    <!-- The HTML code for the date time picker control -->
+    <code id="datetimepicker">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$DATE}:            Current date selected.
+      {$EVENTS}:          JavaScript events for this edit control.
+      {$DISABLED}:        Specifies whether this edit control is disabled. (' disabled'/'')
+      {$STYLES}:          Contains stylesheet overrides.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<div id="{$NAME}_container" class="jtdatepicker {$CSSCLASS}" style="width: {$WIDTH};{$STYLES}">
+  <table id="{$NAME}_table" border="0" cellpadding="0" cellspacing="0" class="jtdatepickertable">
+    <tr>
+      <td class="jtdatepickerinputcell"><input name="{$NAME}" id="{$NAME}" class="jtbb jtdatepickerinput" tabindex="{$TABINDEX}" value="{$DATETIME}" style="{$STYLES}"{$DISABLED}{$EVENTS}{$ALLOWTYPING} /></td>
+      <td class="jtdatepickerarrowcell" onclick="JTDateTimePickerShowCalendar( '{$NAME}' )"><div id="{$NAME}_arrowinner" class="jtbb jtdatepickerdropdownarrow"></div></td>
+    </tr>
+  </table>
+</div>
+<div id="{$NAME}_calendar" class="jtbb jtdatetimepickercalendar" style="display: none;">
+  <div class="jtbb jtdatetimepickercalendarinner">
+    <div class="jtbb jtdatepickercalendartitle">
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarprevyear" onmouseup="JTDateTimePickerPrevYear( '{$NAME}' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarprevmonth" onmouseup="JTDateTimePickerPrevMonth( '{$NAME}' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarnextyear" onmouseup="JTDateTimePickerNextYear( '{$NAME}' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarnextmonth" onmouseup="JTDateTimePickerNextMonth( '{$NAME}' )">&nbsp;</div>
+      <div id="{$NAME}_calendartitle" class="jtbb jtfont jtdatepickercalendartitleinner">&nbsp;</div>
+    </div>
+    <div id="{$NAME}_calendartable" class="jtdatetimepickercaltable">&nbsp;</div>
+    <div class="jtbb jtdatetimepickertimebar" onclick="JTDateTimePickerTimeBarClick()">
+      <input name="{$NAME}_h" id="{$NAME}_h" type="text" maxlength="2" size="3" value="" onkeydown="return JTTimePickerKeyDown(event);" onblur="JTDateTimePickerTimeChange( '{$NAME}' )" /><span>&nbsp;:</span>
+      <input name="{$NAME}_m" id="{$NAME}_m" type="text" maxlength="2" size="3" value="" onkeydown="return JTTimePickerKeyDown(event);" onblur="JTDateTimePickerTimeChange( '{$NAME}' )" /><span>&nbsp;:</span>
+      <input name="{$NAME}_s" id="{$NAME}_s" type="text" maxlength="2" size="3" value="" onkeydown="return JTTimePickerKeyDown(event);" onblur="JTDateTimePickerTimeChange( '{$NAME}' )" /><span>&nbsp;</span>
+      <select name="{$NAME}_a" id="{$NAME}_a" size="1" style="display: {$12HOUR};" onclick="JTDateTimePickerTimeChange( '{$NAME}' )" onblur="JTDateTimePickerTimeChange( '{$NAME}' )">
+        <option>AM</option>
+        <option>PM</option>
+      </select>
+    </div>
+    <div class="jtbb jtdatepickerbottombar">
+      <div class="jtbb jtfont jtdatepickerbottomlink">
+        <a href="javascript: ;" title="{$StrGoToTodayMonth}" onclick="JTDateTimePickerToday( '{$NAME}' )">{$StrToday}</a> | 
+        <a href="javascript: ;" title="{$StrClearDate}" onclick="JTDateTimePickerClear( '{$NAME}' )">{$StrClear}</a></div>
+    </div>
+  </div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

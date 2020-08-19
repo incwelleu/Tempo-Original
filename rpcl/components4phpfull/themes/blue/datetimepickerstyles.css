@@ -1,0 +1,33 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtdatetimepickercalendar
+{
+	background: white;
+	border: solid 1px #5A7A9A;
+	/*height: 210px;*/
+	/*overflow: hidden;*/
+	overflow: hidden;
+	padding: 1px 1px 17px;
+	position: absolute;
+	width: 250px;
+	zoom: expression("1");
+}
+
+.jtdatetimepickercalendarinner
+{
+	/*height: 100%;*/
+	/*padding-bottom: 45px;
+	padding-top: 20px;*/
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.jtdatetimepickertimebar
+{
+	background: #EEEDED;
+	padding: 2px;
+}

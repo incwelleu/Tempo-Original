@@ -1,0 +1,30 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtuserloginloggedin
+{
+	font-size: 8pt;
+}
+
+.jtuserloginlogout
+{
+	font-size: 8pt;
+}
+
+.jtuserloginlogin
+{
+	font-size: 8pt;
+}
+
+.jtuserloginview
+{
+	background-color: white;
+}
+
+.jtuserloginview a
+{
+	color: #515050;
+}

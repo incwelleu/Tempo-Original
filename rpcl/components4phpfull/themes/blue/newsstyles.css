@@ -1,0 +1,87 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtnewscontrol
+{
+  border: none;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  background: white;
+  padding: 6px;
+}
+
+.jtnewscontrolborder
+{
+  background: #9EB9D4;
+  overflow: hidden;
+  position: absolute;
+}
+
+.jtnewscontrolborder_l
+{
+  height: 100%;
+  left: 0;
+  top: 6px;
+  width: 1px;
+}
+
+.jtnewscontrolborder_t
+{
+  height: 1px;
+  left: 6px;
+  top: 0;
+  width: 100%;
+}
+
+.jtnewscontrolborder_r
+{
+  height: 100%;
+  right: 0;
+  top: 6px;
+  width: 1px;
+}
+
+.jtnewscontrolborder_b
+{
+  height: 1px;
+  left: 6px;
+  bottom: 0;
+  width: 100%;
+}
+
+.jtnewscontrolcorner
+{
+  height: 6px;
+  overflow: hidden;
+  position: absolute;
+  width: 6px;
+}
+
+.jtnewscontrolcorner_tl
+{
+  background: url(images/bevel_tl.gif);
+  left: 0;
+  top: 0;
+}
+
+.jtnewscontrolcorner_tr
+{
+  background: url(images/bevel_tr.gif);
+  right: 0;
+  top: 0;
+}
+
+.jtnewscontrolcorner_bl
+{
+  background: url(images/bevel_bl.gif);
+  bottom: 0;
+  left: 0;
+}
+
+.jtnewscontrolcorner_br
+{
+  background: url(images/bevel_br.gif);
+  right: 0;
+  bottom: 0;
+}

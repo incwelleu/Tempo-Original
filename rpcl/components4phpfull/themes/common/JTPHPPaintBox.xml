@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this JTPHPPaintBox theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular JTPHPPaintBox skin -->
+    <code id="image">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$SRC}:             Image source url.
+      -->
+      <![CDATA[
+<img src="{$SRC}" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" border="0">
+      ]]>
+    </code>
+  </skin>
+</skins>

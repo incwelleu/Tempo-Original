@@ -1,0 +1,33 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtcombobox {
+	border: solid 1px #9EB9D4;
+}
+
+.jtcombobox table tbody tr td.cba {
+	background: url(images/nav_hdr_back.gif) repeat-x center center;
+	border: none;
+}
+
+.jtcombobox table tbody tr td.cba div {
+	background-image: url(images/dropdownarrow.gif);
+}
+
+.jtcomboboxdropdownbox {
+	border: solid 1px #C1C1C1;
+}
+
+.jtcomboboxdropdownbox li {
+	padding: 2px 30px 2px 5px;
+}
+
+.jtcomboboxdropdownbox ul .over {
+	background-color: #E5ECF5;
+}
+
+.jtcomboboxdropdownbox ul .jtcomboboxitemselected {
+	background-color: #9EB9D4;
+	color: black;
+}

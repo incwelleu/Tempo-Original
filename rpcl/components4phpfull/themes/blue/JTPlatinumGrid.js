@@ -1,0 +1,1 @@
+﻿JTPlatinumGridTheme = { FilterHeightOffset: 3 };

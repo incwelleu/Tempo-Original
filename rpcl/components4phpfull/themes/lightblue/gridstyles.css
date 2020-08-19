@@ -1,0 +1,45 @@
+.jtexppopupframe {
+    background: #FFFFFF;
+    border: solid 1px #BAC9DB;
+}
+
+.jtgrid {
+  background: #FFFFFF;
+  border: solid 1px #BAC9DB;
+}
+
+.jtgrid_header_div {
+  background-image: url(images/gradient.gif);
+  border-bottom: solid 1px #BAC9DB;
+}
+
+.jtgrid_header_row {
+  background: #EBF4FE;
+}
+
+.jtgrid_header_cell {
+  border-right: solid 1px #BAC9DB;
+  color: #000000;
+}
+
+.jtgrid_data_cell {
+  border-right: solid 1px #BAC9DB;
+  border-bottom: solid 1px #BAC9DB;
+  color: #000000;
+}
+
+.jtgrid_row_selected {
+  background: #DFE9F5;
+}
+
+.jtgrid_row_even {
+  background: #FFFFFF;
+}
+
+.jtgrid_row_odd {
+  background: #EBF4FE;
+}
+
+.jtgrid_cell_selected {
+  background: #DFE9F5;
+}

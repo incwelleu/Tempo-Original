@@ -1,0 +1,53 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtprogressbar {
+	background: white;
+	border: solid 1px #5D7EB0;
+	overflow: hidden;
+}
+
+.jtprogressbarinner
+{
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.jtprogressbarindicator
+{
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.jtprogressbarbacktop
+{
+	background: #E6E6E6;
+	height: 50%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.jtprogressbarbackbottom
+{
+	background: #B3AFAF;
+	height: 50%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.jtprogressbarindicatorgradient
+{
+	background: url(images/dropdown_back.gif) repeat-x 0px center;
+	font-size: 0;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

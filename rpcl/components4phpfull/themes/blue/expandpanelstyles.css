@@ -1,0 +1,31 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtexpandpanel {
+  border: none;
+}
+
+.jtexpandpanel .jtexpandpanelcontrol {
+  background: transparent;
+  color: #5A7A9A;
+  height: 9pt;
+  margin-left: 8px;
+  padding-top: 0;
+  width: 100px;
+}
+
+.jtexpandpanel .jtexpandpanelline {
+	background: #5A7A9A;
+	height: 1px;
+	left: 8px;
+	margin-top: 6px;
+	position: absolute;
+	/* set to the height of jtexpandpanelcontrol + 1 */
+	top: 10pt;
+	width: 100px;
+}
+
+.jtexpandpanel .jtexpandpanelcontent {
+	height: 100%;
+}

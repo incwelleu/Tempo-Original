@@ -1,0 +1,33 @@
+.jtmenudivider {
+  background: #BAC9DB;
+}
+
+.jtmenuitem {
+  color: #000000;
+}
+
+.jtmenuitem table td {
+	color: #000000;
+}
+
+.jtmenuitem_over {
+  background: #DFE9F5;
+}
+
+.jtmenu {
+  background: #EBF4FE;
+  border: solid 1px #BAC9DB;
+}
+
+.jtmenubar {
+	background-image: url(images/gradient.gif);
+	border: solid 1px #BAC9DB;
+}
+
+.jtmenubarbutton {
+	color: #000000;
+}
+
+.jtmenubarbutton_over {
+	background: #EBF4FE;
+}

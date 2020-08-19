@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="12,33" />
+  <setting name="BorderLessDropZone" value="12,12" />
+  <setting name="ClientArea" value="12,33,9,9" />
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for each button (minimize,maximize,close etc.) in the window titlebar -->
+    <code id="titlebar_button">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$BORDERSTYLE}:     The border style of this window.
+      {$BUTTON}:          Button that is being rendered. (help,minimize,maximize,help)
+      -->
+      <![CDATA[
+<div id="{$NAME}_button_{$BUTTON}" class="jtbb jtdivwindowbutton jtdivwindowbutton_{$BUTTON}" onclick="JTDivWindowButtonClick( '{$NAME}', '{$BUTTON}' )" onmousedown="JTDivWindowButtonMouseDown( '{$NAME}_button_{$BUTTON}', '{$BUTTON}' )" onmouseup="JTDivWindowButtonMouseUp( '{$NAME}_button_{$BUTTON}', '{$BUTTON}' )">&nbsp;</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the window titlebar -->
+    <code id="titlebar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$BORDERSTYLE}:     The border style of this window.
+      {$BUTTONS}:         The HTML code for the titlebar buttons.
+      {$CAPTION}:         The window caption.
+      -->
+      <![CDATA[
+<div id="{$NAME}_titlebar" class="jtbb jtdivwindowtitlebar jtdivwindowtitlebar_{$BORDERSTYLE}">
+  {$BUTTONS}
+  <div id="{$NAME}_caption" class="jtbb jtfont jtdivwindowcaption">{$CAPTION}</div>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the window. -->
+    <code id="window">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$BORDERSTYLE}:     The border style of this window.
+      {$CONTENT}:         The HTML contents of the window.
+      {$SCROLL}:          Setting controlling whether the window auto-scrolls or not (auto/hidden).
+      {$TITLEBAR}:        HTML code for the window titlebar.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtdivwindow jtdivwindow_{$BORDERSTYLE} dc {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}; display: {$DESIGNDISPLAY};">
+  <div class="jtbb jtdivwindowcont">
+  <div id="{$NAME}_inner" class="jtbb jtdivwindowinner jtdivwindowinner_{$BORDERSTYLE}">
+    {$TITLEBAR}
+    <div class="jtbb jtdivwindowcontentsouterframe">
+      <div id="{$NAME}_frame" class="jtbb jtdivwindowcontentsframe">
+        <div class="jtbb jtdivwindowcontentsframeleft">&nbsp;</div>
+        <div class="jtbb jtdivwindowcontentsframetopleft">&nbsp;</div>
+        <div id="{$NAME}_contents" class="jtbb jtfont jtdivwindowcontents" style="overflow: {$SCROLL};">
+          {$CONTENT}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- IE6- hack to fix <select> tags from floating above everything else. -->
+  <iframe scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+  <div id="{$NAME}_topborder" class="jtbb jtdivwindowtopborder jtdivwindowtopborder_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_leftborder" class="jtbb jtdivwindowleftborder jtdivwindowleftborder_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_bottomborder" class="jtbb jtdivwindowbottomborder jtdivwindowbottomborder_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_rightborder" class="jtbb jtdivwindowrightborder jtdivwindowrightborder_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_topleftcorner" class="jtbb jtbb jtdivwindowtopleftcorner jtdivwindowtopleftcorner_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_toprightcorner" class="jtbb jtdivwindowtoprightcorner jtdivwindowtoprightcorner_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_bottomleftcorner" class="jtbb jtdivwindowbottomleftcorner jtdivwindowbottomleftcorner_{$BORDERSTYLE}">&nbsp;</div>
+  <div id="{$NAME}_bottomrightcorner" class="jtbb jtdivwindowbottomrightcorner jtdivwindowbottomrightcorner_{$BORDERSTYLE}">&nbsp;</div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

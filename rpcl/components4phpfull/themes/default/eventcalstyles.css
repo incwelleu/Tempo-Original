@@ -1,0 +1,52 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jteventcalendar
+{
+  border: solid 1px #C1C1C1;
+  padding: 1px;
+}
+
+.jteventcalendar table {
+  border-bottom: solid 1px #C1C1C1;
+}
+
+.jteventcalendartitle {
+  background: url(images/dropdown_back.gif) repeat-x left center;
+  border: solid 1px #908E8E;
+  font-size: 22pt;
+  height: 48px;
+}
+
+.jteventcalendarheadrow {
+  background: #EEEDED;
+}
+
+.jteventcalendarheadrow td {
+  border-left: solid 1px #C1C1C1;
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.jteventcalendarheadlastcell
+{
+  border-right: solid 1px #C1C1C1;
+}
+
+.jteventcalendarcellday {
+}
+
+.jteventcalendarcell {
+  border-left: solid 1px #C1C1C1;
+  border-top: solid 1px #C1C1C1;
+}
+
+.jteventcalendarcell6 {
+  border-right: solid 1px #C1C1C1; 
+}
+
+.jteventcalendarcell_blank {
+  background-color: #EEEDED;
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this month calendar theme -->
+  <skin id="default">
+    <!-- The HTML code for each calendar cell. -->
+    <code id="cell">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+        {$DAY}:             The day that this cell is for.
+        {$MONTH}:           The month that this cell is part of.
+        {$YEAR}:            The year.
+        {$STYLE}:           CSS Style overrides for the calendar font.
+      -->
+      <![CDATA[
+  <div class="jtmonthcalendarcellday"{$STYLE} onclick="JTMonthCalendarDateClick('{$NAME}','{$YEAR}','{$MONTH}','{$DAY}')">{$DAY}</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the calendar. -->
+    <code id="calendar">
+      <!--
+        Available variables:
+        {$NAME}:            Name of component.
+        {$WIDTH}:           Width of component.
+        {$HEIGHT}:          Height of component.
+        {$MONTH}:           The selected month.
+        {$MONTHSTR}:        The selected month in name form.
+        {$YEAR}:            The year.
+		{$CSSCLASS}: 		  Custom CSS class.
+        {$CONTENT}:         Content of the calendar.
+        {$STYLE}:           CSS Style overrides for the calendar font.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtmonthcalendar {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="7" class="jtbb jtfont jtmonthcalendartitle">
+        <div{$STYLE}>{$MONTHSTR} {$YEAR}</div>
+      </td>
+    </tr>
+    <tr class="jtbb jtfont jtmonthcalendarheadrow">
+      <td{$STYLE}><div>{$StrSundaySingle}</div></td>
+      <td{$STYLE}><div>{$StrMondaySingle}</div></td>
+      <td{$STYLE}><div>{$StrTuesdaySingle}</div></td>
+      <td{$STYLE}><div>{$StrWednesdaySingle}</div></td>
+      <td{$STYLE}><div>{$StrThursdaySingle}</div></td>
+      <td{$STYLE}><div>{$StrFridaySingle}</div></td>
+      <td class="jtbb jtfont jtmonthcalendarheadlastcell"{$STYLE}><div>{$StrSaturdaySingle}</div></td
+    </tr>
+{$CONTENT}
+  </table>
+</div>
+<input type="hidden" name="{$NAME}_selyear" id="{$NAME}_selyear" value="">
+<input type="hidden" name="{$NAME}_selmonth" id="{$NAME}_selmonth" value="">
+<input type="hidden" name="{$NAME}_selday" id="{$NAME}_selday" value="">
+      ]]>
+    </code>
+  </skin>
+</skins>

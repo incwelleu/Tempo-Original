@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this survey form theme -->
+  <skin id="default">
+    <!-- The HTML code for the message stating that a question was not answered correctly. -->
+    <code id="answerinvalid">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+      <p class="jtfont jtsurvey_answerinvalid">{$StrSurveyAnswerInvalid}</p>
+      ]]>
+    </code>
+    <!-- The HTML code for the survey form -->
+    <code id="surveyform">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         HTML code for the survey questions.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}_container" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}">
+  {$CONTENT}
+  <p>
+    <input id="{$NAME}" name="{$NAME}" type="submit" value="Submit" />
+  </p>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the message stating that the survey has been submitted successfully. -->
+    <code id="answersuccess">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+      <p class="jtfont jtsurvey_answersuccess">{$StrSurveyAnswerSuccess}</p>
+      ]]>
+    </code>
+    <!-- The HTML code for an edit box survey field -->
+    <code id="editquestion">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$REQUIRED}:        Specifies whether this field is required. ('Required'/'')
+      {$MESSAGE}:         Validation message for this field.
+      {$VALUE}:           Initial value for this field.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="jtfont jtsurvey_field jtsurvey_edit">
+  <label for="{$FIELDNAME}">{$CAPTION} <span class="jtsurvey_fielderror">{$MESSAGE}</span></label><br />
+  <input id="{$FIELDNAME}" name="{$FIELDNAME}" type="text" value="{$VALUE}" size="50" /> {$REQUIRED}
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for a radio button survey field -->
+    <code id="radioquestion">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$MESSAGE}:         Validation message for this field.
+      {$CONTENT}:         The HTML code for the radio buttons in this field.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="jtfont jtsurvey_field jtsurvey_radio">
+  <label for="{$FIELDNAME}">{$CAPTION} <span class="authfielderror">{$MESSAGE}</span></label><br />
+  <table border="0">
+    {$CONTENT}
+  </table>
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for an individual radio button. -->
+    <code id="radioquestion_option">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$MESSAGE}:         Validation message for this field.
+      {$RADIOVALUE}:      The value for this radio button.
+      {$RADIOTEXT}:       The text for this radio button.
+      {$RADIOINDEX}:      The index of this radio button.
+      {$CHECKED}          The checked state of this item.
+      -->
+      <![CDATA[
+<tr>
+  <td><input type="radio" id="{$FIELDNAME}_{$RADIOINDEX}" name="{$FIELDNAME}" value="{$RADIOVALUE}"{$CHECKED} /></td>
+  <td><label for="{$FIELDNAME}_{$RADIOINDEX}" class="jtsurveyfieldlabel">{$RADIOTEXT}</label></td>
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for an individual radio button with an edit field. -->
+    <code id="radioquestion_option_withedit">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$MESSAGE}:         Validation message for this field.
+      {$RADIOVALUE}:      The value for this radio button.
+      {$RADIOTEXT}:       The text for this radio button.
+      {$RADIOINDEX}:      The index of this radio button.
+      {$RADIOEDITNAME}:   The name of the edit control.
+      {$CHECKED}          The checked state of this item.
+      -->
+      <![CDATA[
+<tr>
+  <td><input type="radio" id="{$FIELDNAME}_{$RADIOINDEX}" name="{$FIELDNAME}" value="{$RADIOVALUE}"{$CHECKED} /></td>
+  <td><label for="{$FIELDNAME}_{$RADIOINDEX}" class="jtsurveyfieldlabel">{$RADIOTEXT}</label></td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>
+    <input type="text" id="{$RADIOEDITNAME}" name="{$RADIOEDITNAME}" /><br />
+  </td>
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for a check box survey field -->
+    <code id="checkquestion">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$MESSAGE}:         Validation message for this field.
+      {$CHECKED}:         Checked state of the checkbox.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="jtfont jtsurvey_field jtsurvey_check">
+  <input id="{$FIELDNAME}" name="{$FIELDNAME}" type="checkbox" value="1"{$CHECKED} /> <label for="{$FIELDNAME}">{$CAPTION} <span class="jtsurvey_fielderror">{$MESSAGE}</span></label><br />
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for a textarea survey field -->
+    <code id="textareaquestion">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$REQUIRED}:        Specifies whether this field is required. ('Required'/'')
+      {$MESSAGE}:         Validation message for this field.
+      {$VALUE}:           Initial value of the text area.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="jtfont jtsurvey_field jtsurvey_textarea">
+  <label for="{$FIELDNAME}">{$CAPTION} <span class="jtsurvey_fielderror">{$MESSAGE}</span></label> {$REQUIRED}<br />
+  <textarea id="{$FIELDNAME}" name="{$FIELDNAME}" rows="10" cols="50">{$VALUE}</textarea>
+</p>
+      ]]>
+    </code>
+  </skin>
+</skins>

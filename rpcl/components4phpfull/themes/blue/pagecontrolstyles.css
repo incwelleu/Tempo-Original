@@ -1,0 +1,217 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtpagecontrol {
+  background: white;
+  padding-top: 22px;
+  position: relative;
+}
+
+.jttabbuttons {
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jttab
+{
+  color: #2F455B;
+  cursor: default;
+  font-size: 9pt;
+  font-weight: bold;
+  position: relative;
+}
+
+.jttab_active
+{
+  background: white;
+  border: none;
+}
+
+.jttab_inactive
+{
+  border-bottom: solid 1px #5A7A9A;
+  color: white;
+}
+
+.jttabinner
+{
+  overflow: hidden;
+  position: relative;
+}
+
+.jttabinner_active {  
+  height: 22px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.jttabinner_before {
+  background: url(images/tab_back.gif);
+  border-left: none;
+  height: 21px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.jttabinner_after {
+  border-right: none;
+  background: url(images/tab_back.gif);
+  height: 21px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.jttabcontainer {
+  background: white;
+  border-bottom: solid 1px #5A7A9A;
+  border-left: solid 1px #5A7A9A;
+  border-right: solid 1px #5A7A9A;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.jttabcontainerinner
+{
+	height: 100%;
+	/* overflow: hidden; : Removed to fix a bug with IE6. */
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.jttabsheet
+{
+  background: white;
+  font-size: 10pt;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jttabtl
+{
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.jttabtr
+{
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.jttabtl_active
+{
+  background: url(images/pg_sel_tl.gif);
+  height: 6px;
+  width: 6px;
+}
+
+.jttabtr_active
+{
+  background: url(images/pg_sel_tr.gif);
+  height: 6px;
+  width: 6px;
+}
+
+.jttabtl_inactive
+{
+  background: url(images/pg_nosel_tl.gif);
+  height: 5px;
+  width: 4px;
+}
+
+.jttabtr_inactive
+{
+  background: url(images/pg_nosel_tr.gif);
+  height: 5px;
+  width: 5px;
+}
+
+.jttabr
+{
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  width: 1px;
+}
+
+.jttabr_active
+{
+  background: #5A7A9A;
+}
+
+.jttabr_after
+{
+  background: #5A7A9A;
+}
+
+.jttabl
+{
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  width: 1px;
+}
+
+.jttabl_before
+{
+  background: #5A7A9A;
+}
+
+.jttabl_active
+{
+  background: #5A7A9A;
+}
+
+.jttabstop
+{
+  height: 1px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jttabstop_active
+{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.jttabstop_inactive
+{
+  display: none;
+}
+
+.jttabstopinner
+{
+  height: 1px;
+  width: 100%;
+}
+
+.jttabstopinner2
+{
+  background: #5A7A9A;
+  height: 1px;
+  width: 100%;
+}

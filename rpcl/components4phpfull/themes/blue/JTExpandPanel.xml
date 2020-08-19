@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="1,20" />
+  <setting name="DefaultControlBarSize" value="20" />
+  <!-- The default skin for this bullet list theme -->
+  <skin id="default">
+    <!-- The HTML code for each bullet item -->
+    <code id="expandpanel">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$DISPLAY}:         Default state of the expand panel. (block/none)
+      {$STARTHEIGHT}:     Initial height of the expand panel.
+      {$COLOR}:           Background color style of the expand panel.
+      {$BORDER}:          Border style of the expand panel.
+      {$CONTENT}:         Content of components dropped on this expand panel.
+      {$CTRLBAR_STYLE}:   CSS Style overrides for the control bar.
+      {$CTRL_TEXT}:       Default text to show in the expand panel control bar.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtexpandpanel jtbevel {$CSSCLASS}" style="width: {$WIDTH}; height: {$STARTHEIGHT};{$COLOR}{$BORDER}">
+<table border="0" cellpadding="0" cellspacing="0" class="jtbb jtbevel" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <tr>
+    <td class="jtbevelcorner_tl"><div></div></td>
+    <td class="jtbevelborder_t" valign="top"><div></div></td>
+    <td class="jtbevelcorner_tr"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelborder_l" align="left"><div></div></td>
+    <td class="jtbevelcontent">
+      <div class="jtbevelcontentinner">
+        <div id="{$NAME}_control" class="jtbb jtfont jtexpandpanelcontrol"{$CTRLBAR_STYLE} onClick="JTExpandPanelClick( '{$NAME}' )">
+          <span id="{$NAME}_controltext">{$CTRL_TEXT}</span>
+        </div>
+        <div id="{$NAME}_line" class="jtbb jtexpandpanelline" style="display: {$DISPLAY};">&nbsp;</div>
+        <div id="{$NAME}_content" class="jtexpandpanelcontent" style="display: {$DISPLAY};">
+          {$CONTENT}
+        </div>
+      </div>
+    </td>
+    <td class="jtbevelborder_r" align="right"><div></div></td>
+  </tr>
+  <tr>
+    <td class="jtbevelcorner_bl"><div></div></td>
+    <td class="jtbevelborder_b" valign="bottom"><div></div></td>
+    <td class="jtbevelcorner_br"><div></div></td>
+  </tr>
+</table>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for each item in the drop-down combobox -->
+    <code id="item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Item data.
+      {$VALUE}            Item value.
+      {$SELECTED}:        State of this item. (' selected','')
+      -->
+      <![CDATA[
+<option value="{$VALUE}"{$SELECTED}>{$CONTENT}</option>
+      ]]>
+    </code>
+    <!-- The HTML code for the drop-down combobox -->
+    <code id="combobox">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$CONTENT}:         Content of components dropped on this bevel.
+      {$EVENTS}:          JavaScript events for this combobox.
+      {$DISABLED}:        Specifies whether this edit control is disabled. (' disabled'/'')
+      {$READONLY}:        Specifies whether this control is read-only.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<select name="{$NAME}" id="{$NAME}" size="1"{$DISABLED} tabindex="{$TABINDEX}" class="jtbb {$CSSCLASS}" style="float: left; width: {$WIDTH};{$STYLES}"{$EVENTS}>
+  {$CONTENT}
+</select>
+      ]]>
+    </code>
+  </skin>
+</skins>

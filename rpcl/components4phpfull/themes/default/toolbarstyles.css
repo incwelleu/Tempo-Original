@@ -1,0 +1,65 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jttoolbar
+{
+  background: white;
+  border: solid 1px #C1C1C1;
+  padding: 1px;
+  position: relative;
+}
+
+.jttoolbar_innertable
+{
+  color: #626262;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.jttoolbar_inside
+{
+  background: url(images/toolbar_back.gif);
+  border: none;
+  padding: 0;
+}
+
+.jttoolbutton {
+  background: transparent;
+  border: solid 1px #C1C1C1;
+  color: #626262;
+  cursor: pointer;
+  font-size: 10pt;
+  height: 24px;
+  margin-right: 3px;
+  padding: 0 7px 2px 7px;
+}
+
+.jttoolbutton_over
+{
+  background: #EEEDED;
+  border: solid 1px #C1C1C1;
+}
+
+.jttoolbutton_down
+{
+  background: #908E8E;
+  border: solid 1px #515050;
+  color: white;
+}
+
+.jttoolbarinner2
+{
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.jttoolbarscroller
+{
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this label theme -->
+  <skin id="default">
+    <!-- The HTML code for the label -->
+    <code id="label">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$TEXTCLASS}:       Text class selected by the user for the label font.
+      {$STYLE}:           CSS font overrides for the label.
+      {$CONTENT}:         Label caption. May contain link code, if the user has specified a link for this label.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="{$TEXTCLASS} {$CSSCLASS}" style="overflow: hidden; width:{$WIDTH}; height:{$HEIGHT};{$STYLE}">{$CONTENT}</div>
+      ]]>
+    </code>
+    <code id="link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$LINK}:            Destination URL.
+      {$CONTENT):         Label caption.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<a id="{$NAME}_link" href="{$LINK}" tabindex="{$TABINDEX}">{$CONTENT}</a>
+      ]]>
+    </code>
+  </skin>
+</skins>

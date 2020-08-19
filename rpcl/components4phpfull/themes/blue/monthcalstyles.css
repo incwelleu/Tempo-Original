@@ -1,0 +1,87 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtmonthcalendar
+{
+  border: solid 1px #5A7A9A;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.jtmonthcalendar table
+{
+  width: 100%;
+  height: 100%;
+  border-bottom: none;
+}
+
+.jtmonthcalendartitle {
+  border-bottom: none;
+  background: #9EB9D4;
+  color: #5A7A9A;
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+.jtmonthcalendarheadrow
+{
+  background: #E5ECF5;
+}
+
+.jtmonthcalendarheadrow td
+{
+  border-bottom: solid 1px #C4D4E5;
+  border-left: none;
+  border-right: solid 1px #C4D4E5;
+  color: #9EB9D4;
+}
+
+.jtmonthcalendarheadlastcell
+{
+  border-right: none;
+}
+
+.jtmonthcalendarmonth
+{
+  background: #F9D6BC;
+  color: #95321F;
+  font-size: 8pt;
+}
+
+.jtmonthcalendarcellday
+{
+  font-size: 10pt;
+  cursor: pointer;
+}
+
+.jtmonthcalendarcell
+{
+  border-left: none;
+  border-right: solid 1px #C4D4E5;
+  border-top: none;
+  border-bottom: solid 1px #C4D4E5;
+  color: #5A7A9A;
+}
+
+.jtmonthcalendarcell6
+{
+  border-right: none;
+}
+
+.jtmonthcalendarrow5
+{
+  border-bottom: none;
+}
+
+.jtmonthcalendarcellselected
+{
+  background-color: #F9D6BC;
+}
+
+.jtmonthcalendarcell_blank
+{
+  background-color: #E5ECF5;
+}

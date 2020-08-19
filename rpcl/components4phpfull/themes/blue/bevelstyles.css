@@ -1,0 +1,96 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtbevel {
+  border: none;
+  overflow: visible;
+}
+
+.jtbevel .jtbevelcontent {
+	height: 100%;
+}
+
+.jtbevel .jtbevelcontent .jtbevelcontentinner {
+	background: white;
+	height: 100%;
+	position: static;
+	overflow: hidden;
+}
+
+.jtbevel .jtbevelborder_t,
+.jtbevel .jtbevelborder_b,
+.jtbevel .jtbevelcorner_tl,
+.jtbevel .jtbevelcorner_tr,
+.jtbevel .jtbevelcorner_bl,
+.jtbevel .jtbevelcorner_br {
+	font-size: 0;
+	height: 6px;
+}
+
+.jtbevel .jtbevelborder_t,
+.jtbevel .jtbevelborder_b,
+.jtbevel .jtbevelborder_l,
+.jtbevel .jtbevelborder_r {
+	background: white;
+}
+
+.jtbevel .jtbevelborder_t,
+.jtbevel .jtbevelborder_b {
+	width: 100%;
+}
+
+.jtbevel .jtbevelborder_t div {
+	background: #9EB9D4;
+	height: 1px;
+	overflow: hidden;
+}
+
+.jtbevel .jtbevelborder_l,
+.jtbevel .jtbevelborder_r {
+	height: 100%;
+}
+
+.jtbevel .jtbevelborder_l div {
+	background: #9EB9D4;
+	height: 100%;
+	width: 1px;
+}
+
+.jtbevel .jtbevelborder_r div {
+	background: #9EB9D4;
+	height: 100%;
+	width: 1px;
+}
+
+.jtbevel .jtbevelborder_b div {
+	background: #9EB9D4;
+	height: 1px;
+	overflow: hidden;
+}
+
+.jtbevel .jtbevelcorner_tl div,
+.jtbevel .jtbevelcorner_tr div,
+.jtbevel .jtbevelcorner_bl div,
+.jtbevel .jtbevelcorner_br div {
+	height: 6px;
+	width: 6px;
+}
+
+.jtbevel .jtbevelcorner_tl {
+	background: url(images/bevel_tl.gif) no-repeat;
+}
+
+.jtbevel .jtbevelcorner_tr  {
+	background: url(images/bevel_tr.gif) no-repeat;
+}
+
+.jtbevel .jtbevelcorner_bl {
+	background: url(images/bevel_bl.gif) no-repeat;
+}
+
+.jtbevel .jtbevelcorner_br {
+	background: url(images/bevel_br.gif) no-repeat;
+}

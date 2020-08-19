@@ -1,0 +1,51 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtdigitalclock
+{
+  background-image: url(images/clock_dig_back.gif);
+}
+
+.jtdigitalclock_digit
+{
+  height: 28px;
+  width: 15px;
+}
+
+.jtdigitalclock_h1
+{
+  left: 14px;
+}
+
+.jtdigitalclock_h2
+{
+  left: 34px;
+}
+
+.jtdigitalclock_m1
+{
+  left: 74px;
+}
+
+.jtdigitalclock_m2
+{
+  left: 93px;
+}
+
+.jtdigitalclock_s1
+{
+  left: 133px;
+}
+
+.jtdigitalclock_s2
+{
+  left: 152px;
+}
+
+.jtdigitalclock_apm
+{
+  height: 27px;
+  left: 181px;
+  width: 36px;
+}

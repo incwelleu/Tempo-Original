@@ -1,0 +1,58 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtmonthcalendar
+{
+  border: solid 1px #C1C1C1;
+  padding: 1px;
+}
+
+.jtmonthcalendar table
+{
+  border-bottom: solid 1px #C1C1C1;
+}
+
+.jtmonthcalendartitle {
+  background: url(images/dropdown_back.gif) repeat-x left center;
+  border: solid 1px #908E8E;
+  color: #505151;
+  font-size: 11pt;
+}
+
+.jtmonthcalendarheadrow
+{
+  background: #EEEDED;
+}
+
+.jtmonthcalendarheadrow td
+{
+  border-left: solid 1px #C1C1C1;
+}
+
+.jtmonthcalendarheadlastcell
+{
+  border-right: solid 1px #C1C1C1;
+}
+
+.jtmonthcalendarcell
+{
+  border-left: solid 1px #C1C1C1;
+  border-top: solid 1px #C1C1C1;
+}
+
+.jtmonthcalendarcell6
+{
+  border-right: solid 1px #C1C1C1; 
+}
+
+.jtmonthcalendarcell_blank
+{
+  background-color: #EEEDED;
+}
+
+.jtmonthcalendarcellselected
+{
+  background-color: maroon;
+  color: white;
+}

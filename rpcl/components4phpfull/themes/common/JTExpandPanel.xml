@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="1,20" />
+  <setting name="DefaultControlBarSize" value="20" />
+  <!-- The default skin for this bullet list theme -->
+  <skin id="default">
+    <!-- The HTML code for each bullet item -->
+    <code id="expandpanel">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$DISPLAY}:         Default state of the expand panel. (block/none)
+      {$STARTHEIGHT}:     Initial height of the expand panel.
+      {$COLOR}:           Background color style of the expand panel.
+      {$BORDER}:          Border style of the expand panel.
+      {$CONTENT}:         Content of components dropped on this expand panel.
+      {$CTRLBAR_STYLE}:   CSS Style overrides for the control bar.
+      {$CTRL_TEXT}:       Default text to show in the expand panel control bar.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtexpandpanel {$CSSCLASS}" style="width: {$WIDTH}; height: {$STARTHEIGHT};{$COLOR}{$BORDER}">
+  <div id="{$NAME}_control" class="jtbb jtfont jtexpandpanelcontrol"{$CTRLBAR_STYLE} onClick="JTExpandPanelClick( '{$NAME}' )">
+    <span id="{$NAME}_controltext">{$CTRL_TEXT}</span>
+  </div>
+  <div class="jtbb jtexpandpanelline"></div>
+  <div id="{$NAME}_content" class="jtexpandpanelcontent" style="display: {$DISPLAY};">
+    {$CONTENT}
+  </div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

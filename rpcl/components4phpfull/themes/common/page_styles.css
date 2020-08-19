@@ -1,0 +1,14 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+body
+{
+	background-color: white;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+td
+{
+	font-size: 10pt;
+}

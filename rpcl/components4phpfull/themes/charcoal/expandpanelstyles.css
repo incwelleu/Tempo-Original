@@ -1,0 +1,12 @@
+.jtexpandpanel {
+    border: solid 1px #555555;
+}
+
+.jtexpandpanelcontrol {
+    background-image: url(images/gradient.gif);
+    color: #555555;
+}
+
+.jtexpandpanelline {
+	border-bottom: solid 1px #555555;
+}

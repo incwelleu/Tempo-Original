@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="0,0" />
+  <!-- The default skin for this section bar theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular section bar skin -->
+    <code id="section">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SECTIONNAME}:     Name of this particular section.
+      {$STYLE}:           CSS font override for the tab button.
+      {$DISPLAY}:         State of this tabsheet. (block/none)
+      {$VISIBILITY}:      State of this tabsheet. (visible/hidden)
+      {$ZINDEX}:          State of this tabsheet in the z-order. (3/1)
+      {$CAPTION}          Section caption.
+      {$CONTENT}          Contents of this section bar.
+      -->
+      <![CDATA[
+<div id="{$SECTIONNAME}_container" class="jtbb jtsecbarcontainer" style="display: {$DISPLAY}">
+  {$CONTENT}
+</div>
+<div id="{$SECTIONNAME}" class="jtbb jtsecbarsection">
+  <div id="{$SECTIONNAME}_caption" class="jtbb jtfont jtsecbarsectioncaption"{$STYLE} onclick="JTSectionBarButtonClick('{$NAME}','{$SECTIONNAME}')">{$CAPTION}</div>
+</div>
+      ]]>
+    </code>
+    <code id="sectionbar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$SECTIONSCODE}:    HTML code for the sections.
+      -->
+      <![CDATA[
+<div id="{$NAME}" style="width: {$WIDTH}; height: {$HEIGHT};" class="jtbb jtsectionbar {$CSSCLASS}">
+  <div class="jtbb jtsecbarsections">
+    {$SECTIONSCODE}
+  </div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

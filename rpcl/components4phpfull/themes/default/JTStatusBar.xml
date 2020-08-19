@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2009. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this statusbar line theme -->
+  <skin id="default">
+    <!-- The HTML code for the statusbar -->
+    <code id="statusbar_back">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$LENGTH}:          Used for fill/not fill sections.
+      {$CONTENT}:         The HTML code for the statusbar sections.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtstatusbar {$CSSCLASS}" style="width: {$WIDTH};">
+  <div id="{$NAME}_inner" class="jtbb jtstatusbar_inside">
+    <div id="{$NAME}_inner2" class="jtbb jtstatusbarinner2">
+      <div id="{$NAME}_scroller" class="jtbb jtstatusbarscroller">
+        <table border="0" cellpadding="0" cellspacing="1" class="jtbb jtstatusbaritemtable"{$LENGTH}>
+          <tr>
+            {$CONTENT}
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+      ]]>
+    </code>
+    <code id="statusbar_item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this section.
+      {$LENGTH}:          Length override for this section.
+      {$CONTENT}:         The caption of this section.
+      -->
+      <![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jtfont jtstatussection"{$CSSSTYLE}>{$CONTENT}</td>
+      ]]>
+    </code>
+	<code id="statusbar_item_fixedwidth">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this section.
+      {$LENGTH}:          Length override for this section.
+      {$CONTENT}:         The caption of this section.
+      -->
+      <![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jtfont jtstatussection"{$CSSSTYLE}><div{$LENGTH}>{$CONTENT}</div></td>
+      ]]>
+	</code>
+  </skin>
+</skins>

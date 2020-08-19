@@ -1,0 +1,21 @@
+.jtdivwindow {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtdivwindowcont {
+    background: #FFFFFF;
+}
+
+.jtdivwindowcontinner {
+    background: #FFFFFF;
+}
+
+.jtdivwindowtitlebar {
+    background: url(images/gradient.gif) repeat-x;
+    border-bottom: solid 1px #555555;
+}
+
+.jtdivwindowcaption {
+  color: #555555;
+}

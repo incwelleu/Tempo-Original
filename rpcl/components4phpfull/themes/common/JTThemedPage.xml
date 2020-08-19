@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <skin id="default">
+    <!-- The HTML code for this page skin -->
+    <code id="page">
+      <!--
+      Available variables:
+      {$CONTENT}:     HTML code for the entire page body, including all controls on the page.
+      -->
+      <![CDATA[
+<!-- Themed page -->
+{$CONTENT}
+      ]]>
+    </code>
+  </skin>
+</skins>

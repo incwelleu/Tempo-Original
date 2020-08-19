@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2009. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this atom feed theme -->
+  <skin id="default">
+    <!-- The HTML code for the atom feed -->
+    <code id="feedimg">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.      
+      {$FEEDLINK}:        Link to feed.
+      {$FEEDTITLE}:       Title of feed.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<a href="{$FEEDLINK}" class="{$CSSCLASS}"><img src="{$THEMEWEBDIR}images/rssfeed.gif" width="20" height="20" alt="{$FEEDTITLE} (RSS)" border="0"></a>
+      ]]>
+    </code>
+  </skin>
+</skins>

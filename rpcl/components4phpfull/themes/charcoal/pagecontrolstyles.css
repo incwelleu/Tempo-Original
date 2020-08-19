@@ -1,0 +1,45 @@
+.jtpagecontrol {
+    background: #FFFFFF;
+}
+
+.jttab {
+    color: #555555;
+}
+
+.jttab_active {
+  background: #FFFFFF;
+  border-left: solid 1px #555555;
+  border-right: solid 1px #555555;
+  border-top: solid 1px #555555;
+}
+
+.jttab_inactive {
+  border-bottom: solid 1px #555555;
+}
+
+.jttabinner_before {
+    border-left: solid 1px #555555;
+}
+
+.jttabinner_after {
+    border-right: solid 1px #555555;
+}
+
+.jttabinner2_inactive {
+    background-image: url(images/gradient.gif);
+    border-top: solid 1px #555555;
+}
+
+.jtpagecontrolcontentcell {
+    border-bottom: solid 1px #555555;
+    border-left: solid 1px #555555;
+    border-right: solid 1px #555555;
+}
+
+.jttabcontainer {
+    background: #FFFFFF;
+}
+
+.jttabsheet {
+  background: #FFFFFF;
+}

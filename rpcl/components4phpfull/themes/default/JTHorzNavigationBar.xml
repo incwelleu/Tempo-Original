@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this navigation bar theme -->
+  <skin id="default">
+    <code id="horz_back">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$CONTENT}:         Navigation bar contents.
+      {$SUBITEMS}:        HTML contents of all the sub-navigation bars for this nav bar.
+      {$STATE}:           Initial state of the sub-nav bar. (visible/hidden).
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jthnavbar {$CSSCLASS}" style="width: {$WIDTH};">
+  <table class="jtnavbar_table" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      {$CONTENT}
+    </tr>
+  </table>
+</div>
+<div id="{$NAME}_subbar" class="jtbb jtnavbar_subbar" style="width: {$WIDTH}; display: {$STATE};">
+  <div class="jtbb jtnavbar_subbar_inner">
+    {$SUBITEMS}
+  </div>
+</div>
+      ]]>
+	</code>
+	<code id="horz_item">
+<!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this navigation item.
+      {$STATE}:           State of this navigation item. (active/default)
+      {$STYLE}:           CSS font override for navigation bar.
+      {$EVENTS}:          JavaScript events used by the navigation bar.
+      {$CONTENT}:         Navigation bar item caption.
+      {$TABINDEX}:        Tab index override.
+      -->
+<![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jthnavbar_button jthnavbar_button_{$STATE}"{$STYLE}{$EVENTS} tabindex="{$TABINDEX}">
+  <div id="{$ITEMNAME}_inner" class="jtbb jthnavbar_button_inner jthnavbar_button_inner_{$STATE}">
+    {$CONTENT}
+  </div>
+</td>
+      ]]>
+	</code>
+	<code id="horz_item_img">
+<!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this navigation item.
+      {$STATE}:           State of this navigation item. (active/default)
+      {$STYLE}:           CSS font override for navigation bar.
+      {$EVENTS}:          JavaScript events used by the navigation bar.
+      {$CONTENT}:         Navigation bar item caption.
+      {$TABINDEX}:        Tab index override.
+	  {$IMAGE}:			  Image.
+      -->
+<![CDATA[
+<td id="{$ITEMNAME}" class="jtbb jthnavbar_button jthnavbar_button_{$STATE}"{$STYLE}{$EVENTS} tabindex="{$TABINDEX}">
+  <div id="{$ITEMNAME}_inner" class="jtbb jthnavbar_button_inner jthnavbar_button_inner_{$STATE}">
+	<table class="jtnavbar_innertable jthnavbar_imgbutton_inner_{$STATE}" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="{$ITEMNAME}_imagetd" style="padding-right: 5px;">
+			<img id="{$ITEMNAME}_image" src="{$IMAGE}" />
+		</td><td id="{$ITEMNAME}_content">
+			{$CONTENT}
+		</td>
+	</tr></table>
+  </div>
+</td>
+      ]]>
+	</code>
+    <!-- The HTML code for the horizontal navigation bar divider -->
+    <code id="horz_divider">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<td class="jtbb jthnavbar_divider">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$LINK}:            Destination URL.
+      {$CONTENT}:         Navigation bar item caption.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<a id="{$ITEMNAME}_link" href="{$LINK}" onClick="return false;" tabindex="{$TABINDEX}">{$CONTENT}</a>
+      ]]>
+    </code>
+    <code id="sublink">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this subitem.
+      {$LINK}:            Destination URL.
+      {$CONTENT}:         Subitem caption.
+      -->
+      <![CDATA[
+<a id="{$ITEMNAME}_link" href="{$LINK}">{$CONTENT}</a>
+      ]]>
+    </code>
+    <code id="subitem">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SUBITEMNAME}:     Name of this subitem.
+      {$SUBITEMCONTENT}:  Subitem content.
+      -->
+      <![CDATA[
+<li id="{$SUBITEMNAME}" class="jtfont jtnavbar_subitem" onclick="return {$NAME}ClickHandler(event,true);">{$SUBITEMCONTENT}</li>
+      ]]>
+    </code>
+    <code id="subitem_img">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SUBITEMNAME}:     Name of this subitem.
+      {$SUBITEMCONTENT}:  Subitem content.
+	  {$SUBITEMIMAGE}:	  Subitem image.
+      -->
+      <![CDATA[
+<li id="{$SUBITEMNAME}" class="jtfont jtnavbar_subitem" onclick="return {$NAME}ClickHandler(event,true);">
+
+<table class="jtnavbar_subitem_table" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+	<td id="{$SUBITEMNAME}_imagetable" style="padding-right: 5px;">
+		<img id="{$SUBITEMNAME}_image" src="{$SUBITEMIMAGE}" />
+	</td><td id="{$SUBITEMNAME}_content">
+		{$SUBITEMCONTENT}
+	</td>
+</tr></table>
+
+</li>
+      ]]>
+    </code>
+    <code id="subbar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SUBNAME}:         Name of this sub-bar.
+      {$CONTENT}:         Sub-bar content.
+      {$STATE}:           State of the sub-bar (block/none).
+      -->
+      <![CDATA[
+<ul id="{$SUBNAME}" style="display: {$STATE}; width: {$WIDTH};">
+  {$CONTENT}
+</ul>
+      ]]>
+    </code>
+  </skin>
+</skins>

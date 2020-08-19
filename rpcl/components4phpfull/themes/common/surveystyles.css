@@ -1,0 +1,32 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtsurvey_answerinvalid
+{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.jtsurvey_answersuccess
+{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.jtsurvey_field
+{
+    font-size: 10pt;
+}
+
+.jtsurveyfieldlabel
+{
+    font-size: 10pt;
+}
+
+.jtsurveyradioeditcontainer
+{
+    padding-left: 24px;
+}

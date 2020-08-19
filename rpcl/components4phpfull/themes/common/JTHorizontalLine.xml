@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this horizontal line theme -->
+  <skin id="default">
+    <!-- The HTML code for the horizontal line -->
+    <code id="horizontalline">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS background color and line height override.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jthorzline {$CSSCLASS}" style="width: {$WIDTH};{$STYLE}">&nbsp;</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

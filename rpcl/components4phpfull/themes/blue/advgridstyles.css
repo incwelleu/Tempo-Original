@@ -1,0 +1,320 @@
+/*********************************************************************************/
+/*                      JomiTech PlatinumGrid Stylesheet                         */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+/* Container styles */
+.jtadvgrid {
+	border-top: solid 1px #9EB9D4;
+	border-bottom: solid 1px #9EB9D4;
+	border-left: solid 1px #9EB9D4;
+	border-right: solid 1px #9EB9D4;
+}
+
+.jtadvgrid .scrollcontainer {
+	background: #E5ECF5;
+}
+
+.jtadvgrid .inttable tbody {
+	border-top: solid 1px #9EB9D4;
+}
+/* End Container styles */
+
+/* Pager styles */
+.jtadvgrid .pager {
+	background: #E5ECF5;
+	border-top: solid 1px #9EB9D4;
+	color: #5A7A9A;
+}
+
+* html .jtadvgrid .toppager {
+	background: url(images/grid_dark_grad.gif) repeat-x left center;
+}
+/* End Pager styles */
+
+/* Row and cell styles */
+.jtadvgrid .inttable .oddrow td {
+	background-color: #E5ECF5;
+}
+
+.jtadvgrid .inttable .grouprow td {
+	background-color: #9EB9D4;
+}
+
+.jtadvgrid .inttable .grouprow .groupexpcolcell {
+	background: #5A7A9A;
+}
+
+.jtadvgrid .inttable .row .grouppadcell,
+.jtadvgrid .inttable td.grouppadcell,
+.jtadvgrid .inttable .memorow .grouppadcell,
+.jtadvgrid .inttable .grouprow .grouppadcell {
+	background: #5A7A9A;
+}
+
+.jtadvgrid .inttable .grouprow .groupcell {
+	background: #5A7A9A;
+	color: white;
+}
+
+.jtadvgrid .horzlines tbody tr td.cell,
+.jtadvgrid .horzlines tbody tr td.cellwithchildren,
+.jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .horzlines tbody tr td.sc,
+.jtadvgrid .horzlines tbody tr td.editcolumn,
+.jtadvgrid .horzlines tbody tr td.memocell,
+.jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .horzlines tbody tr.columnheader td.headercell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.cell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.cellwithchildren,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.sc,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.editcolumn,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.memocell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr.columnheader td.headercell {
+	border-bottom: solid 1px #9EB9D4;
+}
+
+.jtadvgrid .vertlines tbody tr td.cell,
+.jtadvgrid .vertlines tbody tr td.cellwithchildren,
+.jtadvgrid .vertlines tbody tr td.blankcell,
+.jtadvgrid .vertlines tbody tr td.detailrow,
+.jtadvgrid .vertlines tbody tr td.sc,
+.jtadvgrid .vertlines tbody tr td.editcolumn,
+.jtadvgrid .vertlines tbody tr td.memocell,
+.jtadvgrid .vertlines tbody tr.filterbar td.fl,
+.jtadvgrid .vertlines tbody tr.columnheader td.headercell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.cell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.cellwithchildren,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.sc,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.editcolumn,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.memocell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr.columnheader td.headercell {
+	border-right: solid 1px #9EB9D4;
+}
+
+.jtadvgrid .inttable tbody tr td.selected,
+.jtadvgrid .inttable tbody tr.rowselected td {
+	background-color: #9EB9D4;
+}
+
+.jtadvgrid .inttable tbody .evenrow .noscrollcell div.cd, .jtadvgrid .inttable tbody .oddrow .noscrollcell div.cd {
+	background: #E5ECF5 url(images/grid_fixed_col.gif) repeat-y left center;
+}
+
+.jtadvgrid .horzlines tbody tr .noscrollcell div.cd {
+	border-top: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .inttable tbody .row .selected .noscrolldiv, .jtadvgrid .inttable tbody .rowselected .noscrollcell div.cd {
+	background: #5A7A9A;
+}
+
+.jtadvgrid .vertlines tbody tr .noscrollcell div.cd {
+	border-left: solid 1px #C1C1C1;
+	border-right: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .inttable tbody tr td .commandcol input {
+	background: url(images/grid_dark_grad.gif) repeat-x center center;
+	border: solid 1px #9EB9D4;
+	color: white;
+	padding: 1px;
+}
+
+.jtadvgrid .inttable .cellexpand {
+	background: url(images/treeplus.gif) no-repeat left center;
+}
+
+.jtadvgrid .inttable .cellwithchildren .expanded {
+	background: url(images/treeminus.gif) no-repeat left center;
+}
+
+.jtadvgrid .inttable .cellwithchildren .collapsed {
+	background: url(images/treeplus.gif) no-repeat left center;
+}
+
+.jtadvgrid .dragselect {
+	background-color: #9EB9D4;
+	border: solid 1px #363636;
+}
+/* End row and cell styles */
+
+/* Column header styles */
+.jtadvgrid .columnheader td {
+	background: #ECECEC url(images/grid_light_grad.gif) repeat-x left center;
+	border-top: solid 1px #C1C1C1;
+	color: white;
+	font-weight: bold;
+	height: 20px;
+}
+
+.jtadvgrid .colmover {
+	background: #ECECEC url(images/grid_light_grad.gif) repeat-x left center;
+	border: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .vertlines tbody tr .noscrollhdr .noscrollhdrdiv {
+	border-right: 1px solid #C1C1C1;
+}
+
+.jtadvgrid .horzlines tbody tr .noscrollhdr .noscrollhdrdiv {
+	border-top: 1px solid #C1C1C1;
+}
+
+.jtadvgrid .columnheader .noscrollhdr .noscrollhdrdiv {
+	background: #ECECEC url(images/grid_light_grad.gif) repeat-x left center;
+	border-top: 1px solid #C1C1C1;
+}
+/* End column header styles */
+
+/* Filter bar styles */
+.jtadvgrid .filterbar td {
+	background-color: #E5ECF5;
+	border-top: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .filterbar td table td {
+	border: 0;
+	padding: 0;
+}
+
+.jtadvgrid .filterbar td .inputcontainer {
+	background-color: white;
+	border: solid 1px #9EB9D4;
+	padding-left: 1px;
+}
+
+.jtadvgrid .filterbar .timefilter table td .inputcontainer {
+	background: transparent;
+	border: none;
+}
+
+.jtadvgrid .filterbar td input {
+	background-color: white;
+	border: solid 1px #9EB9D4;
+	font-size: 8pt;
+	height: 15px;
+}
+
+.jtadvgrid .filterbar td .jtcombobox input {
+	height: auto;
+}
+
+.jtadvgrid .filterbar td .inputcontainer input {
+	border: none;
+}
+
+.jtadvgrid .filterbar td select {
+	border: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .filterbar td .textfilterinputcontainer {
+	border: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .intheadertable tbody .filterbar .noscrollfilterdiv {
+	background-color: #E5ECF5;
+	border-right: solid 1px #C1C1C1;
+	border-top: solid 1px #C1C1C1;
+}
+/* End filter bar styles */
+
+/* Group By styles */
+.jtadvgrid .groupbar {
+	background-color: #E5ECF5;
+	border-top: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .nogroups {
+	color: #5A7A9A;
+}
+
+.jtadvgrid .inttable .grouprow .expanded div {
+	background: url(images/treeminus.gif) no-repeat center center;
+}
+
+.jtadvgrid .inttable .grouprow .collapsed div {
+	background: url(images/treeplus.gif) no-repeat center center;
+}
+/* End group by styles */
+
+/* Editor styles */
+.jtadvgrid .textediteditor {
+	border: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .memoeditor {
+	border: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .inttable .editorform td {
+	background-color: #ECECEC;
+	border-bottom: solid 1px #C1C1C1;
+	border-top: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .inttable .editorform td .editorformdiv .cancelbtn {
+	border: solid 1px #C1C1C1;
+}
+/* End editor styles */
+
+/* Summary styles */
+.jtadvgrid .summary-container,
+.jtadvgridprinting .summaryrow td,
+.noscrolling .summaryrow td {
+	background-color: #E5ECF5;
+	border-top: solid 1px #C1C1C1;
+}
+
+/* Command Bar styles */
+.jtadvgrid .cmdbar {
+	background-color: #E5ECF5;
+  border-top: solid 1px #C1C1C1;
+}
+
+.jtadvgrid .cmdbar a {
+  border: solid 1px #9EB9D4;
+  color: #5A7A9A;
+}
+
+.jtadvgrid .cmdbar a:hover {
+  background-color: #9EB9D4;
+  color: black;
+}
+
+/* Custom control styles */
+.jtadvgrid .jtdatepicker input {
+	font-size: 8pt;
+}
+
+.jtadvgrid .inttable .jtdatepicker .jtdatepickerdropdown {
+	height: 100%;
+	right: 0;
+	top: 0;
+}
+
+.jtadvgrid .filterbar .jtdatepickerdropdown {
+	right: -1px;
+	top: -1px;
+}
+
+.jtadvgrid .filterbar .jttimepicker input {
+	width: auto;
+}
+
+.jtadvgrid .filterbar .jttimepicker select {
+	width: auto;
+}
+/* End custom control styles */
+
+/* Extra styles */
+.jtadvgrid .waitwindow {
+	background: #ECECEC url(images/wait.gif) no-repeat center center;
+}
+/* End extra styles */

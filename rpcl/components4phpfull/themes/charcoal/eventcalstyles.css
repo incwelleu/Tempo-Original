@@ -1,0 +1,28 @@
+.jteventcalendar {
+    border: solid 1px #555555;
+}
+
+.jteventcalendartitle {
+    background-image: url(images/gradient.gif);
+    border-bottom: solid 1px #555555;
+    color: #555555;
+}
+
+.jteventcalendarheadrow {
+    background: #f0f0f0;
+}
+
+.jteventcalendarheadrow td {
+    border-left: solid 1px #555555;
+    color: #555555;
+}
+
+.jteventcalendarcell {
+    border-left: solid 1px #555555;
+    border-top: solid 1px #555555;
+    color: #555555;
+}
+
+.jteventcalendarcell_blank {
+    background-color: #f0f0f0;
+}

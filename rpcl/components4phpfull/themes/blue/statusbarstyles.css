@@ -1,0 +1,64 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtstatusbar
+{
+  background: url(images/menubar_back.gif);
+  border: solid 1px #5A7A9A;
+  overflow: hidden;
+  padding: 0 0 0 0;
+}
+
+.jtstatusbar_innertable
+{
+  color: white;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.jtstatussection
+{
+  color: white;
+  cursor: default;
+  font-size: 8pt;
+  font-weight: bold;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  background: url(images/statusbar_background.gif) repeat-x;
+  border: solid 1px #4B6176;
+}
+
+.jtstatusbarclear
+{
+  clear: both;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.jtstatusbarinner2
+{
+  height: 21px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.jtstatusbarscroller
+{
+  /*height: 21px;*/
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.jtstatusbaritemtable
+{
+	height: 100%;
+}

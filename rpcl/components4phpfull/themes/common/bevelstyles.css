@@ -1,0 +1,11 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtbevel {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #5D7EB0;
+}

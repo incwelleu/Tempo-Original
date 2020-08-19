@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this auth registration form theme -->
+  <skin id="default">
+    <!-- The HTML code for an edit form field -->
+    <code id="Edit">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$REQUIRED}:        Specifies whether this field is required. ('Required'/'')
+      {$CONTENT}:         Initial contents of this field.
+      {$MESSAGE}:         Validation message for this field.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="authfield autheditd">
+  <label for="{$FIELDNAME}">{$CAPTION}: <span class="authfielderror">{$MESSAGE}</span></label><br>
+  <input id="{$FIELDNAME}" name="{$FIELDNAME}" type="text" value="{$CONTENT}" size="{$SIZE}" maxlength="{$MAXLENGTH}"> {$REQUIRED}
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for an select field -->
+    <code id="Select">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$REQUIRED}:        Specifies whether this field is required. ('Required'/'')
+      {$CONTENT}:         Initial contents of this field.
+      {$MESSAGE}:         Validation message for this field.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="authfield autheditd">
+  <label for="{$FIELDNAME}">{$CAPTION}: <span class="authfielderror">{$MESSAGE}</span></label><br>
+  <select id="{$FIELDNAME}" name="{$FIELDNAME}" size="1">
+    <option>-- {$StrSelectItem} --</option>
+    {$CONTENT}
+  </select> {$REQUIRED}
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for a password form field -->
+    <code id="Password">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$FIELDNAME}:       Name of this field.
+      {$CAPTION}:         The caption for this field.
+      {$REQUIRED}:        Specifies whether this field is required. ('Required'/'')
+      {$CONTENT}:         Initial contents of this field.
+      {$MESSAGE}:         Validation message for this field.
+      -->
+      <![CDATA[
+<p id="{$FIELDNAME}_div" class="authfield autheditd">
+  <label for="{$FIELDNAME}">{$CAPTION}: <span class="authfielderror">{$MESSAGE}</span></label><br>
+  <input id="{$FIELDNAME}" name="{$FIELDNAME}" type="password" value="{$CONTENT}" size="{$SIZE}" maxlength="{$MAXLENGTH}"> {$REQUIRED}
+</p>
+      ]]>
+    </code>
+    <!-- The HTML code for the auth form. -->
+    <code id="authform">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Content of the auth form.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}_container" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}">
+  {$CONTENT}
+  <p>
+    <input id="{$NAME}" name="{$NAME}" type="submit" value="Register">
+  </p>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the registration success -->
+    <code id="regsuccess">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<h2>
+  {$StrCongratulationsRegistration}
+</h2>
+      ]]>
+    </code>
+  </skin>
+</skins>

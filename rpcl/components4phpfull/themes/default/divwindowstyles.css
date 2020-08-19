@@ -1,0 +1,124 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtdivwindow
+{
+  background: white;
+  border: solid 1px #C1C1C1;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.jtdivwindowcont
+{
+        background: transparent;
+}
+
+.jtdivwindowinner
+{
+  background: #C1C1C1;
+  border: solid 1px #908E8E;
+}
+
+.jtdivwindowtitlebar
+{
+  background: url(images/dropdown_back.gif) repeat-x scroll center -14px;
+  border-bottom: none;
+  padding-left: 3px;
+  padding-right: 3px;
+  top: 1px;
+}
+
+.jtdivwindowtitlebar_bsSingle
+{
+}
+
+.jtdivwindowcaption
+{
+  color: #515050;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.jtdivwindowbutton
+{
+  height: 22px;
+}
+
+.jtdivwindowbutton_help
+{
+  background-image: url(images/divwindow_help.gif);
+}
+
+.jtdivwindowbutton_help_down
+{
+  background-image: url(images/divwindow_help_down.gif);
+}
+
+.jtdivwindowbutton_minimize
+{
+  background-image: url(images/divwindow_minimize.gif);
+}
+
+.jtdivwindowbutton_minimize_down
+{
+  background-image: url(images/divwindow_minimize_down.gif);
+}
+
+.jtdivwindowbutton_maximize
+{
+  background-image: url(images/divwindow_maximize.gif);
+}
+
+.jtdivwindowbutton_maximize_down
+{
+  background-image: url(images/divwindow_maximize_down.gif);
+}
+
+.jtdivwindowbutton_close
+{
+  background-image: url(images/divwindow_close.gif);
+}
+
+.jtdivwindowbutton_close_down
+{
+  background-image: url(images/divwindow_close_down.gif);
+}
+
+.jtdivwindowbutton_restore
+{
+  background-image: url(images/divwindow_restore.gif);
+}
+
+.jtdivwindowbutton_restore_down
+{
+  background-image: url(images/divwindow_restore_down.gif);
+}
+
+.jtdivwindowcontentsouterframe
+{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.jtdivwindowcontentsframe
+{
+  background-color: white;
+  background-image: url(images/divwindow_top_frame.gif);
+  background-repeat: repeat-x;
+  border: solid 1px #908E8E;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.jtdivwindowcontentsframeleft
+{
+  background: url(images/divwindow_left_frame.gif);
+}
+
+.jtdivwindowcontentsframetopleft
+{
+  background: url(images/divwindow_topleft_frame.gif);
+}
+

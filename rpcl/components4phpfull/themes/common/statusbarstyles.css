@@ -1,0 +1,89 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtstatusbar
+{
+  -moz-user-select: none;
+  position: relative;
+}
+
+.jtstatusbar_inside
+{
+  background: url(images/dropdown_back.gif) repeat-x center center;
+  border: solid 1px #5D7EB0;
+  -moz-user-select: none;
+  padding: 1px;
+}
+
+.jtstatussection {
+	background: white;
+	border: solid 1px #5D7EB0;
+	color: #062F5D;
+	font-size: 8pt;
+	padding: 1px;
+}
+
+.jtstatussectioninner {
+	background: url(images/dropdown_back.gif) repeat-x center center;
+	height: 18px;
+	line-height: 17px;
+	padding: 0 3px;
+}
+
+.jtstatussectioninner table {
+	line-height: 1em;
+}
+
+.jtstatussectioninner table td {
+	font-size: 8pt;
+}
+
+.jtstatussection_over {
+}
+
+.jtstatussection_over .jttoolbuttoninner {
+	background: #F2F7FF; 
+}
+
+.jtstatussection_down {
+	background: #AFC3E4;
+}
+
+.jtstatussection_down .jttoolbuttoninner {
+	background: #AFC3E4;
+}
+
+.jtstatussection_disabled {
+	background: #EEEDED;
+	border: solid 1px #C1C1C1;
+	color: gray;
+}
+
+.jtstatussection_disabled .jttoolbuttoninner {
+	background: #EEEDED;
+}
+
+.jtstatussectionspacer
+{
+	width: 1px;
+}
+
+.jtstatusbarinner2
+{
+  /*height: 24px;*/
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.jtstatusbarscroller
+{
+  /*height: 24px;*/
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  zoom: expression("1");
+}

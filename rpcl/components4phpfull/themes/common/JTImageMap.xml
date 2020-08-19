@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this image map theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular image map skin -->
+    <code id="image">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$IMAGEHEIGHT}:     Image height
+      {$IMAGESOURCE}:     Image source
+      {$IMAGEWIDTH}:      Image width
+      -->
+      <![CDATA[
+<div style="width: {$WIDTH}; height: {$HEIGHT};" class="{$CSSCLASS}">
+  <img name="{$NAME}" id="{$NAME}" src="{$IMAGESOURCE}" width="{$IMAGEWIDTH}" height="{$IMAGEHEIGHT}" usemap ="#{$NAME}_map" border="0" />
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the image map container -->
+    <code id="map">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Area definitions
+      -->
+      <![CDATA[
+<map id="{$NAME}_map" name="{$NAME}_map">
+  {$CONTENT}
+</map>
+      ]]>
+    </code>
+    <!-- The HTML code for each individual map area -->
+    <code id="area">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$HREF}:            URL to go to when the user clicks this area.
+      {$ALT}:             Alternate text for the area.
+      {$COORDS}:          Coordinates of the area.
+      {$TYPE}:            Type of the area.
+      {$TABINDEX}:        Tab index of the area.
+      -->
+      <![CDATA[
+<area shape="{$TYPE}" coords="{$COORDS}" href="{$HREF}" alt="{$ALT}" tabindex="{$TABINDEX}" />
+      ]]>
+    </code>
+  </skin>
+</skins>

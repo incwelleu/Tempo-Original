@@ -1,0 +1,41 @@
+.fsTiny {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+}
+
+.fsSmall {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 9pt;
+}
+
+.fsDefault {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+}
+
+.fsMedium {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+}
+
+.fsLarge {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12pt;
+}
+
+.fsTitle {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14pt;
+}
+
+.fsHeading {
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16pt;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this progress bar theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular progress bar skin -->
+    <code id="progressbar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$PWIDTH}:          Pre-determined width of the progress indicator. Specified in percentage.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtprogressbar {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <div class="jtbb jtprogressbarinner">
+    <div id="{$NAME}_indicator" class="jtbb jtprogressbarindicator" style="width: {$PWIDTH}%;">
+      <div class="jtbb jtprogressbarbacktop">&nbsp;</div>
+      <div class="jtbb jtprogressbarbackbottom">&nbsp;</div>
+      <div class="jtbb jtprogressbarindicatorgradient">&nbsp;</div>
+    </div>
+  </div>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

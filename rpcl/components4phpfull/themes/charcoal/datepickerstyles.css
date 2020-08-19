@@ -1,0 +1,49 @@
+.jtdatepicker {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtdatepicker .jtdatepickertable .jtdatepickerinputcell {
+    background: #FFFFFF;
+}
+
+.jtdatepicker .jtdatepickertable .jtdatepickerarrowcell {
+    background-image: url(images/gradient.gif);
+    border: solid 1px #FFFFFF;
+}
+
+.jtdatepickercalendar {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtdatepickercalendartitle {
+    background-image: url(images/gradient.gif);
+    border-bottom: solid 1px #555555;
+    color: #555555;
+}
+
+.jtdatepickercalendarheader {
+	background: #f0f0f0;
+}
+
+.jtdatepickercalendarheader td {
+	color: #555555;
+}
+
+.jtdatepickerselected {
+	background-color: #AAAAAA;
+	color: #555555;
+}
+
+.jtdatepickerbottombar {
+	background: #f0f0f0;
+}
+
+.jtdatepickerbottomlink {
+	color: #555555;
+}
+
+.jtdatepickerbottomlink a {
+	color: #555555;
+}

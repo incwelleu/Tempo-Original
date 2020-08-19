@@ -1,0 +1,245 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtexppopup
+{
+  /*height: 70px;*/
+  height: auto;
+  position: absolute;
+  visibility: hidden;
+  width: 230px;
+  z-index: 100;
+}
+
+.jtepshadow
+{
+  height: 100%;
+  left: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.jtepshadow_inner
+{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.jtepshadow_tl
+{
+  background: url(images/ep_tl_shad.png);
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  left: -22px;
+  height: 14px;
+  overflow: hidden;
+  position: absolute;
+  top: -20px;
+  width: 17px;
+}
+
+.jtepshadow_tr
+{
+  background: url(images/ep_tr_shad.png);
+  background-repeat: no-repeat;
+  right: -8px;
+  height: 12px;
+  overflow: hidden;
+  position: absolute;
+  top: -19px;
+  width: 13px;
+}
+
+.jtepshadow_bl
+{
+  background: url(images/ep_bl_shad.png);
+  bottom: -5px;
+  left: -21px;
+  height: 11px;
+  overflow: hidden;
+  position: absolute;
+  width: 14px;
+}
+
+.jtepshadow_l
+{
+  background: url(images/ep_l_shad.png);
+  background-position: 1px 0;
+  background-repeat: repeat-y;
+  top: -6px;
+  left: -22px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 12px;
+}
+
+.jtepshadow_t
+{
+  background: url(images/ep_t_shad.png);
+  background-position: 0 1px;
+  background-repeat: repeat-x;
+  top: -20px;
+  left: -5px;
+  height: 10px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.jtepbevel
+{
+  left: 9px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 6px;
+  position: relative;
+  top: 9px;
+  z-index: 2;
+}
+
+.jtepbevel_border_container
+{
+  background: #E5ECF5;
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.jtepbevel_border_frame
+{
+  color: #2F455B;
+  font-size: 8pt;
+  padding-bottom: 4px;
+}
+
+.jtepbevel_border
+{
+  background: #9EB9D4;
+  overflow: hidden;
+  position: absolute;
+}
+
+.jtepbevel_border_l
+{
+  height: 100%;
+  left: -6px;
+  top: 0;
+  width: 1px;
+}
+
+.jtepbevel_border_t
+{
+  height: 1px;
+  left: 0;
+  top: -6px;
+  width: 100%;
+}
+
+.jtepbevel_border_r
+{
+  height: 100%;
+  right: -6px;
+  top: 0;
+  width: 1px;
+}
+
+.jtepbevel_border_b
+{
+  height: 1px;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+}
+
+.jtepbevel_corner
+{
+  height: 6px;
+  overflow: hidden;
+  position: absolute;
+  width: 6px;
+  z-index: 3;
+}
+
+.jtepbevel_corner_tl
+{
+  background: url(images/ep_tl.png);
+  left: 0;
+  top: 0;
+}
+
+.jtepbevel_corner_tr
+{
+  background: url(images/ep_tr.png);
+  height: 7px;
+  right: 0;
+  top: 0;
+}
+
+.jtepbevel_corner_bl
+{
+  background: url(images/ep_bl.png);
+  bottom: 0;
+  height: 6px;
+  left: 0;
+}
+
+.jtepbevel_corner_br
+{
+  background: url(images/ep_br.png);
+  right: 0;
+  bottom: 0;
+}
+
+.jtepbevel_border_inner
+{
+  background: #E5ECF5;
+  overflow: hidden;
+  position: absolute;
+}
+
+.jtepbevel_border_inner_l
+{
+  height: 100%;
+  left: -5px;
+  top: 0;
+  width: 5px;
+}
+
+.jtepbevel_border_inner_t
+{
+  height: 5px;
+  left: 0;
+  top: -5px;
+  width: 100%;
+}
+
+.jtepbevel_border_inner_r
+{
+  height: 100%;
+  right: -5px;
+  top: 0;
+  width: 5px;
+}
+
+.jtepbevel_border_inner_b
+{
+  height: 5px;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+}

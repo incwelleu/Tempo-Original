@@ -1,0 +1,23 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtprogressbar {
+	border: solid 1px #5A7A9A;
+	padding: 1px;
+}
+
+.jtprogressbarbacktop
+{
+	background: #BDCEE0;
+}
+
+.jtprogressbarbackbottom
+{
+	background: #3C5975;
+}
+
+.jtprogressbarindicatorgradient
+{
+	background: url(images/menubar_back.gif) repeat-x 0px center;
+}

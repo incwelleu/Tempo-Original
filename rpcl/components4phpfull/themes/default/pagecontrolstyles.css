@@ -1,0 +1,72 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtpagecontrol {
+  border: solid 1px #C1C1C1;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 26px;
+}
+
+.jttab
+{
+  color: #515050;
+  cursor: default;
+  font-size: 9pt;
+}
+
+.jttab_active
+{
+  background: white;
+  border-left: solid 1px #C1C1C1;
+  border-right: none;
+  border-top: none;
+}
+
+.jttab_inactive
+{
+  border-bottom: solid 1px #C1C1C1;
+  vertical-align: middle;
+}
+
+.jttabinner_active {  
+  border-right: solid 1px #C1C1C1;
+  border-top: solid 1px #C1C1C1;
+}
+
+.jttabinner_before {
+  background: white;
+  border-bottom: solid 1px #C1C1C1;
+  border-left: none;
+  border-right: solid 1px #C1C1C1;
+  height: 24px;
+  margin-right: 1px;
+  padding-right: 1px;
+  padding-top: 1px;
+}
+
+.jttabinner_after {
+  background: white;
+  border-bottom: solid 1px #C1C1C1;
+  border-left: solid 1px #C1C1C1;
+  height: 24px;
+  margin-left: 1px;
+  border-right: none;
+  padding-left: 1px;
+  padding-top: 1px;
+}
+
+.jttabinner2_inactive
+{
+  background: url(images/tab_back.gif);
+  border-top: none;
+  height: 22px;
+}
+
+.jttabcontainer {
+	border-bottom: solid 1px #C1C1C1;
+	border-left: solid 1px #C1C1C1;
+	border-right: solid 1px #C1C1C1;
+}

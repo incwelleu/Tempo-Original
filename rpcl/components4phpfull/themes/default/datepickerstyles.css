@@ -1,0 +1,102 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtdatepicker
+{
+	border: none;
+	overflow: hidden;
+	position: relative;
+}
+
+.jtdatepickerinput
+{
+	border: solid 1px #C1C1C1;
+	position: relative;
+	width: 100%;
+}
+
+.jtdatepickerdropdown
+{
+	background: white;
+	border: solid 1px #C1C1C1;
+	height: 20px;
+	overflow: hidden;
+	padding: 1px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+
+.jtdatepickerdropdowninner
+{
+	background: url(images/dropdown_back.gif) repeat-x center center;
+	height: 100%;
+	width: 100%;
+}
+
+.jtdatepickerdropdownarrow {
+	cursor: pointer;
+	height: 100%;
+}
+
+.jtdatepickercalendar
+{
+	border: solid 1px #C1C1C1;
+	/*height: 180px; Have determine height from inside -> out. */
+	/*overflow: hidden;*/
+}
+
+.jtdatepickercalendarinner
+{
+	/*height: 100%;*/
+	/*padding-bottom: 20px;
+	padding-top: 20px;*/
+	position: relative;
+	width: 100%;
+}
+
+.jtdatepickercalendartitle
+{
+	background: url(images/grid_dark_grad.gif) repeat-x center center;
+	border: solid 1px #908E8E;
+	padding-top: 0;
+}
+
+.jtdatepickercalendarprevyear
+{
+	background-image: url(images/doubleleftarrow.gif);
+}
+
+.jtdatepickercalendarprevmonth
+{
+	background-image: url(images/leftarrow.gif);
+}
+
+.jtdatepickercalendarnextyear
+{
+	background-image: url(images/doublerightarrow.gif);
+}
+
+.jtdatepickercalendarnextmonth
+{
+	background-image: url(images/rightarrow.gif);
+}
+
+.jtdatepickercalendarheader
+{
+	background: #EEEDED;
+}
+
+.jtdatepickerselected
+{
+	background-color: maroon;
+	color: white;
+}
+
+.jtdatepickerbottombar
+{
+	background: #EEEDED;
+}

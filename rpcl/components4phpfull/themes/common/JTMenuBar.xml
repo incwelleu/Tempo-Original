@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this menu theme -->
+  <skin id="default">
+    <!-- The HTML code for each menu bar button -->
+    <code id="menubarbutton">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of the menu bar button.
+      {$CAPTION}:         Caption of this menu bar button.
+      -->
+      <![CDATA[
+<a id="{$ITEMNAME}" href="{$LINK}" class="jtmenubaritem" tag="{$TAG}" style="background-image: url({$IMAGE});">{$CAPTION}</a>
+      ]]>
+    </code>
+    <!-- The HTML code for the menu bar itself -->
+    <code id="menubar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	    {$CSSCLASS}: 		  Custom CSS class.
+      {$CONTENT}:         HTML code for the contents of the menu bar.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtmenubar {$CSSCLASS}" style="width: {$WIDTH};">
+  <div class="jtbb jtmenubarinner">
+    {$CONTENT}
+    <div class="jtclear"></div>
+  </div>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for divider menu items -->
+    <code id="divider">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<li class="jtbb jtmenudivider">&nbsp;</li>
+      ]]>
+    </code>
+    <!-- The HTML code for each menu item -->
+    <code id="item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of the menu item.
+      {$CONTENT}:         HTML code for the content to display for the menu item.
+      -->
+      <![CDATA[
+<li id="{$ITEMNAME}" class="jtmenuitem" tag="{$TAG}">
+  <a href="{$LINK}" style="background-image: url({$IMAGE});">{$CONTENT}</a>
+{$SUBITEMS}</li>
+      ]]>
+    </code>
+    <!-- The HTML code for the menu itself -->
+    <code id="menu">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         HTML code for all the menu items.
+      {$MENU}:            Name of menu.
+      {$DISPLAY}:  :      Display state for the menu. Is visible at design-time, hidden at run-time.
+      {$VISIBILITY}:      Visibility state for the menu. Is visible at design-time, hidden at run-time.
+      -->
+      <![CDATA[
+<span class="jtmenuchildarrow">&gt;</span>
+<ul id="{$MENU}" class="jtfont jtmenu" style="display: {$DISPLAY};">
+  {$CONTENT}
+</ul>
+      ]]>
+    </code>
+  </skin>
+</skins>

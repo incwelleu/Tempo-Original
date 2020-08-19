@@ -1,0 +1,260 @@
+.jtadvgrid {
+    background-color: #FFFFFF;
+    border-bottom: solid 1px #AAAAAA;
+    border-left: solid 1px #AAAAAA;
+    border-right: solid 1px #AAAAAA;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid td {
+  font-size: 8pt;
+}
+
+.jtadvgrid .inttable {
+    background-color: #FFFFFF;
+}
+
+.jtadvgrid .inttable tbody {
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .pager {
+    background-color: #FFFFFF;
+    background-image: url(images/gradient.gif);
+    border-top: solid 1px #AAAAAA;
+    color: #555555;
+}
+
+* html .jtadvgrid .toppager {
+    background-color: #FFFFFF;
+    background-image: url(images/gradient.gif);
+}
+
+.jtadvgrid .inttable .oddrow td {
+    background-color: #f0f0f0;
+}
+
+.jtadvgrid .inttable .grouprow td {
+    background-color: #CCCCCC;
+}
+
+.jtadvgrid .inttable .grouprow .groupexpcolcell {
+    background: #CCCCCC;
+}
+
+.jtadvgrid .inttable .row .grouppadcell,
+.jtadvgrid .inttable .memorow .grouppadcell,
+.jtadvgrid .inttable .grouprow .grouppadcell {
+    background: #CCCCCC;
+}
+
+.jtadvgrid .inttable .grouprow .groupcell {
+    background: #CCCCCC;
+}
+
+.jtadvgrid .inttable .editcolumn a {
+    color: #555555;
+}
+
+.jtadvgrid .inttable tr .merged {
+    background-color: #f0f0f0;
+}
+
+.jtadvgrid .horzlines tbody tr td.cell,
+.jtadvgrid .horzlines tbody tr td.cellwithchildren,
+.jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .horzlines tbody tr td.sc,
+.jtadvgrid .horzlines tbody tr td.editcolumn,
+.jtadvgrid .horzlines tbody tr td.memocell,
+.jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .horzlines tbody tr.columnheader td.headercell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.cell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.cellwithchildren,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.sc,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.editcolumn,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr td.memocell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .horzlines tbody tr.columnheader td.headercell {
+    border-bottom: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .vertlines tbody tr td.cell,
+.jtadvgrid .vertlines tbody tr td.cellwithchildren,
+.jtadvgrid .vertlines tbody tr td.blankcell,
+.jtadvgrid .vertlines tbody tr td.detailrow,
+.jtadvgrid .vertlines tbody tr td.sc,
+.jtadvgrid .vertlines tbody tr td.editcolumn,
+.jtadvgrid .vertlines tbody tr td.memocell,
+.jtadvgrid .vertlines tbody tr.filterbar td.fl,
+.jtadvgrid .vertlines tbody tr.columnheader td.headercell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.cell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.cellwithchildren,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr td.blankcell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr td.detailrow,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.sc,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.editcolumn,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .vertlines tbody tr td.memocell,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr.filterbar td.fl,
+.jtadvgrid .vertlines tbody tr .jtadvgrid .horzlines tbody tr.columnheader td.headercell,
+.jtadvgrid .horzlines tbody tr .jtadvgrid .vertlines tbody tr.columnheader td.groupbyheader {
+    border-right: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .inttable tbody tr td.selected,
+.jtadvgrid .inttable tbody tr.rowselected td {
+    background-color: #CEDCF8;
+    border-color: #555555;
+}
+
+.jtadvgrid .inttable tbody .evenrow .noscrollcell div.cd, .jtadvgrid .inttable tbody .oddrow .noscrollcell div.cd {
+    background: #CCCCCC repeat-y left center;
+}
+
+.jtadvgrid .inttable tbody .row .selected .noscrolldiv, .jtadvgrid .inttable tbody .rowselected .noscrollcell div.cd {
+    background-color: #FFFFFF;
+    border-color: #CCCCCC;
+}
+
+.jtadvgrid .vertlines tbody tr .noscrollcell div.cd {
+    border-left: solid 1px #AAAAAA;
+    border-right: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .inttable tbody tr td .commandcol .buttondiv div {
+    background: #FFFFFF;
+    border: 1px solid #555555;
+}
+
+.jtadvgrid .inttable tbody tr td .commandcol input {
+    background: url(images/gradient.gif) repeat-x center center;
+}
+
+.jtadvgrid .inttable .cellexpand {
+    background: url(images/treeplus.gif) no-repeat left center;
+}
+
+.jtadvgrid .inttable .cellwithchildren .expanded {
+    background: url(images/treeminus.gif) no-repeat left center;
+}
+
+.jtadvgrid .inttable .cellwithchildren .collapsed {
+    background: url(images/treeplus.gif) no-repeat left center;
+}
+
+.jtadvgrid .dragselect {
+    background-color: #f0f0f0;
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .columnheader td {
+    background: #f0f0f0 url(images/gradient.gif) repeat-x left center;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .columnheader td a {
+    color: #555555;
+}
+
+.jtadvgrid .colmover {
+    background: #f0f0f0 url(images/gradient.gif) repeat-x left center;
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .colpositioner {
+    background-color: #f0f0f0;
+}
+
+.jtadvgrid .filterbar td {
+    background-color: #f0f0f0;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .filterbar td select {
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .filterbar td .textfilterinputcontainer {
+    background-color: #FFFFFF;
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .intheadertable tbody .filterbar .noscrollfilterdiv {
+    background-color: #f0f0f0;
+    border-right: solid 1px #AAAAAA;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .groupbar {
+    background-color: #f0f0f0;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .nogroups {
+    color: #555555;
+}
+
+.jtadvgrid .inttable .grouprow .expanded div {
+    background-image: url(images/treeminus.gif);
+}
+
+.jtadvgrid .inttable .grouprow .collapsed div {
+    background-image: url(images/treeplus.gif);
+}
+
+.jtadvgrid .textediteditor {
+    background-color: #FFFFFF;
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .textediteditor input {
+    background-color: #FFFFFF;
+}
+
+.jtadvgrid .memoeditor {
+    background-color: #FFFFFF;
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .memoeditor textarea {
+    background-color: #FFFFFF;
+}
+
+.jtadvgrid .inttable .editorform td {
+    background-color: #f0f0f0;
+    border-bottom: solid 1px #AAAAAA;
+    border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .inttable .editorform td .editorformdiv .cancelbtn {
+    border: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .inttable .editorform td p a {
+    color: #555555;
+}
+
+.jtadvgrid .summary-container,
+.jtadvgridprinting .summaryrow td,
+.noscrolling .summaryrow td {
+	background-color: #f0f0f0;
+	border-top: solid 1px #AAAAAA;
+}
+
+.jtadvgrid .cmdbar {
+	background-color: #f0f0f0;
+  border-top: solid 1px #AAAAAA;
+  font-size: 8pt;
+}
+
+.jtadvgrid .cmdbar a {
+  border: solid 1px #AAAAAA;
+  color: #555555;
+  line-height: 16px;
+}
+
+.jtadvgrid .cmdbar a:hover {
+  background-color: #FFFFFF;
+}

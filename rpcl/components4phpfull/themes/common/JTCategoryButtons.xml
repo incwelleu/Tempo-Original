@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this category buttons theme -->
+  <skin id="default">
+    <!-- The HTML code for links -->
+    <code id="link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$LINK}:            Destination URL.
+      {$CONTENT}:         Button caption.
+      {$CATEGORYINDEX}:   Category index.
+      {$BUTTONINDEX}:     Button index.
+      {$ITEMNAME}:        Compound item name.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<a id="{$ITEMNAME}_link" href="{$LINK}" onclick="return false;" tabindex="{$TABINDEX}">{$CONTENT}</a>
+      ]]>
+    </code>
+    <!-- The HTML code for each button -->
+    <code id="button">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Button caption.
+      {$CATEGORYINDEX}:   Category index.
+      {$BUTTONINDEX}:     Button index.
+      {$ITEMNAME}:        Compound item name.
+      {$STYLE}:           CSS style overrides.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<div id="{$ITEMNAME}" class="jtbb jtfont jtcatbutton"{$STYLE} onclick="return {$NAME}ClickHandler(event);" onmouseover="JTCategoryButtonsMouseOver('{$ITEMNAME}')" onmouseout="JTCategoryButtonsMouseOut('{$ITEMNAME}')" tabindex="{$TABINDEX}">{$CONTENT}</div>
+      ]]>
+    </code>
+    <!-- The HTML code for each category -->
+    <code id="category">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CAPTION}:         Category caption.
+      {$CONTENT}:         Button caption.
+      {$CATEGORYINDEX}:   Category index.
+      {$ITEMNAME}:        Compound item name.
+      {$STYLE}:           CSS style overrides.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+  <div id="{$ITEMNAME}" class="jtbb jtcategory">
+    <div id="{$ITEMNAME}_caption" class="jtbb jtfont jtcatcaption" onclick="JTCategoryButtonCatClick('{$NAME}','{$ITEMNAME}')"><span>{$CAPTION}</span></div>
+    {$CONTENT}
+  </div>
+      ]]>
+    </code>
+    <!-- The HTML code for the whole category button set. -->
+    <code id="categorybuttons">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Button caption.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtcategorybuttons {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+{$CONTENT}
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

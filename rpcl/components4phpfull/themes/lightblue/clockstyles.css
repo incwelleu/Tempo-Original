@@ -1,0 +1,51 @@
+.jtdigitalclock {
+    background-image: url(images/clock_dig_back.gif);
+}
+
+.jtdigitalclock_d0 {
+    background: url(images/clock_dig_0.gif);
+}
+
+.jtdigitalclock_d1 {
+    background: url(images/clock_dig_1.gif);
+}
+
+.jtdigitalclock_d2 {
+    background: url(images/clock_dig_2.gif);
+}
+
+.jtdigitalclock_d3 {
+    background: url(images/clock_dig_3.gif);
+}
+
+.jtdigitalclock_d4 {
+    background: url(images/clock_dig_4.gif);
+}
+
+.jtdigitalclock_d5 {
+    background: url(images/clock_dig_5.gif);
+}
+
+.jtdigitalclock_d6 {
+    background: url(images/clock_dig_6.gif);
+}
+
+.jtdigitalclock_d7 {
+    background: url(images/clock_dig_7.gif);
+}
+
+.jtdigitalclock_d8 {
+    background: url(images/clock_dig_8.gif);
+}
+
+.jtdigitalclock_d9 {
+    background: url(images/clock_dig_9.gif);
+}
+
+.jtdigitalclock_am {
+    background: url(images/clock_dig_am.gif);
+}
+
+.jtdigitalclock_pm {
+	background: url(images/clock_dig_pm.gif);
+}

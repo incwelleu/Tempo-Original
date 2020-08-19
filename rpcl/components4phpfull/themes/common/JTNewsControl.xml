@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular bevel skin -->
+    <code id="newscontrol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Content of components dropped on this bevel.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtnewscontrol {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <ul>
+    {$CONTENT}&nbsp;
+  </ul>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for each individual news item -->
+    <code id="item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$INDEX}:           Integer index of this news item.
+      {$TITLE}:           News item title.
+      {$DESCRIPTION}:     News item description
+      {$LINK}:            Link to news item page.
+	  {$DATE}:			  Date of news item.
+      {$STYLE}:           CSS font overrides.
+      -->
+      <![CDATA[
+<li id="{$NAME}_{$INDEX}" class="jtbb jtnewsitem"{$STYLE}>
+  <span class="jtnewsitemtitle">{$LINK}</span><br>
+  <span class="jtnewsitemdesc">{$DATE}</span><br>
+  <span class="jtnewsitemdesc">{$DESCRIPTION}</span>
+</li>
+      ]]>
+    </code>
+    <!-- The HTML code for news item links -->
+    <code id="link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$TITLE}:           News item title.
+      {$DESCRIPTION}:     News item description
+      {$URL}:             URL of the news item's page.
+      -->
+      <![CDATA[
+      <a href="{$URL}">{$TITLE}</a>
+      ]]>
+    </code>
+  </skin>
+</skins>

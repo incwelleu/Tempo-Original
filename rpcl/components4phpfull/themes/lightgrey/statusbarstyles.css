@@ -1,0 +1,36 @@
+.jtstatusbar_inside {
+  background-image: url(images/gradient.gif);
+  border: solid 1px #CACACA;
+}
+
+.jtstatussection {
+    background: #FFFFFF;
+    border: solid 1px #CACACA;
+    color: #000000;
+}
+
+.jtstatussectioninner {
+    background-image: url(images/gradient.gif);
+}
+
+.jtstatussection_over .jttoolbuttoninner {
+    background: #F4F4F4;
+}
+
+.jtstatussection_down {
+    background: #EAEAEA;
+}
+
+.jtstatussection_down .jttoolbuttoninner {
+    background: #EAEAEA;
+}
+
+.jtstatussection_disabled {
+    background: #E8E8E8;
+    border: solid 1px #CACACA;
+    color: #000000;
+}
+
+.jtstatussection_disabled .jttoolbuttoninner {
+    background: #E8E8E8;
+}

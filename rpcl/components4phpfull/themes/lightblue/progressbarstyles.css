@@ -1,0 +1,16 @@
+.jtprogressbar {
+	background: #FFFFFF;
+	border: solid 1px #BAC9DB;
+}
+
+.jtprogressbarbacktop {
+	background: #F7FBFF;
+}
+
+.jtprogressbarbackbottom {
+	background: #DCE6F4;
+}
+
+.jtprogressbarindicatorgradient {
+	background-image: url(images/gradient.gif);
+}

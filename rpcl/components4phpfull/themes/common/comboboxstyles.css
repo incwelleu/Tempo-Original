@@ -1,0 +1,98 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtcombobox {
+	background: white;
+	border: solid 1px #5D7EB0;
+	overflow: hidden;
+}
+
+.jtcombobox table {
+	/*border-collapse: collapse;*/
+	table-layout: fixed;
+	width: 100%;
+}
+
+.jtcombobox table tbody tr td.cbi input {
+	border: none;
+	border-width: 0px;
+	width: 100%;
+}
+
+.jtcombobox table tbody tr td.cbi {
+	background: white;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.jtcombobox table tbody tr td.cba {
+	background: url(images/dropdown_back.gif) repeat-x center center;
+	border: solid 1px white;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	width: 15px;
+}
+
+.jtcombobox table tbody tr td.cba div {
+	background-position: center center;
+	background-image: url(images/dropdownarrow.gif);
+	background-repeat: no-repeat;
+	font-size: 0;
+	height: 5px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.jtcomboboxdropdownbox {
+	background: white;
+	border: solid 1px #5D7EB0;
+	display: none;
+	height: 150px;
+	overflow: auto;
+	overflow-x: visible;
+	position: absolute;
+}
+
+.jtcomboboxdropdownbox .cbz {
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.jtcomboboxdropdownbox ul {
+	font-size: 10pt;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.jtcomboboxdropdownbox li {
+	cursor: pointer;
+	line-height: 12pt;
+	padding: 3px 30px 3px 5px;
+	white-space: nowrap;
+}
+
+.jtcomboboxdropdownbox li span.value {
+	display: none;
+}
+
+.jtcomboboxdropdownbox .jtcomboboxhidden {
+	display: none;
+}
+
+.jtcomboboxdropdownbox ul .over {
+	background-color: #DBE4F5;
+	color: black;
+}
+
+.jtcomboboxdropdownbox ul .jtcomboboxitemselected {
+	background-color: #AFC3E4;
+}
+
+.jtcomboboxdisabled table tbody tr td.cba {
+  background: silver !important;
+}

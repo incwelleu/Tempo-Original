@@ -1,0 +1,48 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtcategorybuttons {
+  border-top: solid 1px #9EB9D4;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.jtcategory
+{
+  border-bottom: solid 1px #9EB9D4;
+  border-left: solid 1px #9EB9D4;
+  border-right: solid 1px #9EB9D4;
+  padding: 2px;
+}
+
+.jtcatcaption {
+  background: url(images/cat_header_back.gif);
+  border: solid 1px #D7DCE2;
+  color: white;
+  margin-bottom: 2px;
+  text-align: center;
+  padding: 0;
+}
+
+.jtcatbutton {
+  border-bottom: none;
+  border-left: solid 1px #A4BDD7;
+  border-right: solid 1px #A4BDD7;
+  border-top: solid 1px #A4BDD7;
+  font-size: 8pt;
+  padding: 2px;
+  text-align: center;
+}
+
+.jtcatbuttonover {
+  background: #F9D6BC;
+}
+
+.jtcatbottom
+{
+  background: #A4BDD7;
+  height: 1px;
+  overflow: hidden;
+}

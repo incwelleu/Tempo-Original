@@ -1,0 +1,26 @@
+.jtcombobox {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtcombobox table tbody tr td.cbi {
+    background: #FFFFFF;
+}
+
+.jtcombobox table tbody tr td.cba {
+    background-image: url(images/gradient.gif);
+}
+
+.jtcomboboxdropdownbox {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtcomboboxdropdownbox ul .over {
+	background-color: #f0f0f0;
+	color: #555555;
+}
+
+.jtcomboboxdropdownbox ul .jtcomboboxitemselected {
+	background-color: #AAAAAA;
+}

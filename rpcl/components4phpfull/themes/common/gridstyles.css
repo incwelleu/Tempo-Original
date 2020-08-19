@@ -1,0 +1,122 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtgrid {
+  background: white;
+  border: solid 1px #5D7EB0;
+  overflow: hidden;
+  position: relative;
+}
+
+.jtgrid_inner {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.jtgrid_innernoscroll {
+  height: auto;
+  overflow: visible;
+}
+
+.jtgridnoscroll {
+  height: auto;
+}
+
+.jtgrid_header_div {
+  background: url(images/grid_dark_grad.gif) repeat-x center center;
+  border-bottom: solid 1px #5D7EB0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.jtgrid_data_scroll {
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.jtgrid_data_noscroll {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.jtgrid_table {
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.jtgrid_header_row {
+  background: #C1C1C1;
+}
+
+.jtgrid_header_cell_div {
+	position: absolute;
+	top: 0;
+}
+
+.jtgrid_header_cell {
+  border-right: solid 1px #5D7EB0;
+  color: #515050;
+  font-size: 9pt;
+  font-weight: bold;
+  overflow-x: hidden;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+
+.jtgrid_header_last {
+  border-right: none;
+}
+
+.jtgrid_data_cell {
+  border-right: solid 1px #C5D3EC;
+  border-bottom: solid 1px #C5D3EC;
+  color: #515050;
+  font-size: 9pt;
+  padding: 1px 4px;
+}
+
+.jtgrid_row_selected
+{
+  background: silver;
+  border: dotted 1px black;
+}
+
+.jtgrid_row_even
+{
+  background: white;
+}
+
+.jtgrid_row_odd {
+  background: #F4FAFF;
+}
+
+.jtgrid_cell_selected {
+  background: #CEDCF8;
+  font-size: 9pt;
+}
+
+.jtgridinput
+{
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.jtgrid_cellspacer
+{
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+}

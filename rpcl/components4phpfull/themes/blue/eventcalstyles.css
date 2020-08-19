@@ -1,0 +1,75 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jteventcalendar
+{
+  border: solid 1px #5A7A9A;
+  padding: 1px;
+}
+
+.jteventcalendartitle {
+  background: #9EB9D4;
+  border-bottom: none;
+  color: #5A7A9A;
+  font-size: 22pt;
+  font-weight: normal;
+  height: 48px;
+  text-align: left;
+}
+
+.jteventcalendarheadrow {
+  background: #E5ECF5;
+}
+
+.jteventcalendarheadrow td {
+  border-bottom: solid 1px #C4D4E5;
+  border-left: none;
+  border-right: solid 1px #C4D4E5;
+  color: #9EB9D4;
+  font-size: 22pt;
+  height: 45px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: auto;
+}
+
+.jteventcalendarheadlastcell
+{
+  border-right: none;
+}
+
+.jteventcalendarevent
+{
+  background: #F9D6BC;
+  color: #95321F;
+  font-size: 8pt;
+}
+
+.jteventcalendarcellday {
+  padding: 0;
+}
+
+.jteventcalendarcell {
+  border-left: none;
+  border-right: solid 1px #C4D4E5;
+  border-top: none;
+  border-bottom: solid 1px #C4D4E5;
+  color: #5A7A9A;
+  height: 14%;
+}
+
+.jteventcalendarcell6
+{
+  border-right: none;
+}
+
+.jteventcalendarrow5
+{
+  border-bottom: none;
+}
+
+.jteventcalendarcell_blank {
+  background-color: #E5ECF5;
+}

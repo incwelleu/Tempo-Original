@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Drop zone for the form designer, used to position the controls correctly when rendering.
+       Set to the top-left corner of the region where controls can be dropped onto this control. -->
+  <setting name="DropZone" value="0,0" />
+  <!-- The default skin for this groupbox theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular groupbox skin -->
+    <code id="groupbox">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$CAPTION}:         Groupbox caption.
+      {$CONTENT}:         Content of components dropped on this group-box.
+      -->
+      <![CDATA[
+<fieldset id="{$NAME}" class="jtgroupbox {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <legend class="jtfont jtgroupboxcaption">{$CAPTION}</legend>
+  <div class="jtgroupboxcontents">
+    {$CONTENT}
+  </div>
+</fieldset>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,43 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtmenudivider {
+  background: #9EB9D4;
+  height: 3px;
+  margin: 0;
+}
+
+.jtmenuitem {
+  border-top: solid 1px #9EB9D4;
+  color: #2F455B;
+}
+
+.jtmenuitem_over {
+  background: #F9D6BC;
+}
+
+.jtmenu {
+  background: #E5ECF5;
+  border-top: none;
+  border-bottom: solid 1px #9EB9D4;
+  border-left: solid 1px #9EB9D4;
+  border-right: solid 1px #9EB9D4;
+  padding: 0;
+}
+
+.jtmenubar {
+  background: url(images/grid_light_grad.gif) repeat-x center center;
+  border: solid 1px #5A7A9A;
+}
+
+.jtmenubaritem {
+  border: solid 1px transparent;
+  border: expression("solid 1px #4B6176");
+  color: white;
+}
+
+.jtmenubarbutton_over {
+  background-color: #5A7A9A;
+  border: solid 1px #4B6176;
+}

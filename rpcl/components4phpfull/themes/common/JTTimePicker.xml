@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this time picker theme -->
+  <skin id="default">
+    <!-- The HTML code for the time picker. -->
+    <code id="datetime">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$HOUR}:            Hour value.
+      {$MINUTE}:          Minute value.
+      {$SECOND}:          Second value.
+      {$ISAM}:            Specifies whether AM is selected. (' checked'/'')
+      {$ISPM}:            Specifies whether PM is selected. (' checked'/'')
+      {$12HOUR}:          Sets whether to display the AM/PM selector. (block/none)
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jttimepicker {$CSSCLASS}" style="width: {$WIDTH};">
+  <input name="{$NAME}_h" id="{$NAME}_h" type="text" maxlength="2" size="3" value="{$HOUR}" onkeydown="return JTTimePickerKeyDown(event);" onkeypress="return JTTimePickerKeyPress(event);" onfocus="JTTimePickerControlFocus('{$NAME}', this)" onblur="JTTimePickerControlBlur('{$NAME}', this)" />
+  <span>:</span>
+  <input name="{$NAME}_m" id="{$NAME}_m" type="text" maxlength="2" size="3" value="{$MINUTE}" onkeydown="return JTTimePickerKeyDown(event);" onkeypress="return JTTimePickerKeyPress(event);" onfocus="JTTimePickerControlFocus('{$NAME}', this)" onblur="JTTimePickerControlBlur('{$NAME}', this)" />
+  <span>:</span>
+  <input name="{$NAME}_s" id="{$NAME}_s" type="text" maxlength="2" size="3" value="{$SECOND}" onkeydown="return JTTimePickerKeyDown(event);" onkeypress="return JTTimePickerKeyPress(event);" onfocus="JTTimePickerControlFocus('{$NAME}', this)" onblur="JTTimePickerControlBlur('{$NAME}', this)" />
+  <span>&nbsp;</span>
+  <select name="{$NAME}_a" id="{$NAME}_a" size="1" style="display: {$12HOUR};" onchange="JTTimePickerControlChange('{$NAME}')">
+    <option{$ISAM}>AM</option>
+    <option{$ISPM}>PM</option>
+  </select>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

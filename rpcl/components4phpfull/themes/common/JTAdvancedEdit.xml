@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bevel theme -->
+  <skin id="default">
+    <!-- The HTML code for the edit control -->
+    <code id="edit">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Content of edit control.
+      {$EVENTS}:          JavaScript events for this edit control.
+      {$DISABLED}:        Specifies whether this edit control is disabled. (' disabled'/'')
+      {$MAXLENGTH}:       Specifies the maximum no. of characters that can be entered into this control.
+      {$READONLY}:        Specifies whether this control is read-only.
+      {$STYLES}:          Contains stylesheet overrides.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$TABINDEX}:        Tab index override.
+      {$TYPE}:            Specifes the type of edit control. (text/password)
+      -->
+      <![CDATA[
+<input name="{$NAME}" id="{$NAME}" type="{$TYPE}" size="1"{$DISABLED}{$MAXLENGTH}{$READONLY} class="jtbb jtfont {$CSSCLASS}" style="cursor: {$CURSOR}; float: left; width: {$WIDTH};{$STYLES}"{$EVENTS} value="{$CONTENT}" tabindex="{$TABINDEX}">
+      ]]>
+    </code>
+  </skin>
+</skins>

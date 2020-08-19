@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this image submit theme -->
+  <skin id="default">
+    <!-- The HTML code for this particular image submit skin -->
+    <code id="imagesubmit">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$EVENTS}:          JavaScript events for this submit control.
+      {$SRC}:             URL of image to display.
+      {$TABINDEX}:        Tab order.
+      -->
+      <![CDATA[
+<input id="{$NAME}" name="{$NAME}" class="{$CSSCLASS}" type="image" src="{$SRC}" tabindex="{$TABINDEX}" style="width: {$WIDTH}; height: {$HEIGHT};"{$EVENTS} />
+      ]]>
+    </code>
+  </skin>
+</skins>

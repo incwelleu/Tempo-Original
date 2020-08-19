@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this tree view theme -->
+  <skin id="default">
+    <!-- The HTML code for the tree view container -->
+    <code id="tree">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$CONTENT}:         HTML code for all the child nodes.
+      {$TABINDEX}         Tab stop index for the tree view.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jttreeview {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" tabindex="{$TABINDEX}">
+  <div class="jbb jttreeviewinner">
+    <div class="jtbb jttreeviewborder jttreeviewborder_t">&nbsp;</div>
+    <div class="jtbb jttreeviewborder jttreeviewborder_l">&nbsp;</div>
+    <div class="jtbb jttreeviewborder jttreeviewborder_r">&nbsp;</div>
+    <div class="jtbb jttreeviewborder jttreeviewborder_b">&nbsp;</div>
+    <div class="jtbb jttreeviewcorner jttreeviewcorner_tl">&nbsp;</div>
+    <div class="jtbb jttreeviewcorner jttreeviewcorner_tr">&nbsp;</div>
+    <div class="jtbb jttreeviewcorner jttreeviewcorner_bl">&nbsp;</div>
+    <div class="jtbb jttreeviewcorner jttreeviewcorner_br">&nbsp;</div>
+    <div class="jtbb jttreeviewscroller">
+      <ul>
+{$CONTENT}
+      </ul>
+    </div>
+  </div>
+  <input type="hidden" id="{$NAME}_sn" name="{$NAME}_sn" value="" />
+  <input type="hidden" id="{$NAME}_cn" name="{$NAME}_cn" value="" />
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for a tree node that has sub-nodes -->
+    <code id="node_with_children">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CHILDREN}:        HTML code for all this nodes children.
+      {$INDEX}            Index of this node in its parent node's child list.
+      {$NODENAME}         Name of this node.
+      {$CAPTION}          Caption of this node.
+      {$STYLE}            Font style overrides.
+      -->
+      <![CDATA[
+<li id="{$NODENAME}" class="jttreerootnode jttreerootnodewithchildren">
+  <div id="{$NODENAME}_plus" class="jtfont jttreenodeminus" onclick="JTTreeViewPlusClick(event,'{$NAME}')"></div> <span id="{$NODENAME}_title" class="jtfont jttreenodetitle" style="{$STYLE}" onclick="JTTreeViewNodeClick(event,'{$NAME}')">{$CAPTION}</span>
+  <ul>
+    {$CHILDREN}
+  </ul>
+</li>
+      ]]>
+    </code>
+    <!-- The HTML code for a tree node that doesn't have sub-nodes -->
+    <code id="node_without_children">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CHILDREN}:        HTML code for all this nodes children.
+      {$INDEX}            Index of this node in its parent node's child list.
+      {$NODENAME}         Name of this node.
+      {$CAPTION}          Caption of this node.
+      {$STYLE}            Font style overrides.
+      -->
+      <![CDATA[
+<li id="{$NODENAME}"><span id="{$NODENAME}_title" class="jtfont jttreenodetitle" style="{$STYLE}" onclick="JTTreeViewNodeClick(event,'{$NAME}')">{$CAPTION}</span></li>
+      ]]>
+    </code>
+    <!-- The HTML code for a tree node that has sub-nodes -->
+    <code id="node_with_children_link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CHILDREN}:        HTML code for all this nodes children.
+      {$INDEX}            Index of this node in its parent node's child list.
+      {$NODENAME}         Name of this node.
+      {$CAPTION}          Caption of this node.
+      {$STYLE}            Font style overrides.
+      -->
+      <![CDATA[
+<li id="{$NODENAME}" class="jttreerootnode jttreerootnodewithchildren">
+  <div id="{$NODENAME}_plus" class="jtfont jttreenodeminus" onclick="JTTreeViewPlusClick(event,'{$NAME}')"></div> <a href="{$LINK}" id="{$NODENAME}_title" class="jtfont jttreenodetitle" style="{$STYLE}" onclick="return JTTreeViewNodeClick(event,'{$NAME}')">{$CAPTION}</a>
+  <ul>
+    {$CHILDREN}
+  </ul>
+</li>
+      ]]>
+    </code>
+    <!-- The HTML code for a tree node that doesn't have sub-nodes -->
+    <code id="node_without_children_link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CHILDREN}:        HTML code for all this nodes children.
+      {$INDEX}            Index of this node in its parent node's child list.
+      {$NODENAME}         Name of this node.
+      {$CAPTION}          Caption of this node.
+      {$STYLE}            Font style overrides.
+      -->
+      <![CDATA[
+<li id="{$NODENAME}"><a href="{$LINK}" id="{$NODENAME}_title" class="jtfont jttreenodetitle" style="{$STYLE}" onclick="return JTTreeViewNodeClick(event,'{$NAME}')">{$CAPTION}</a></li>
+      ]]>
+    </code>
+  </skin>
+</skins>

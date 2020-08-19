@@ -1,0 +1,16 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtbb
+{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.jtfont
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}

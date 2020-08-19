@@ -1,0 +1,55 @@
+X-Powered-By: PHP/5.2.17
+Content-type: text/html
+
+TO: daniela@incwell.eu Daniela Maynez 
+SQL: SELECT DISTINCT company.short_name,
+       line_item.description,
+       line_item.service_start_dt, line_item.service_end_dt
+FROM company
+     INNER JOIN line_item ON company.company_id = line_item.company_id
+     INNER JOIN service ON line_item.service_id = service.service_id
+     INNER JOIN user ON company.user_id = user.user_id AND user.status_cd = 'a'
+     INNER JOIN contact ON company.contact_list_id = contact.contact_list_id
+WHERE (line_item.status_cd = 'SV') AND
+      (( MONTH(line_item.service_start_dt) = MONTH('2020-09-01') AND YEAR(line_item.service_start_dt) = YEAR('2020-09-01') ) OR
+       ( MONTH(line_item.service_end_dt) = MONTH('2020-09-01') AND YEAR(line_item.service_end_dt) = YEAR('2020-09-01') ))
+ORDER BY company.short_name 
+
+Cantidad de registros: 10 
+From: clientarea@incwell.eu ('TEMPO') 
+Clients with "<strong>Regular services</strong>" that will expire in the next month.<br /><br /><table width='50%' border='0' cellspacing='0'>
+            <tr>
+              <td><strong>Short name</strong></td>
+	            <td><strong>Services</strong></td>
+            </tr><tr>
+	            <td>adservice</td>
+	            <td>Accounting for {month}</td>
+              </tr><tr>
+	            <td>adservice</td>
+	            <td>Registered address for {month}</td>
+              </tr><tr>
+	            <td>adservice</td>
+	            <td>Tax filing for {month}</td>
+              </tr><tr>
+	            <td>cafe sommelier</td>
+	            <td>Filing of tax form 303</td>
+              </tr><tr>
+	            <td>jri</td>
+	            <td>Bank account support service for {month}</td>
+              </tr><tr>
+	            <td>leoncycle</td>
+	            <td>Tax representation and reception of government notifications via DEH for {year}</td>
+              </tr><tr>
+	            <td>mellius</td>
+	            <td>Tax filing for {quarter} for Mobile Defensivo</td>
+              </tr><tr>
+	            <td>smash</td>
+	            <td>Tax filing for {month}</td>
+              </tr><tr>
+	            <td>smash</td>
+	            <td>Accounting for {month}</td>
+              </tr><tr>
+	            <td>warshay</td>
+	            <td>Payroll for {month}</td>
+              </tr></table><br /><br />Automatic message from "Standard emails internal". 
+Envío con exito!!!

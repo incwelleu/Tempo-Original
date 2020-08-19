@@ -1,0 +1,36 @@
+.jttoolbar_inside {
+  background-image: url(images/gradient.gif);
+  border: solid 1px #BAC9DB;
+}
+
+.jttoolbutton {
+    border: solid 1px #BAC9DB;
+    color: #000000;
+    padding: 0;
+}
+
+.jttoolbuttoninner {
+    background-image: url(images/gradient.gif);
+}
+
+.jttoolbutton_over .jttoolbuttoninner {
+    background: #EBF4FE;
+}
+
+.jttoolbutton_down {
+    background: #DFE9F5;
+}
+
+.jttoolbutton_down .jttoolbuttoninner {
+    background: #DFE9F5;
+}
+
+.jttoolbutton_disabled {
+    background: #E8E8E8;
+    border: solid 1px #BAC9DB;
+    color: #000000;
+}
+
+.jttoolbutton_disabled .jttoolbuttoninner {
+	background: #E8E8E8;
+}

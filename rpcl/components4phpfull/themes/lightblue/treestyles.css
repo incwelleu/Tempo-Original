@@ -1,0 +1,32 @@
+.jttreeview {
+    border: solid 1px #BAC9DB;
+}
+
+.jttreeview li a, .jttreeview li a:visited {
+    color: #000000;
+}
+
+.jttreeview li a.jttreenodetitleselected, .jttreeview li a.jttreenodetitleselected:visited {
+    color: #000000;
+}
+
+.jttreenodetitle {
+	color: #000000;
+}
+
+.jttreenodetitleselected {
+	background: #DFE9F5;
+	color: #000000;
+}
+
+.jttreeview ul li .jttreenodetitleselected {
+	color: #000000;
+}
+
+.jttreenodeplus {
+	background-image: url(images/treeplus.gif);
+}
+
+.jttreenodeminus {
+	background-image: url(images/treeminus.gif);
+}

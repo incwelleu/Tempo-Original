@@ -1,0 +1,497 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2009. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtdivwindow
+{
+  background: #F2F7FF;
+  border: solid 1px #5D7EB0;
+  position: absolute;
+}
+
+.jtdivwindowcont
+{
+	background: #F2F7FF;
+	height: 100%;
+	position: relative;
+}
+
+.jtdivwindowcontinner {
+	background: #F2F7FF;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}
+
+.jtdivwindowinner
+{
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 3px;
+  padding-top: 24px;
+  position: absolute;
+  width: 100%;
+}
+
+.jtdivwindowinner_bsNone
+{
+  padding-top: 3px;
+}
+
+.jtdivwindowtitlebar
+{
+  background: url(images/dropdown_back.gif) repeat-x scroll center -14px;
+  border-bottom: solid 1px #5D7EB0;
+  cursor: default;
+  height: 22px;
+  left: 0;
+  margin-bottom: 1px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtdivwindowtitlebarinner {
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1px;
+	width: auto;
+}
+
+.jtdivwindowtitleb
+{
+}
+
+.jtdivwindowtitlebar_bsSizeable
+{
+}
+
+.jtdivwindowtitlebar_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowcaption
+{
+  color: black;
+  font-size: 9pt;
+  margin-left: 3px;
+  margin-top: 2px;
+  overflow: hidden;
+  width: auto;
+}
+
+.jtdivwindowbutton
+{
+  cursor: pointer;
+  float: right;
+  font-size: 0;
+  height: 19px;
+  margin-left: 1px;
+  overflow: hidden;
+  width: 23px;
+}
+
+.jtdivwindowbutton_help
+{
+  background: url(images/divwindow_help.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_help_down
+{
+  background: url(images/divwindow_help.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_minimize
+{
+  background: url(images/divwindow_minimize.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_minimize_down
+{
+  background: url(images/divwindow_minimize.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_maximize
+{
+  background: url(images/divwindow_maximize.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_maximize_down
+{
+  background: url(images/divwindow_maximize.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_close
+{
+  background: url(images/divwindow_close.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_close_down
+{
+  background: url(images/divwindow_close.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_restore
+{
+  background: url(images/divwindow_restore.gif) no-repeat center center;
+}
+
+.jtdivwindowbutton_restore_down
+{
+  background: url(images/divwindow_restore.gif) no-repeat center center;
+}
+
+.jtdivwindowcontentsouterframe
+{
+  height: 100%;
+  width: 100%;
+}
+
+.jtdivwindowcontentsframe
+{
+  /*background: white;*/
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.jtdivwindowcontentsframeleft
+{
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 5px;
+}
+
+.jtdivwindowcontentsframetopleft
+{
+  height: 6px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 6px;
+}
+
+.jtdivwindowcontents
+{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.jtdivwindowmodalback
+{
+  background: url(images/divwindow_mask.gif);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtdivwindowtopborder_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowleftborder_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowrightborder_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowbottomborder_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowtopleftcorner_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowtoprightcorner_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowbottomleftcorner_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowbottomrightcorner_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowtopborder_bsSingle
+{
+	display: none;
+}
+
+.jtdivwindowleftborder_bsSingle
+{
+	display: none;
+}
+
+.jtdivwindowrightborder_bsSingle
+{
+	display: none;
+}
+
+.jtdivwindowbottomborder_bsSingle
+{
+	display: none;
+}
+
+.jtdivwindowtopleftcorner_bsSingle
+{
+	display: none;
+}
+
+.jtdivwindowtoprightcorner_bsSingle
+{
+  display: none;
+}
+
+.jtdivwindowbottomleftcorner_bsSingle
+{
+  display: none;
+}
+
+.jtdivwindowbottomrightcorner_bsSingle
+{
+  display: none;
+}
+
+.jtdivwindowtopborder_bsSizeable
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  cursor: n-resize;
+}
+
+.jtdivwindowleftborder_bsSizeable
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  overflow: hidden;
+  cursor: w-resize;
+}
+
+.jtdivwindowrightborder_bsSizeable
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  overflow: hidden;
+  cursor: e-resize;
+}
+
+.jtdivwindowbottomborder_bsSizeable
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  cursor: s-resize;
+}
+
+.jtdivwindowtopleftcorner_bsSizeable
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+  cursor: nw-resize;
+}
+
+.jtdivwindowtoprightcorner_bsSizeable
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+  cursor: ne-resize;
+}
+
+.jtdivwindowbottomleftcorner_bsSizeable
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+  cursor: sw-resize;
+}
+
+.jtdivwindowbottomrightcorner_bsSizeable
+{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+  cursor: se-resize;
+}
+
+.jtdivwindow .jtdivwindowshadowcontainer {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.jtdivwindowshadowtop {
+	background: url(images/shadowtilex.png) repeat-x left top;
+	height: 16px;
+	left: 0;
+	position: absolute;
+	top: -15px;
+	width: 100%;
+}
+
+.jtdivwindowshadowbottom {
+	background: url(images/shadowtilex.png) repeat-x left bottom;
+	bottom: -14px;
+	height: 16px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.jtdivwindowshadowleft {
+	background: url(images/shadowtiley.png) repeat-y left top;
+	height: 100%;
+	left: -15px;
+	position: absolute;
+	top: 0;
+	width: 16px;
+}
+
+.jtdivwindowshadowright {
+	background: url(images/shadowtiley.png) repeat-y right top;
+	height: 100%;
+	position: absolute;
+	right: -15px;
+	top: 0;
+	width: 16px;
+}
+
+.jtdivwindowshadowtopleft {
+	background: url(images/shadow.png) no-repeat left top;
+	height: 15px;
+	left: -15px;
+	position: absolute;
+	top: -15px;
+	width: 15px;
+}
+
+.jtdivwindowshadowtopright {
+	background: url(images/shadow.png) no-repeat right top;
+	height: 15px;
+	right: -15px;
+	position: absolute;
+	top: -15px;
+	width: 15px;
+}
+
+.jtdivwindowshadowbottomleft {
+	background: url(images/shadow.png) no-repeat left bottom;
+	height: 15px;
+	left: -15px;
+	position: absolute;
+	bottom: -15px;
+	width: 15px;
+}
+
+.jtdivwindowshadowbottomright {
+	background: url(images/shadow.png) no-repeat right bottom;
+	height: 15px;
+	right: -15px;
+	position: absolute;
+	bottom: -15px;
+	width: 15px;
+}
+
+/* For browsers that don't support 24bit PNGs */
+* html .jtdivwindowshadowtop {
+	display: none;
+}
+
+* html .jtdivwindowshadowbottom {
+	background: gray;
+	bottom: -5px;
+	font-size: 0;
+	height: 4px;
+	left: 2px;
+	position: absolute;
+	width: 100%;
+}
+
+* html .jtdivwindowshadowleft {
+	display: none;
+}
+
+* html .jtdivwindowshadowright {
+	background: gray;
+	height: 100%;
+	position: absolute;
+	right: -4px;
+	top: 2px;
+	width: 4px;
+}
+
+* html .jtdivwindowshadowtopleft {
+	display: none;
+}
+
+* html .jtdivwindowshadowtopright {
+	display: none;
+}
+
+* html .jtdivwindowshadowbottomleft {
+	display: none;
+}
+
+* html .jtdivwindowshadowbottomright {
+	background: gray;
+	font-size: 0;
+	height: 6px;
+	right: -4px;
+	position: absolute;
+	bottom: -5px;
+	width: 6px;
+}

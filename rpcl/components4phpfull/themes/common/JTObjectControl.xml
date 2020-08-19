@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this object control theme -->
+  <skin id="default">
+    <!-- The HTML code for the object control -->
+    <code id="object">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$CLASSID}:         Class ID of the control to display. 
+      {$CODEBASE}:        Location of the files for this control.
+      {$PARAMETERS}:      Contains the parameters for the control.
+      -->
+      <![CDATA[
+<object id="{$NAME}" name="{$NAME}" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" classid="{$CLASSID}" codebase="{$CODEBASE}" data="{$DATA}" type="{$TYPE}">
+  {$PARAMETERS}
+</object>
+      ]]>
+    </code>
+  </skin>
+</skins>

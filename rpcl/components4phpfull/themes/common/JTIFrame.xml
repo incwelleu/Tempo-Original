@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this IFRAME theme -->
+  <skin id="default">
+    <!-- The HTML code for the IFRAME -->
+    <code id="iframe">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$URL}:             URL to display in the IFRAME. 
+      {$SCROLLING}:       Scrollbar setting. (auto/no/yes)
+      {$BORDER}:          Specifies whether to show the border or not. (1/0)
+      -->
+      <![CDATA[
+<iframe id="{$NAME}" name="{$NAME}" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" src="{$URL}" frameborder="{$BORDER}" scrolling="{$SCROLLING}"></iframe>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this explanation popup theme -->
+  <skin id="default">
+    <!-- The HTML code for the popup -->
+    <code id="popup">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtajaxwaitpopup jtfont">
+  {$StrPleaseWait}
+</div>
+<div id="{$NAME}_background" class="jtajaxwaitpopupbackground"></div>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,36 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtmenuitem {
+  color: #515050;
+  cursor: default;
+  font-size: 9pt;
+}
+
+.jtmenuitem_over {
+  background: #EEEDED;
+}
+
+.jtmenu {
+  background: white;
+  border: solid 1px #C1C1C1;
+}
+
+.jtmenubar {
+  background: white;
+  border: solid 1px #C1C1C1;
+}
+
+.jtmenubarinner {
+  background: url(images/menu_back.gif);
+}
+
+.jtmenubaritem {
+  border: solid 1px #C1C1C1;
+  color: #515050;
+}
+
+.jtmenubarbutton_over {
+  background-color: white;
+}

@@ -1,0 +1,12 @@
+.jtsectionbar {
+  border: solid 1px #555555;
+}
+
+.jtsecbarsectioncaption {
+  background-image: url(images/gradient.gif);
+  color: #555555;
+}
+
+.jtsecbarendsection {
+  border-bottom: solid 1px #555555;
+}

@@ -1,0 +1,48 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtgroupbox {
+	border: none;
+	overflow: visible;
+	padding-top: 6pt;
+  position: relative;
+}
+
+.jtgroupbox .jtgroupboxcaptioncontainer {
+  /*height: 1px;*/
+  height: 10pt;
+  left: 10px;
+  position: absolute;
+  top: -5pt;
+  width: 1%;
+  z-index: 2;
+}
+
+.jtgroupbox .jtgroupboxcaption {
+  margin-left: 0;
+  overflow: visible !important;
+}
+
+.jtgroupbox .jtgroupboxcaption div {
+	display: inline;
+	font-size: 0;
+	height: 6px;
+	overflow: hidden;
+	position: relative;
+}
+
+.jtgroupbox .jtgroupboxcaption div div {
+	color: #2F455B;
+	display: inline;
+	font-size: 8pt;
+	position: relative;
+	top: -6pt;
+	z-index: 2;
+}
+
+.jtgroupbox .jtbevel .jtbevelborder_t {
+	width: auto;
+}

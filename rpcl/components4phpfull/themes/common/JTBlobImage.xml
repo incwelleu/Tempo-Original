@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this JTBlobImage theme -->
+  <skin id="default">
+  <!-- The HTML code for this particular JTBlobImage skin -->
+    <code id="image">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$SRC}:             Image source url.
+      {$ALT}:             Image alternate text.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<img src="{$SRC}" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" alt="{$ALT}" border="0"{$EVENTS}>
+      ]]>
+    </code>
+  </skin>
+</skins>

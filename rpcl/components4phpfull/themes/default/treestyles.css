@@ -1,0 +1,34 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jttreeview {
+	border: solid 1px #C1C1C1;
+}
+
+
+.jttreeview li a, .jttreeview li a:visited {
+	color: #515050;
+	font-weight: bold;
+}
+
+.jttreenodetitle
+{
+	color: black;
+	font-weight: normal;
+}
+
+.jttreenodetitleselected
+{
+	background: #871719;
+}
+
+.jttreenodeplus {
+	background: url(images/treeplus.gif) no-repeat left center;
+	margin-top: 5px;
+}
+
+.jttreenodeminus {
+	background: url(images/treeminus.gif) no-repeat left center;
+	margin-top: 5px;
+}

@@ -1,0 +1,23 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtsectionbar {
+  border: solid 1px #C1C1C1;
+  padding: 1px;
+}
+
+.jtsecbarsection
+{
+  border-left: solid 1px #C1C1C1;
+  border-right: solid 1px #C1C1C1;
+  border-top: solid 1px #C1C1C1;
+}
+
+.jtsecbarsectioncaption
+{
+  background: url(images/cat_header_back.gif);
+  height: 23px;
+  padding-top: 3px;
+  width: 100%;
+}

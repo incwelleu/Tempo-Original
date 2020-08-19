@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this bullet list theme -->
+  <skin id="default">
+    <!-- The HTML code for each bullet item -->
+    <code id="bulletitem">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$TEXTCLASS}:       Text class selected by the user for the bullet font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Bullet contents.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<li class="{$TEXTCLASS}"{$STYLE}>{$CONTENT}</li>
+      ]]>
+    </code>
+    <code id="bulletitem_link">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$TEXTCLASS}:       Text class selected by the user for the bullet font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Bullet contents.
+	  {$LINK}:			  Link URL.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<li class="{$TEXTCLASS}"{$STYLE}><a id="{$NAME}_link" href="{$LINK}">{$CONTENT}</a></li>
+      ]]>
+    </code>
+    <code id="bulletlist">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$LISTSTYLE}:       CSS bullet list style type selector. (square,circle,disc etc)
+      {$CONTENT}:         Bullet list contents, in other words the sequence of <li> elements.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<ul id="{$NAME}" class="jtbulletlist {$CSSCLASS}" style="list-style-type: {$LISTSTYLE};">
+  {$CONTENT}
+</ul>
+      ]]>
+    </code>
+  </skin>
+</skins>

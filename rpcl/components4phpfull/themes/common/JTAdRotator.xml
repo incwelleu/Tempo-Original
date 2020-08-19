@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this ad-rotator theme -->
+  <skin id="default">
+    <!-- The HTML code for the ad-rotator -->
+    <code id="ad">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSCLASS}: 		  Custom CSS class.
+      {$ADURL}:           URL to go to when the user clicks the advertisment. 
+      {$ADIMAGESRC}:      Image source for the advertisment image.
+      {$ADHINT}:          Hint to display for the advertisment.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="{$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}; text-align: center;">
+  <a href="{$ADURL}" title="{$ADHINT}"><img src="{$ADIMAGESRC}" border="0" /></a><br />
+  <span style="font-size: 8pt;">{$StrAdvertisement}</span>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- Specifies the factor by which the rows are indented when rendered like a tree. -->
+  <setting name="IndentFactor" value="30" />
+  <!-- The default skin for this grid theme -->
+  <skin id="default">
+    <!-- The HTML code for the header CSS -->
+    <code id="css">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CSS}:             The CSS code.
+      -->
+      <![CDATA[
+<style type="text/css">
+<!--
+{$CSS}
+-->
+</style>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's outer "shell" -->
+    <code id="GridScrolling">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$GROUPBAR}:        The grid group bar.
+      {$COLUMNHEADER}:    The grid column header.
+      {$FILTERBAR}:       The grid filter bar.
+      {$DATA}:            The data in the grid.
+      {$TOPPAGER}:        The top pager code.
+      {$BOTTOMPAGER}:     The bottom pager code.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtadvgrid jtfont scrolling" tabindex="{$TABINDEX}" style="height: {$HEIGHT};">
+  <div class="toppager">
+    {$TOPPAGER}
+  </div>
+  {$TOPCMDBAR}
+  {$GROUPBAR}
+  <div class="scrollcontainer">
+    <div id="{$NAME}_Header" class="header">
+      <div class="intheader">
+        <table id="{$NAME}_HeaderTable" border="0" cellpadding="0" cellspacing="0" class="intheadertable{$TABLECLASSES}">
+          <colgroup>
+            {$HDRCOLGROUP}
+          </colgroup>
+          <tbody id="{$NAME}_IntTableHead">
+    {$COLUMNHEADER}
+    {$FILTERBAR}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="{$NAME}_ScrollerDiv" class="scrollerdiv" style="width: auto;" onscroll="{$NAME}._divScroll()">
+      <table id="{$NAME}_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable{$TABLECLASSES}">
+        <colgroup>
+          {$BODYCOLGROUP}
+        </colgroup>
+        <tbody id="{$NAME}_IntTableBody" class="inttablebody" onclick="{$NAME}._dtcc(event,this)" ondblclick="{$NAME}._dtcdc(event,this)">
+          {$DATA}
+          {$INSERTROW}
+          {$FORMEDITORS}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="{$NAME}_SummaryCont" class="summary-container">
+    <table id="{$NAME}_Summary" class="summary" cellspacing="0" cellpadding="0">
+      {$SUMMARY}
+    </table>
+  </div>
+  <div id="{$NAME}_ColMover" class="jtfont colmover"></div>
+  <div id="{$NAME}_ColPositioner" class="colpositioner">
+    <div class="colpositionertop"></div>
+    <div class="colpositionerbottom"></div>
+  </div>
+  <div id="{$NAME}_DragSelect" class="dragselect"></div>
+  {$BOTTOMCMDBAR}
+  {$BOTTOMPAGER}
+  {$INLINEEDITORS}
+  <div id="{$NAME}_wait" class="waitwindow"></div>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's outer "shell" -->
+    <code id="GridNoScroll">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$HEADER}:          The grid header.
+      {$DATA}:            The data in the grid.
+      {$TOPPAGER}:        The top pager code.
+      {$BOTTOMPAGER}:     The bottom pager code.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtadvgrid jtfont noscrolling" tabindex="{$TABINDEX}" style="overflow: visible;">
+  <div class="toppager">
+    {$TOPPAGER}
+  </div>
+  {$TOPCMDBAR}
+  {$GROUPBAR}
+  <div class="scrollcontainer">
+    <div id="{$NAME}_ScrollerDiv" class="scrollerdiv" style="width: auto;">
+      <table id="{$NAME}_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable inttablenoscroll{$TABLECLASSES}">
+        <colgroup>
+          {$HDRCOLGROUP}
+        </colgroup>
+        <thead id="{$NAME}_IntTableHead">
+  {$COLUMNHEADER}
+  {$FILTERBAR}
+        </thead>
+        <tbody id="{$NAME}_IntTableBody" class="inttablebody" onclick="{$NAME}._dtcc(event,this)" ondblclick="{$NAME}._dtcdc(event,this)">
+          {$DATA}
+          {$INSERTROW}
+          {$FORMEDITORS}
+        </tbody>
+        <tfoot>
+          {$SUMMARY}
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div id="{$NAME}_ColMover" class="jtfont colmover"></div>
+  <div id="{$NAME}_ColPositioner" class="colpositioner">
+    <div class="colpositionertop"></div>
+    <div class="colpositionerbottom"></div>
+  </div>
+  <div id="{$NAME}_DragSelect" class="dragselect"></div>
+  {$BOTTOMCMDBAR}
+  {$BOTTOMPAGER}
+  {$INLINEEDITORS}
+  <div id="{$NAME}_wait" class="waitwindow"></div>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for each column in the grid's group bar. -->
+    <code id="GroupColumnAsc">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNNAME}:      The column name.
+      {$COLUMNCAPTION}:   The column caption.
+      -->
+      <![CDATA[
+<td id="{$NAME}_GroupCol_{$COLUMNNAME}" onmousedown="{$NAME}._startGroupMove(event, this, '{$NAME}_GroupCol_{$COLUMNNAME}')">
+  <table border="0" cellpadding="0" cellspacing="0" class="intgroupheader">
+    <tr>
+      <td>&raquo;</td>
+      <td><span class="link" title="{$StrGroupHeaderColTitleAsc}" onclick="return {$NAME}._groupClick('{$COLUMNNAME}', 'DESC');">{$COLUMNCAPTION}</span></td>
+      <td valign="middle"><img src="{$THEMEWEBDIR}images/grid_sort_asc.gif" title="{$StrGroupedAscending}" /></td>
+    </tr>
+  </table>
+</td>
+      ]]>
+    </code>
+    <code id="GroupColumnDesc">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNNAME}:      The column name.
+      {$COLUMNCAPTION}:   The column caption.
+      -->
+      <![CDATA[
+<td id="{$NAME}_GroupCol_{$COLUMNNAME}" onmousedown="{$NAME}._startGroupMove(event, this, '{$NAME}_GroupCol_{$COLUMNNAME}')">
+  <table border="0" cellpadding="0" cellspacing="0" class="intgroupheader">
+    <tr>
+      <td>&raquo;</td>
+      <td><span class="link" title="{$StrGroupHeaderColTitleDesc}" onclick="return {$NAME}._groupClick('{$COLUMNNAME}', 'ASC');">{$COLUMNCAPTION}</span></td>
+      <td valign="middle"><img src="{$THEMEWEBDIR}images/grid_sort_desc.gif" title="{$StrGroupedDescending}" /></td>
+    </tr>
+  </table>
+</td>
+      ]]>
+    </code>
+    <!-- The HTML code for each column in the grid's group bar. -->
+    <code id="NoGroupColumns">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNNAME}:      The column name.
+      {$COLUMNCAPTION}:   The column caption.
+      -->
+      <![CDATA[
+<td class="nogroups">{$StrGroupHeaderTitle}</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's group bar. -->
+    <code id="GroupBar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNS}:         The columns in the group bar.
+      -->
+      <![CDATA[
+<div id="{$NAME}_GroupBar" class="groupbar">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      {$COLUMNS}
+    </tr>
+  </table>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's column header -->
+    <code id="ColumnsHeader">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNS}:         The columns in the header.
+      -->
+      <![CDATA[
+<tr id="{$NAME}_HeaderTableColumnHeader" class="columnheader">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's "select" column in the header. -->
+    <code id="SelectColHeader">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<td id="{$NAME}_SelectColHeader" class="headercell selectcolheader"><input id="{$NAME}_SelectAll" name="{$NAME}_SelectAll" type="checkbox" title="{$StrSelectAllRows}" onclick="{$NAME}.selectAll(this.checked);" /></td>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's "select" column in the header. -->
+    <code id="SelectColHeaderBlank">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<td id="{$NAME}_SelectColHeader" class="headercell selectcolheader">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for group by header columns-->
+    <code id="GroupByHeader">
+      <![CDATA[
+<td class="groupbyheader"><div></div>&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's edit column in the header-->
+    <code id="EditColHeader">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<td id="{$NAME}_EditColHeader" class="edtclhdr">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for an empty filter bar cell. -->
+    <code id="FilterBarEmptyCell">
+      <![CDATA[
+<td class="fl">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's filter bar. -->
+    <code id="FilterBar">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNS}:         The columns in the filter bar.
+      -->
+      <![CDATA[
+<tr id="{$NAME}_FilterBar" class="filterbar">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for each data row in the grid. -->
+    <code id="DataRow">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNS}:         The columns in this row.
+      {$DETAIL}:          The detail view for this row.
+      {$GROUPROW}:        The grouping row
+      {$MEMOROW}:         The memo row.
+      {$ROWCLASS}:        The CSS class name that this row must use.
+      -->
+      <![CDATA[
+{$GROUPROW}
+<tr id="{$NAME}_row_{$ROWINDEX}" class="row {$ROWCLASS} {$EXTRACLASSES} level{$LEVEL}"><td id="{$NAME}_row_{$ROWINDEX}_pk" class="pk">{$PRIMARYKEY}</td><td id="{$NAME}_row_{$ROWINDEX}_dr" class="pk">{$DETAILKEY}</td>{$COLUMNS}</tr>
+{$MEMOROW}
+{$DETAIL}
+      ]]>
+    </code>
+    <!-- The HTML code for the group rows -->
+    <code id="GroupRow">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNINDEX}:     The index of the column that this row is grouping on.
+      {$COLUMNNAME}:      The name of the column that this row is grouping on.
+      {$COLUMNCAPTION}:   The caption of the column that this row is grouping on.
+      {$GROUPFIELD}:      The data field of the column that this row is grouping on.
+      {$GROUPINDEX}:      The index of the field in the group by collection, of the column that this row is grouping on.
+      {$GROUPVALUE}:      The current row's value of the field that this row is grouping on.
+      {$PREFIXCOLS}:      The spacer columns used to indent the group.
+      {$POSTFIXCOLS}:     The spacer columns used to pad the group.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<tr id="{$NAME}_grouprow_{$ROWINDEX}" class="grouprow grouplevel{$GROUPINDEX}">
+  {$PREFIXCOLS}
+  <td class="groupcell" colspan="{$COLCOUNT}">{$COLUMNCAPTION}: {$GROUPVALUE} {$AGGREGATES}</td>
+  {$POSTFIXCOLS}
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the group rows -->
+    <code id="GroupPrefixCol">
+      <![CDATA[
+<td class="grouppadcell">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the group rows on the right -->
+    <code id="GroupPostfixCol">
+      <![CDATA[
+<td class="groupprefixcell">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="GroupExpandCollapseCol">
+      <![CDATA[
+<td class="groupexpcolcell expanded" onclick="{$NAME}._expCollapseGroup(this, {$ROWINDEX})"><div></div></td>
+      ]]>
+    </code>
+    <code id="GroupSelectCol">
+      <![CDATA[
+<td class="blankcell">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the data rows because of grouping -->
+    <code id="DataGroupCol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$GROUPFIELD}:      The data field of the column that this row is grouping on.
+      {$GROUPINDEX}:      The index of the field in the group by collection, of the column that this row is grouping on.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td class="grouppadcell">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the select column -->
+    <code id="SelectCol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td class="sc {$EXTRACLASSES}"><input id="{$NAME}_rs_{$ROWINDEX}" type="checkbox" onclick="{$NAME}.selectRow({$ROWINDEX}, this.checked, false, true)" /></td>
+      ]]>
+    </code>
+    <!-- The HTML code for the edit column -->
+    <code id="EditCol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td id="{$NAME}_editcol_{$ROWINDEX}" class="headercell editcolumn {$EXTRACLASSES}">
+  <span><a href="#" class="edbn" onclick="{$NAME}.Edit({$ROWINDEX}); return false;">{$StrEdit}</a> <a href="#" class="dlbn" onclick="{$NAME}.Delete({$ROWINDEX}); return false;">{$StrDelete}</a></span>
+  <span style="display: none;"><a href="#" onclick="{$NAME}.Post(); return false;">{$StrPost}</a> <a href="#" onclick="{$NAME}.Cancel(); return false;">{$StrCancel}</a></span>
+</td>
+      ]]>
+    </code>
+    <code id="EditColOnlyEdit">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td id="{$NAME}_editcol_{$ROWINDEX}" class="headercell editcolumn {$EXTRACLASSES}">
+  <span><a href="#" onclick="{$NAME}.Edit({$ROWINDEX}); return false;">{$StrEdit}</a></span>
+  <span style="display: none;"><a href="#" onclick="{$NAME}.Post(); return false;">{$StrPost}</a> <a href="#" onclick="{$NAME}.Cancel(); return false;">{$StrCancel}</a></span>
+</td>
+      ]]>
+    </code>
+    <code id="EditColOnlyDelete">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td id="{$NAME}_editcol_{$ROWINDEX}" class="headercell editcolumn {$EXTRACLASSES}">
+  <span><a href="#" onclick="{$NAME}.Delete({$ROWINDEX}); return false;">{$StrDelete}</a></span>
+  <span style="display: none;"></span>
+</td>
+      ]]>
+    </code>
+    <code id="EditColNothing">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td id="{$NAME}_editcol_{$ROWINDEX}" class="headercell editcolumn {$EXTRACLASSES}">
+  <span>&nbsp;</span>
+  <span style="display: none;"></span>
+</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the memo row -->
+    <code id="MemoRow">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNCOUNT}:     The number of columns in the table.
+      {$INDENT}:          The number of pixels to indent the row data.
+      {$ROWINDEX}:        The current row's index.
+      {$VALUE}:           The value of the memo.
+      -->
+      <![CDATA[
+<tr class="memorow {$ROWCLASS}">
+  {$PREFIXCOLS}
+  <td colspan="{$COLUMNCOUNT}" class="memocell" style="padding-left: {$INDENT}px;">
+    <div class="memorowdiv">{$VALUE}</div>
+  </td>
+  {$POSTFIXCOLS}
+</tr>
+      ]]>
+    </code>
+    <code id="DetailViewContainer">
+      <![CDATA[
+<tr>
+  {$PREFIXCOLS}
+  <td class="detailrow" colspan="{$COLUMNCOUNT}" style="padding-left: {$INDENT}px;">
+    <div class="detailrowdiv">
+{$GRID}
+    </div>
+  </td>
+</tr>
+      ]]>
+    </code>
+    <code id="InsertRow">
+      <![CDATA[
+<tr id="{$NAME}_row_-2" class="row hidden insertrow">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <!-- The following sections are for the pager -->
+    <code id="PagerToFirstPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      -->
+      <![CDATA[
+<td class="tofirstpage" width="1"><a href="?{$NAME}_Pager=0" page="0">&lt;&lt;</a></td>
+      ]]>
+    </code>
+    <code id="PagerToFirstPageDisabled">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      -->
+      <![CDATA[
+<td class="tofirstpage disabled" width="1">&lt;&lt;</td>
+      ]]>
+    </code>
+    <code id="PagerToLastPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      -->
+      <![CDATA[
+<td class="tolastpage" width="1"><a href="?{$NAME}_Pager={$INDEX}" page="{$INDEX}">&gt;&gt;</a></td>
+      ]]>
+    </code>
+    <code id="PagerToLastPageDisabled">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      -->
+      <![CDATA[
+<td class="tolastpage disabled" width="1">&gt;&gt;</td>
+      ]]>
+    </code>
+    <code id="PageToPreviousPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the page to go to.
+      -->
+      <![CDATA[
+<td class="topreviouspage" width="1"><a href="?{$NAME}_Pager={$INDEX}" page="{$INDEX}">&lt;</a></td>
+      ]]>
+    </code>
+    <code id="PageToPreviousPageDisabled">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the page to go to.
+      -->
+      <![CDATA[
+<td class="topreviouspage disabled" width="1">&lt;</td>
+      ]]>
+    </code>
+    <code id="PagerToNextPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the page to go to.
+      -->
+      <![CDATA[
+<td class="tonextpage" width="1"><a href="?{$NAME}_Pager={$INDEX}" page="{$INDEX}">&gt;</a></td>
+      ]]>
+    </code>
+    <code id="PagerToNextPageDisabled">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the page to go to.
+      -->
+      <![CDATA[
+<td class="tonextpage disabled" width="1">&gt;</td>
+      ]]>
+    </code>
+    <code id="PagerCurrentPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the current page.
+      -->
+      <![CDATA[
+<td class="disabled">{$PAGENO}</td>
+      ]]>
+    </code>
+    <code id="PagerToPage">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$REQUESTOR}:       The JavaScript function that handles the grid postback.
+      {$INDEX}:           The index of the page to go to.
+      -->
+      <![CDATA[
+<td><a href="?{$NAME}_Pager={$INDEX}" title="{$StrGoToPage}" page="{$INDEX}">{$PAGENO}</a></td>
+      ]]>
+    </code>
+    <code id="Pager">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         The content of the pager.
+      -->
+      <![CDATA[
+<div class="pager">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>{$PAGEINFO}</td>
+      <td align="right">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            {$CONTENT}
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for an inline editor -->
+    <code id="ColumnEditorInline">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNINDEX}:     The index of the column that this editor is for.
+      {$COLUMNNAME}:      The name of the column that this editor is for.
+      {$COLUMNCAPTION}:   The caption of the column that this editor is for.
+      {$COLUMNFIELD}:     The data field of the column that this editor is for.
+      {$EDITOR}:          The HTML code for the actual editor.
+      -->
+      <![CDATA[
+{$EDITOR}
+      ]]>
+    </code>
+    <!-- The HTML code for the inline editors container -->
+    <code id="EditorInline">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNCOUNT}:     The number of columns in this grid.
+      {$COLUMNEDITORS}:   The HTML code for the editors.
+      -->
+      <![CDATA[
+<div id="{$NAME}_editorcontainer" class="inlineeditor">
+  {$COLUMNEDITORS}
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for a form-styled editor -->
+    <code id="ColumnEditorForm">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNINDEX}:     The index of the column that this editor is for.
+      {$COLUMNNAME}:      The name of the column that this editor is for.
+      {$COLUMNCAPTION}:   The caption of the column that this editor is for.
+      {$COLUMNFIELD}:     The data field of the column that this editor is for.
+      {$EDITOR}:          The HTML code for the actual editor.
+      -->
+      <![CDATA[
+<div class="formeditor">
+  <span class="caption">{$COLUMNCAPTION}: </span>
+  <span class="editor">{$EDITOR}</span>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the form-style editors container -->
+    <code id="EditorForm">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLUMNCOUNT}:     The number of columns in this grid.
+      {$COLUMNEDITORS}:   The HTML code for the editors.
+      -->
+      <![CDATA[
+<tr id="{$NAME}_editorform" class="editorform hidden">
+  <td colspan="{$COLUMNCOUNT}">
+    <div class="editorformdiv">
+      {$COLUMNEDITORS}
+      <p>
+        <a href="#" onclick="{$NAME}.Post(); return false;">{$StrPost}</a> <a href="#" onclick="{$NAME}.Cancel(); return false;">{$StrCancel}</a>
+      </p>
+      <div class="cancelbtn" onclick="return {$NAME}.Cancel();"></div>
+    </div>
+  </td>
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for a cell with child cells -->
+    <code id="CellWithChildren">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cellwithchildren {$EXTRACLASSES}" {$ATTRS}style="text-align:{$ALIGN};padding-left:{$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd {$DIVCLASSES}"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_contentexpand" class="cellspan cellexpand {$CELLSTATECLASS}" onclick="return {$NAME}._cellExpand(event,this,'{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}',{$ROWINDEX});"></div><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c">{$DATA}</span>{$VALUE}</div></td>]]>
+    </code>
+    <!-- The HTML code for a cell -->
+    <code id="Cell">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cell {$EXTRACLASSES}" {$ATTRS}{$STYLE}><div class="cd {$DIVCLASSES}"><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan">{$DATA}</span>{$VALUE}</div></td>]]>
+    </code>
+    <!-- The HTML code for a cell with child cells -->
+    <code id="NoScrollCellWithChildren">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cellwithchildren {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd {$DIVCLASSES}"><table border="0" cellpadding="0" cellspacing="0"><tr><td><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_contentexpand" class="cellspan cellexpand {$CELLSTATECLASS}" onclick="return {$NAME}._cellExpand(event, this, '{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}', {$ROWINDEX});"></span><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c">{$DATA}</span>{$VALUE}</td></tr></table></div></td>
+      ]]>
+    </code>
+    <!-- The HTML code for a cell -->
+    <code id="NoScrollCell">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cell {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd {$DIVCLASSES}"><table border="0" cellpadding="0" cellspacing="0"><tr><td><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan">{$DATA}</span>{$VALUE}</td></tr></table></div></td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderSortBtnAsc">
+      <![CDATA[
+<td class="srt"><img src="{$THEMEWEBDIR}images/grid_sort_asc.gif" title="{$StrSortedAscending}" /></td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderSortBtnDesc">
+      <![CDATA[
+<td class="srt"><img src="{$THEMEWEBDIR}images/grid_sort_desc.gif" title="{$StrSortedDescending}" /></td>
+      ]]>
+    </code>
+    <code id="ColumnHeader">
+      <![CDATA[
+<td id="{$NAME}_header_{$COLINDEX}" class="headercell {$EXTRACLASSES}" style="width: {$COLWIDTH}px;"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td style="overflow: hidden;"><div class="intcolheaderdiv {$ALIGN}"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td id="{$NAME}_header_{$COLINDEX}_caption">{$CAPTION}</td>{$SORTBTN}</tr></table></div></td><td class="resizercell" width="7">{$RESIZEBORDER}</td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderWithSortLink">
+      <![CDATA[
+<td id="{$NAME}_header_{$COLINDEX}" class="headercell {$EXTRACLASSES}" style="width: {$COLWIDTH}px;" onmousedown="{$NAME}._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv {$ALIGN}"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="{$NAME}_header_{$COLINDEX}_caption" class="link" onclick="return {$NAME}._HeaderClick(event, '{$COLFIELD}', '{$OTHERSORTDIR}');">{$CAPTION}</span></td>{$SORTBTN}</tr></table></div></td><td class="resizercell" width="3">{$RESIZEBORDER}</td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnResizeBorder">
+      <![CDATA[
+<div class="cellresizeborder"><div onmousedown="{$NAME}._scr(event,{$COLINDEX});"></div>
+      ]]>
+    </code>
+    <code id="BooleanEditor">
+      <![CDATA[
+<input id="{$EDITORNAME}" name="{$EDITORNAME}" type="checkbox" onkeypress="{$NAME}._editorKeyPress(event);" />
+      ]]>
+    </code>
+    <code id="BooleanFilter">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}">
+  <select id="{$FILTERNAME}" name="{$FILTERNAME}" onchange="{$NAME}._boolFilterClick(this, event)">
+    {$FILTEROPTIONS}
+  </select>
+</td>
+      ]]>
+    </code>
+    <code id="DateTimeFilter">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl"><div class="inputcontainer" style="position: relative;">{$CONTROL}</div></td>
+      ]]>
+    </code>
+    <code id="DateTimeFilterComplex">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}">
+  <table border="0" cellpadding="0" cellspacing="1" width="100%">
+    <tr>
+      <td style="border: none; white-space: nowrap;" nowrap="nowrap">
+        <div class="inputcontainer">{$CONTROL}</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="border: none;">
+        {$FILTERMETHODCONTROL}
+      </td>
+    </tr>
+  </table>
+</td>
+      ]]>
+    </code>
+    <code id="TimeFilter">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl">{$CONTROL}</td>
+      ]]>
+    </code>
+    <code id="TimeFilterComplex">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl timefilter">
+  <table border="0" cellpadding="0" cellspacing="1" width="100%">
+    <tr>
+      <td style="border: none; white-space: nowrap;" nowrap="nowrap">
+        {$CONTROL}
+      </td>
+    </tr>
+    <tr>
+      <td style="border: none;">
+        {$FILTERMETHODCONTROL}
+      </td>
+    </tr>
+  </table>
+</td>
+      ]]>
+    </code>
+    <code id="ImageCell">
+      <![CDATA[
+<img src="{$FILENAME}" alt="" />
+      ]]>
+    </code>
+    <code id="MemoEditor">
+      <![CDATA[
+<div id="{$EDITORNAME}_outerdiv" class="memoeditor">
+  <textarea id="{$EDITORNAME}" name="{$EDITORNAME}" onkeypress="{$NAME}._editorKeyPress(event);"></textarea>
+</div>
+      ]]>
+    </code>
+    <code id="TextFilter">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}"><div class="inputcontainer textfilterinputcontainer"><input id="{$FILTERNAME}" name="{$FILTERNAME}" type="text" class="textfilterinput" value="{$FILTERVALUE}" onkeydown="return {$NAME}._txtFilterKeyDown(this, event);" onfocus="{$NAME}._txtFilterFocus(this)" onblur="{$NAME}._txtFilterBlur(this)" /></div></td>
+      ]]>
+    </code>
+    <code id="TextFilterComplex">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}"><table border="0" cellpadding="0" cellspacing="1" width="100%"><tr><td style="border: none;"><div class="inputcontainer textfilterinputcontainer"><input id="{$FILTERNAME}" name="{$FILTERNAME}" type="text" class="textfilterinput" value="{$FILTERVALUE}" onkeydown="return {$NAME}._txtFilterKeyDown(this, event);" onfocus="{$NAME}._txtFilterFocus(this)" onblur="{$NAME}._txtFilterBlur(this)" /></div></td></tr><tr><td style="border: none;">{$FILTERMETHODCONTROL}</td></tr></table></td>
+      ]]>
+    </code>
+    <code id="TextFilterCombo">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}">{$FILTEROPTIONCONTROL}</td>
+      ]]>
+    </code>
+    <code id="TextFilterComboComplex">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}"><table border="0" cellpadding="0" cellspacing="1" width="100%"><tr><td style="border: none;">{$FILTEROPTIONCONTROL}</td></tr><tr><td style="border: none;">{$FILTERMETHODCONTROL}</td></tr></table></td>
+      ]]>
+    </code>
+    <code id="TextColComboBoxEditorValue">
+      <![CDATA[
+<option value="{$VALUE}">{$CAPTION}</option>
+      ]]>
+    </code>
+    <code id="TextColComboBoxEditor">
+      <![CDATA[
+<div id="{$EDITORNAME}_outerdiv" class="comboboxeditor">
+  <select id="{$EDITORNAME}" name="{$EDITORNAME}" size="1" onkeypress="{$NAME}._editorKeyPress(event);">
+    {$VALUES}
+  </select>
+</div>
+      ]]>
+    </code>
+    <code id="TextColEditEditor">
+      <![CDATA[
+<div id="{$EDITORNAME}_outerdiv" class="textediteditor"><input id="{$EDITORNAME}" name="{$EDITORNAME}" type="text" maxlength="{$MAXLENGTH}" onkeypress="{$NAME}._editorKeyPress(event);" /></div>
+      ]]>
+    </code>
+    <code id="TextHyperlink">
+      <![CDATA[
+<a href="{$HYPERLINK}">{$DATA}</a>
+      ]]>
+    </code>
+    <code id="CustomFilter">
+      <![CDATA[
+<td id="{$NAME}_filter_{$INDEX}" class="fl {$EXTRACLASSES}">{$CODE}</td>
+      ]]>
+    </code>
+    <code id="CommandColCommand">
+      <![CDATA[
+<div class="btndv"><div><input type="button" id="{$NAME}_CmdColCmd{$INDEX}" value="{$CAPTION}" onclick="{$NAME}.Command({$ROWINDEX},{$COLUMNINDEX},{$INDEX}); return false;" /></div></div>
+      ]]>
+    </code>
+    <code id="CommandCol">
+      <![CDATA[
+<span class="commandcol">{$COMMANDS}</span>
+      ]]>
+    </code>
+    <code id="BlankFilter">
+      <![CDATA[
+<td class="fl {$EXTRACLASSES}"></td>
+      ]]>
+    </code>
+    <code id="BlankCell">
+      <![CDATA[
+<td class="blankcell">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="SizerCol">
+      <![CDATA[
+<td id="{$NAME}_sizer_{$INDEX}" class="{$EXTRACLASSES}"><div id="{$NAME}_sizer_{$INDEX}_div"></div></td>
+      ]]>
+    </code>
+    <code id="ColGroupItem">
+      <![CDATA[
+<col id="{$NAME}_colitem_{$PREFIX}_{$INDEX}" width="{$COLWIDTH}" />
+      ]]>
+    </code>
+    <code id="ColGroupSelectorItem">
+      <![CDATA[
+<col id="{$NAME}_colitem_{$PREFIX}_select" width="25" />
+      ]]>
+    </code>
+    <code id="ColGroupEditorItem">
+      <![CDATA[
+<col id="{$NAME}_colitem_{$PREFIX}_edit" width="127" />
+      ]]>
+    </code>
+    <code id="ColGroupGroupByItem">
+      <![CDATA[
+<col id="{$NAME}_colitem_{$PREFIX}_gb{$INDEX}" width="19" />
+      ]]>
+    </code>
+    <code id="Summary">
+      <![CDATA[
+<tr class="summaryrow">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <code id="ColumnAggregates">
+      <![CDATA[
+<td id="{$NAME}_ColAgg_{$COLUMNINDEX}" class="aggregate">
+  <table cellpadding="0" cellspacing="0">
+    {$AGGREGATES}
+  </table>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnNoAggregates">
+      <![CDATA[
+<td id="{$NAME}_ColAgg_{$COLUMNINDEX}" class="aggregate">
+</td>
+      ]]>
+    </code>
+    <code id="ColumnAggregate">
+      <![CDATA[
+<tr>
+  <td>{$AGGREGATENAME}:&nbsp;</td>
+  <td>{$AGGREGATEVALUE}</td>
+</tr>
+      ]]>
+    </code>
+    <code id="SummarySelectCell">
+      <![CDATA[
+<td class="blankcell {$EXTRACLASSES}">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="SummaryGroupCell">
+      <![CDATA[
+<td class="blankcell {$EXTRACLASSES}">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="SummaryEditCell">
+      <![CDATA[
+<td class="blankcell {$EXTRACLASSES}">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="GroupAggregate">
+      <![CDATA[
+&nbsp;{$AGGREGATENAME}: {$AGGREGATEVALUE}
+      ]]>
+    </code>
+    <code id="GroupAggregateCol">
+      <![CDATA[
+&nbsp;({$COLCAPTION}{$AGGREGATES})
+      ]]>
+    </code>
+    <code id="CommandBar">
+      <![CDATA[
+<div class="cmdbar">
+  {$COMMANDS}
+  <div class="jtclear"></div>
+</div>
+      ]]>
+    </code>
+    <code id="CommandBarItem">
+      <![CDATA[
+    <a class="{$CMDCSSCLASS}" cmd="{$COMMAND}" href="">{$CAPTION}</a>
+      ]]>
+    </code>
+  </skin>
+  <!-- The skin used by the grid to render the printed view -->
+  <skin id="PrintGrid">
+    <!-- The HTML code for the header CSS -->
+    <code id="css">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CSS}:             The CSS code.
+      -->
+      <![CDATA[
+<style type="text/css">
+<!--
+{$CSS}
+-->
+</style>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's outer "shell" -->
+    <code id="GridScrolling">
+      <![CDATA[
+<div id="{$NAME}" class="jtadvgrid jtfont scrolling jtadvgridprinting" tabindex="{$TABINDEX}">
+  {$TOPPAGER}
+  <div class="scrollcontainer">
+    <div id="{$NAME}_ScrollerDiv" class="scrollerdiv" style="width: auto;">
+      <table id="{$NAME}_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable{$TABLECLASSES}">
+        <thead id="{$NAME}_IntTableHead">
+  {$COLUMNHEADER}
+        </thead>
+        <tbody id="{$NAME}_IntTableBody" class="inttablebody">
+          {$DATA}
+        </tbody>
+        <tfoot>
+          {$SUMMARY}
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  {$BOTTOMPAGER}
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's outer "shell" -->
+    <code id="GridNoScroll">
+      <![CDATA[
+<div id="{$NAME}" class="jtadvgrid jtfont scrolling jtadvgridprinting" tabindex="{$TABINDEX}">
+  {$TOPPAGER}
+  <div class="scrollcontainer">
+    <div id="{$NAME}_ScrollerDiv" class="scrollerdiv" style="width: auto;">
+      <table id="{$NAME}_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable{$TABLECLASSES}">
+        <thead id="{$NAME}_IntTableHead">
+  {$COLUMNHEADER}
+        </thead>
+        <tbody id="{$NAME}_IntTableBody" class="inttablebody">
+          {$DATA}
+        </tbody>
+        <tfoot>
+          {$SUMMARY}
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  {$BOTTOMPAGER}
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for each column in the grid's group bar. -->
+    <code id="GroupColumnAsc">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="GroupColumnDesc">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for each column in the grid's group bar. -->
+    <code id="NoGroupColumns">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's group bar. -->
+    <code id="GroupBar">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's column header -->
+    <code id="ColumnsHeader">
+      <![CDATA[
+<tr class="columnheader" style="left: 0px; position: relative; top: 0px;">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's "select" column in the header. -->
+    <code id="SelectColHeader">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for group by header columns-->
+    <code id="GroupByHeader">
+      <![CDATA[
+<td class="groupbyheader">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's edit column in the header-->
+    <code id="EditColHeader">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for an empty filter bar cell. -->
+    <code id="FilterBarEmptyCell">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the grid's filter bar. -->
+    <code id="FilterBar">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for each data row in the grid. -->
+    <code id="DataRow">
+      <![CDATA[
+{$GROUPROW}
+<tr id="{$NAME}_row_{$ROWINDEX}" class="row {$ROWCLASS} {$EXTRACLASSES} level{$LEVEL}">
+  {$COLUMNS}
+</tr>
+{$MEMOROW}
+{$DETAIL}
+      ]]>
+    </code>
+    <!-- The HTML code for the group rows -->
+    <code id="GroupRow">
+      <![CDATA[
+<tr id="{$NAME}_grouprow_{$ROWINDEX}" class="grouprow">
+  {$PREFIXCOLS}
+  <td class="groupcell jtfont" colspan="{$COLCOUNT}">{$COLUMNCAPTION}: {$GROUPVALUE} {$AGGREGATES}</td>
+  {$POSTFIXCOLS}
+</tr>
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the group rows -->
+    <code id="GroupPrefixCol">
+      <![CDATA[
+<td class="grouppadcell">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the group rows on the right -->
+    <code id="GroupPostfixCol">
+      <![CDATA[
+<td class="groupprefixcell">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="GroupExpandCollapseCol">
+      <![CDATA[
+<td class="groupexpcolcell"><div></div></td>
+      ]]>
+    </code>
+    <code id="GroupSelectCol">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the "filler" columns that pad in the data rows because of grouping -->
+    <code id="DataGroupCol">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$GROUPFIELD}:      The data field of the column that this row is grouping on.
+      {$GROUPINDEX}:      The index of the field in the group by collection, of the column that this row is grouping on.
+      {$ROWINDEX}:        The current row's index.
+      -->
+      <![CDATA[
+<td class="grouppadcell">&nbsp;</td>
+      ]]>
+    </code>
+    <!-- The HTML code for the select column -->
+    <code id="SelectCol">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the edit column -->
+    <code id="EditCol">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the memo row -->
+    <code id="MemoRow">
+      <![CDATA[
+<tr>
+  {$PREFIXCOLS}
+  <td class="memorow jtfont" colspan="{$COLUMNCOUNT}" style="padding-left: {$INDENT}px;">
+    <div class="memorowdiv">{$VALUE}</div>
+  </td>
+</tr>
+      ]]>
+    </code>
+    <code id="DetailViewContainer">
+      <![CDATA[
+<tr>
+  {$PREFIXCOLS}
+  <td class="detailrow jtfont" colspan="{$COLUMNCOUNT}" style="padding-left: {$INDENT}px;">
+    <div class="detailrowdiv">
+{$GRID}
+    </div>
+  </td>
+</tr>
+      ]]>
+    </code>
+    <!-- The following sections are for the pager -->
+    <code id="PagerToFirstPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToFirstPageDisabled">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToLastPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToLastPageDisabled">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PageToPreviousPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PageToPreviousPageDisabled">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToNextPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToNextPageDisabled">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerCurrentPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="PagerToPage">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="Pager">
+      <![CDATA[
+<div class="pager">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="jtfont">{$PAGEINFO}</td>
+    </tr>
+  </table>
+</div>
+      ]]>
+    </code>
+    <!-- The HTML code for an inline editor -->
+    <code id="ColumnEditorInline">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the inline editors container -->
+    <code id="EditorInline">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for a form-styled editor -->
+    <code id="ColumnEditorForm">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for the form-style editors container -->
+    <code id="EditorForm">
+      <![CDATA[
+      ]]>
+    </code>
+    <!-- The HTML code for a cell with child cells -->
+    <code id="CellWithChildren">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cellwithchildren {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd"><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan cellexpand {$CELLSTATECLASS}"></span><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c">{$DATA}</span></div></td>
+      ]]>
+    </code>
+    <!-- The HTML code for a cell -->
+    <code id="Cell">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cell {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd"><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan">{$DATA}</span></div></td>
+      ]]>
+    </code>
+    <code id="NoScrollCellWithChildren">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cellwithchildren {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd"><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan cellexpand {$CELLSTATECLASS}"></span><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c">{$DATA}</span></div></td>
+      ]]>
+    </code>
+    <!-- The HTML code for a cell -->
+    <code id="NoScrollCell">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLINDEX}:        The column index for this cell.
+      {$COLSPAN}:         The number of columns to span with this cell.
+      {$DATA}:            The data in this cell.
+      {$INDENT}:          The pixel amount to indent this cell.
+      {$ROWINDEX}:        The row index for this cell.
+      {$ROWSPAN}:         The number of rows to span with this cell.
+      -->
+      <![CDATA[
+<td id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}" class="cell {$EXTRACLASSES}" {$ATTRS}style="text-align: {$ALIGN}; padding-left: {$INDENT}px;"><div id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_div" class="cd"><span id="{$NAME}_cell_{$ROWINDEX}_{$COLINDEX}_c" class="cellspan">{$DATA}</span></div></td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderSortBtnAsc">
+      <![CDATA[
+<td><img src="{$THEMEWEBDIR}images/grid_sort_asc.gif" title="{$StrSortedAscending}" /></td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderSortBtnDesc">
+      <![CDATA[
+<td><img src="{$THEMEWEBDIR}images/grid_sort_desc.gif" title="{$StrSortedDescending}" /></td>
+      ]]>
+    </code>
+    <code id="ColumnHeader">
+      <![CDATA[
+<td id="{$NAME}_header_{$COLINDEX}" class="jtfont headercell {$EXTRACLASSES}" style="width: {$COLWIDTH}px;">
+  {$RESIZEBORDER}
+  <div class="intcolheaderdiv {$ALIGN}"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader">
+      <tr>
+        <td id="{$NAME}_header_{$COLINDEX}_caption">{$CAPTION}</td>
+        {$SORTBTN}
+    </table>
+  </div>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnHeaderWithSortLink">
+      <![CDATA[
+<td id="{$NAME}_header_{$COLINDEX}" class="jtfont headercell {$EXTRACLASSES}" style="width: {$COLWIDTH}px;">
+  {$RESIZEBORDER}
+  <div class="intcolheaderdiv {$ALIGN}"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader">
+      <tr>
+        <td id="{$NAME}_header_{$COLINDEX}_caption">{$CAPTION}</td>
+        {$SORTBTN}
+    </table>
+  </div>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnResizeBorder">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="BooleanEditor">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="BooleanFilter">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="ImageCell">
+      <![CDATA[
+<img src="{$FILENAME}" alt="" />
+      ]]>
+    </code>
+    <code id="MemoEditor">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="TextFilter">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="TextColComboBoxEditorValue">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="TextColComboBoxEditor">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="TextColEditEditor">
+      <![CDATA[
+      ]]>
+    </code>
+	<code id="TextHyperlink">
+      <![CDATA[
+<a href="{$HYPERLINK}">{$DATA}</a>
+      ]]>
+    </code>
+    <code id="CustomFilter">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="BlankCell">
+      <![CDATA[
+<td></td>
+      ]]>
+    </code>
+    <code id="Summary">
+      <![CDATA[
+<tr class="summaryrow">
+  {$COLUMNS}
+</tr>
+      ]]>
+    </code>
+    <code id="ColumnAggregates">
+      <![CDATA[
+<td id="{$NAME}_ColAgg_{$COLUMNINDEX}" class="aggregate">
+  <table cellpadding="0" cellspacing="0">
+    {$AGGREGATES}
+  </table>
+</td>
+      ]]>
+    </code>
+    <code id="ColumnNoAggregates">
+      <![CDATA[
+<td id="{$NAME}_ColAgg_{$COLUMNINDEX}" class="aggregate">
+</td>
+      ]]>
+    </code>
+    <code id="ColumnAggregate">
+      <![CDATA[
+<tr>
+  <td>{$AGGREGATENAME}:&nbsp;</td>
+  <td>{$AGGREGATEVALUE}</td>
+</tr>
+      ]]>
+    </code>
+    <code id="SummarySelectCell">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="SummaryGroupCell">
+      <![CDATA[
+<td class="blankcell {$EXTRACLASSES}">&nbsp;</td>
+      ]]>
+    </code>
+    <code id="SummaryEditCell">
+      <![CDATA[
+      ]]>
+    </code>
+    <code id="GroupAggregate">
+      <![CDATA[
+&nbsp;{$AGGREGATENAME}: {$AGGREGATEVALUE}
+      ]]>
+    </code>
+    <code id="GroupAggregateCol">
+      <![CDATA[
+&nbsp;({$COLCAPTION}{$AGGREGATES})
+      ]]>
+    </code>
+  </skin>
+</skins>

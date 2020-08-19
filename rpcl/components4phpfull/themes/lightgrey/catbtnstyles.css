@@ -1,0 +1,21 @@
+.jtcategorybuttons {
+  border: solid 1px #CACACA;
+}
+
+.jtcatcaption {
+  background-image: url(images/gradient.gif);
+  border-bottom: solid 1px #CACACA;
+  color: #000000;
+}
+
+.jtcatbutton {
+  border-bottom: solid 1px #CACACA;
+}
+
+.jtcatbuttonover {
+  background: #F4F4F4;
+}
+
+.jtcatbutton a {
+  color: #000000;
+}

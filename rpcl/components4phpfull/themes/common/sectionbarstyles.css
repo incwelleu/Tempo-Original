@@ -1,0 +1,55 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtsectionbar {
+  border: solid 1px #5D7EB0;
+  overflow: hidden;
+  position: relative;
+}
+
+.jtsecbarsections
+{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.jtsecbarsection {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+.jtsecbarsectioncaption {
+  background: url(images/grid_dark_grad.gif);
+  color: #515050;
+  cursor: pointer;
+  font-size: 9pt;
+  font-weight: bold;
+  height: 20px;
+  padding-left: 2px;
+  padding-top: 4px;
+}
+
+.jtsecbarcontainer
+{
+  height: 100%;
+  left: -2px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.jtsecbarendsection
+{
+  border-bottom: solid 1px #C1C1C1;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}

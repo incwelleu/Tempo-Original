@@ -1,0 +1,53 @@
+.jthnavbar {
+    background-image: url(images/gradient.gif);
+    border: solid 1px #555555;
+    height: 24px;
+}
+
+.jthnavbar_button {
+    color: #555555;
+    font-size: 8pt;
+}
+
+.jthnavbar a {
+  color: #555555;
+}
+
+.jtnavbar_subitem {
+	color: #555555;
+}
+
+.jtnavbar_subbar {
+    border: solid 1px #555555;
+}
+
+.jtnavbar_subbar_inner {
+    background: #f0f0f0;
+}
+
+.jtvnavbar {
+    background: #FFFFFF;
+    border: solid 1px #555555;
+}
+
+.jtvnavbar_caption {
+    background-image: url(images/gradient.gif);
+    border-bottom: solid 1px #555555;
+    color: #555555;
+}
+
+.jtvnavbar_button,
+.jtvnavbar_button table td {
+    color: #555555;
+}
+
+.jtvnavbar_button_over,
+.jtvnavbar_button_over table td {
+    background: #f0f0f0;
+}
+
+.jtvnavbar_button_active,
+.jtvnavbar_button_active table td {
+    background: #AAAAAA;
+    color: #555555;
+}

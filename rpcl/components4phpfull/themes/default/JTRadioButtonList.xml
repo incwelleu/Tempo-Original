@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this radio button list theme -->
+<skin id="default">
+  <!-- The HTML code for each radio button -->
+    <code id="radiobutton">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$INDEX}:           Index of this radio button in the list.
+      {$EVENTS}:          Optional JavaScript events.
+      {$TEXTCLASS}:       Text class selected by the user for the radio button font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Radio button caption.
+      {$STATE}:           Initial state of the radio button. ('checked'/'')
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<td class="jtradiobutton">
+  <input id="{$NAME}_{$INDEX}" name="{$NAME}" type="radio" value="{$INDEX}" tabindex="{$TABINDEX}" {$STATE}{$EVENTS}>
+  <label for="{$NAME}_{$INDEX}" class="{$TEXTCLASS}"{$STYLE}>{$CONTENT}</label>
+</td>
+      ]]>
+    </code>
+    <code id="radiobuttonrow">
+      <!--
+       Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Radio button list contents.
+      -->
+      <![CDATA[
+<tr>
+  {$CONTENT}
+</tr>
+      ]]>
+    </code>
+    <code id="radiobuttonlist">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$CONTENT}:         Radio button list contents.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtradiobuttonlist {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <table border="0" width="100%">
+    {$CONTENT}
+  </table>
+</div>
+      ]]>
+    </code>
+  </skin>
+  <skin id="horz">
+    <!-- The HTML code for each radio button -->
+    <code id="radiobutton">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$INDEX}:           Index of this radio button in the list.
+      {$EVENTS}:          Optional JavaScript events.
+      {$TEXTCLASS}:       Text class selected by the user for the radio button font. 
+      {$STYLE}:           Style string used to override the text class in 1 or more areas.
+      {$CONTENT}:         Radio button caption.
+      {$STATE}:           Initial state of the radio button. ('checked'/'')
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<td class="jtradiobuttonhorz">
+  <input id="{$NAME}_{$INDEX}" name="{$NAME}" type="radio" value="{$INDEX}" tabindex="{$TABINDEX}" {$STATE}{$EVENTS}>
+  <label for="{$NAME}_{$INDEX}" class="{$TEXTCLASS}"{$STYLE}>{$CONTENT}</label>
+</td>
+      ]]>
+    </code>
+    <code id="radiobuttonlist">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Radio button list contents.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtradiobuttonlist" style="width: {$WIDTH}; height: {$HEIGHT};">
+  <table border="0" width="100%">
+    <tr>
+      {$CONTENT}
+    </tr>
+  </table>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

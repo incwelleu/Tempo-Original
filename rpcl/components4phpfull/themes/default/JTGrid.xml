@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this grid theme -->
+  <skin id="default">
+    <!-- The HTML code for the grid type that scrolls -->
+    <code id="grid_scrolling">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      {$COLOR}:           CSS background color override.
+      {$HEADER}:          Table header code.
+      {$HEADERROW}:       Row of header data, used for table scrolling.
+      {$ROWDATA}:         Table contents code.
+      {$INPUTFIELD}:      Table input field, used for editing cell values.
+      {$SHOWHEADER}:      State of the header in CSS display format. (block,none)
+      {$STYLES}:          Table style overrides.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtgrid {$CSSCLASS}" style="width: {$WIDTH}; height: {$HEIGHT}; {$COLOR}">
+  <div class="jtbb jtgrid_inner" style="width: expression(offsetParent.clientWidth);">
+    <div id="{$NAME}_headerdiv" class="jtbb jtgrid_header_div" style="display: {$SHOWHEADER}">
+      {$HEADER}
+    </div>
+    <div id="{$NAME}_data" class="jtbb jtgrid_data_scroll" style="width: 100%; width: expression(offsetParent.offsetWidth - 2); height: 100%;">
+      <table id="{$NAME}_rows" border="0" cellspacing="0" cellpadding="0" class="jtbb jtgrid_table" style="{$STYLES}">
+        {$HEADERROW}
+        {$ROWDATA}
+      </table>
+    </div>
+  </div>
+  <input type="hidden" name="{$NAME}_sc" id="{$NAME}_sc" value="" />
+  <input type="hidden" name="{$NAME}_sr" id="{$NAME}_sr" value="" />
+  {$INPUTFIELD}
+</div>
+      ]]>
+</code>
+<code id="grid_no_scroll">
+  <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLOR}:           CSS background color override.
+      {$HEADER}:          Table header code.
+      {$ROWDATA}:         Table contents code.
+      {$INPUTFIELD}:      Table input field, used for editing cell values.
+      {$SHOWHEADER}:      State of the header in CSS display format. (block,none)
+      -->
+  <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtgrid jtgridnoscroll {$CSSCLASS}" style="width: {$WIDTH}; {$COLOR}">
+  <div class="jtbb jtgrid_inner jtgrid_innernoscroll">
+    <div id="{$NAME}_headerdiv" class="jtbb jtgrid_header_div" style="display: {$SHOWHEADER}">
+      <table id="{$NAME}_header" border="0" cellspacing="0" cellpadding="0" class="jtbb jtgrid_table_header">
+        {$HEADER}
+      </table>
+    </div>
+    <div id="{$NAME}_data" class="jtbb jtgrid_data_noscroll">
+      <table id="{$NAME}_rows" border="0" cellspacing="0" cellpadding="0" class="jtbb jtgrid_table" style="{$STYLES}">
+        {$HEADER}
+        {$ROWDATA}
+      </table>
+    </div>
+    {$INPUTFIELD}
+  </div>
+  <input type="hidden" name="{$NAME}_sc" value="" />
+  <input type="hidden" name="{$NAME}_sr" value="" />
+</div>
+      ]]>      
+    </code>
+    <code id="header_col">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLNAME}:         Name of this column.
+      {$ATTRS}:           HTML attributes required for this column.
+      {$STYLE}:           CSS styles required for this column.
+      {$CAPTION}:         Caption of this column.
+      {$ONCLICK}:         OnClick event handler, used by the grid.
+      {$CLASSEXT}:        Class extensions for this cell. ('','grid_header_first','grid_header_last')
+      -->
+      <![CDATA[
+<div id="{$COLNAME}" class="jtbb jtgrid_header_cell jtgrid_header_cell_div {$CLASSEXT}"{$ATTRS} style="{$STYLE}" onclick="{$ONCLICK}">{$CAPTION}</div>
+      ]]>
+    </code>
+    <code id="header_row">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS styles required for this row.
+      {$CONTENT}:         Content of the header row.
+      -->
+      <![CDATA[
+  {$CONTENT}
+      ]]>
+    </code>
+    <code id="table_header_col">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$COLNAME}:         Name of this column.
+      {$ATTRS}:           HTML attributes required for this column.
+      {$STYLE}:           CSS styles required for this column.
+      {$CAPTION}:         Caption of this column.
+      {$ONCLICK}:         OnClick event handler, used by the grid.
+      {$CLASSEXT}:        Class extensions for this cell. ('','grid_header_first','grid_header_last')
+      {$CELLWIDTH}:       Preset width of this cell.
+      -->
+      <![CDATA[
+<td id="{$COLNAME}" class="jtgrid_header_cell {$CLASSEXT}"{$ATTRS} style="{$STYLE}" onclick="{$ONCLICK}">{$CAPTION}<div class="jtbb jtgrid_cellspacer" style="width: {$CELLWIDTH}px;"></div></td>
+      ]]>
+    </code>
+    <code id="table_header_row">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$STYLE}:           CSS styles required for this row.
+      {$CONTENT}:         Content of the header row.
+      -->
+      <![CDATA[
+<tr class="jtgrid_header_row" style="{$STYLE}">
+  {$CONTENT}
+</tr>
+      ]]>
+    </code>
+  </skin>
+</skins>

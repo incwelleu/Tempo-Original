@@ -1,0 +1,378 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtdivwindow
+{
+  background: white;
+  border: none;
+  overflow: hidden;
+  padding: 3px;
+  position: absolute;
+}
+
+.jtdivwindowcont
+{
+	height: 100%;
+	position: relative;
+}
+
+.jtdivwindow_bsNone
+{
+  padding: 2px;
+}
+
+.jtborders
+{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.jtdivwindowinner
+{
+  height: 100%;
+  overflow: visible;
+  padding-bottom: 0;
+  padding-top: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.jtdivwindowinner_bsNone
+{
+  padding-top: 0;
+}
+
+.jtdivwindowtitlebar
+{
+  background: url(images/divwindow_title.gif);
+  border-bottom: none;
+  cursor: default;
+  height: 22px;
+  left: 0;
+  margin-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtdivwindowtitlebar_bsSingle
+{
+}
+
+.jtdivwindowtitlebar_bsSizeable
+{
+}
+
+.jtdivwindowtitlebar_bsNone
+{
+  display: none;
+}
+
+.jtdivwindowcaption
+{
+  color: white;
+  font-size: 9pt;
+  font-weight: bold;
+  margin-left: 3px;
+  margin-top: 3px;
+  overflow: hidden;
+  width: auto;
+}
+
+.jtdivwindowbutton
+{
+  cursor: pointer;
+  float: right;
+  font-size: 0;
+  height: 18px;
+  margin-left: 1px;
+  margin-top: 2px;
+  overflow: hidden;
+  width: 28px;
+}
+
+.jtdivwindowbutton_help
+{
+  background-image: url(images/divwindow_help.gif);
+}
+
+.jtdivwindowbutton_help_over
+{
+  background-image: url(images/divwindow_help_down.gif);
+}
+
+.jtdivwindowbutton_minimize
+{
+  background-image: url(images/divwindow_minimize.gif);
+}
+
+.jtdivwindowbutton_minimize_over
+{
+  background-image: url(images/divwindow_minimize_down.gif);
+}
+
+.jtdivwindowbutton_maximize
+{
+  background-image: url(images/divwindow_maximize.gif);
+}
+
+.jtdivwindowbutton_maximize_over
+{
+  background-image: url(images/divwindow_maximize_down.gif);
+}
+
+.jtdivwindowbutton_close
+{
+  background-image: url(images/divwindow_close.gif);
+}
+
+.jtdivwindowbutton_close_over
+{
+  background-image: url(images/divwindow_close_down.gif);
+}
+
+.jtdivwindowbutton_restore
+{
+  background-image: url(images/divwindow_restore.gif);
+}
+
+.jtdivwindowbutton_restore_over
+{
+  background-image: url(images/divwindow_restore_down.gif);
+}
+
+.jtdivwindowcontents
+{
+  background: white;
+  border: solid 1px #9EB9D4;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.jtdivwindowmodalback
+{
+  background: url(images/divwindow_mask.gif);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtdivwindowtopborder
+{
+  border-top: solid 1px #9EB9D4;
+  height: 3px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  width: 100%;
+}
+
+.jtdivwindowleftborder
+{
+  border-left: solid 1px #9EB9D4;
+  height: 100%;
+  left: -3px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.jtdivwindowrightborder
+{
+  border-right: solid 1px #9EB9D4;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: -3px;
+  top: 0;
+  width: 3px;
+}
+
+.jtdivwindowbottomborder
+{
+  border-bottom: solid 1px #9EB9D4;
+  bottom: -3px;
+  height: 3px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.jtdivwindowtopleftcorner
+{
+  background: url(images/divwindow_tl.gif);
+  height: 7px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.jtdivwindowtoprightcorner
+{
+  background: url(images/divwindow_tr.gif);
+  height: 7px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7px;
+}
+
+.jtdivwindowbottomleftcorner
+{
+  background: url(images/divwindow_bl.gif);
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 3px;
+}
+
+.jtdivwindowbottomrightcorner
+{
+  background: url(images/divwindow_br.gif);
+  bottom: 0;
+  height: 3px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 3px;
+}
+
+.jtdivwindowleftborder_bsNone
+{
+  left: -2px;
+}
+
+.jtdivwindowtopborder_bsNone
+{
+  top: -2px;
+}
+
+.jtdivwindowrightborder_bsNone
+{
+  right: -2px;
+}
+
+.jtdivwindowbottomborder_bsNone
+{
+  bottom: -2px;
+}
+
+.jtdivwindowtopleftcorner_bsNone
+{
+  background: url(images/divwindow_tl_none.gif);
+  height: 2px;
+  width: 2px;
+}
+
+.jtdivwindowtoprightcorner_bsNone
+{
+  background: url(images/divwindow_tr_none.gif);
+  height: 2px;
+  width: 2px;
+}
+
+.jtdivwindowtopborder_bsSingle
+{
+	display: block;
+}
+
+.jtdivwindowleftborder_bsSingle
+{
+	display: block;
+}
+
+.jtdivwindowrightborder_bsSingle
+{
+	display: block;
+}
+
+.jtdivwindowbottomborder_bsSingle
+{
+	display: block;
+}
+
+.jtdivwindowtopleftcorner_bsSingle
+{
+	display: block;
+}
+
+.jtdivwindowtoprightcorner_bsSingle
+{
+  display: block;
+}
+
+.jtdivwindowbottomleftcorner_bsSingle
+{
+  display: block;
+}
+
+.jtdivwindowbottomrightcorner_bsSingle
+{
+  display: block;
+}
+
+.jtdivwindowtopleftcorner_bsSizeable
+{
+  cursor: nw-resize;
+}
+
+.jtdivwindowtoprightcorner_bsSizeable
+{
+  cursor: ne-resize;
+}
+
+.jtdivwindowbottomleftcorner_bsSizeable
+{
+  background-position: left 3px;
+  background-repeat: no-repeat;
+  cursor: sw-resize;
+  width: 7px;
+  height: 7px;
+}
+
+.jtdivwindowbottomrightcorner_bsSizeable
+{
+  background-position: right 3px;
+  background-repeat: no-repeat;
+  cursor: se-resize;
+  width: 7px;
+  height: 7px;
+}
+
+.jtdivwindowtopborder_bsSizeable
+{
+  cursor: n-resize;
+}
+
+.jtdivwindowleftborder_bsSizeable
+{
+  cursor: w-resize;
+}
+
+.jtdivwindowrightborder_bsSizeable
+{
+  cursor: e-resize;
+}
+
+.jtdivwindowbottomborder_bsSizeable
+{
+  cursor: s-resize;
+}

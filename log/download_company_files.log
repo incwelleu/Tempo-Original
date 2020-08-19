@@ -1,0 +1,1130 @@
+X-Powered-By: PHP/5.4.45
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Content-type: text/html; charset=utf-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html  DIR=ltr >
+<head>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'/>
+            <script type='text/javascript' src='include/strongweber.js?id=2'></script>
+    				<link rel='icon' type='image/icon' href='favicon.ico'/>
+            <link href='include/tinybox.css' rel='stylesheet' type='text/css' />
+            <link href='css/sa_style.css' rel='stylesheet' type='text/css' />
+            <script type='text/javascript' src='include/tinybox.js'></script><script type='text/javascript' src='include/tiny_mce/tiny_mce.js'></script>
+            <script type='text/javascript'>
+            tinyMCE.init({
+                // General options
+                forced_root_block : false,
+                convert_urls : false,
+                relative_urls : false,
+                remove_script_host : false,
+                mode : 'textareas',
+                language : 'en',
+                theme : 'advanced',
+                plugins : 'autolink,style,layer,table,save,advhr,inlinepopups,searchreplace,print,paste,noneditable,nonbreaking,xhtmlxtras,template',
+
+                // Theme options
+                theme_advanced_buttons1 : 'save,|,bold,italic,underline,|,justifyleft,justifycenter,justifyright,justifyfull,|,search,replace,|,bullist,numlist,|,outdent,indent,|forecolor,backcolor,link,unlink,print',
+                theme_advanced_toolbar_location : 'top',
+                theme_advanced_toolbar_align : 'left',
+                theme_advanced_statusbar_location : 'none',
+                theme_advanced_resizing : false,
+
+                // Skin options
+                skin : 'o2k7',
+                skin_variant : 'silver',
+
+                save_enablewhendirty: true,
+    						save_onsavecallback: function() { ButtonSaveMemo(); },
+
+                // Example content CSS (should be your site CSS)
+                //content_css : 'css/example.css',
+
+                // Drop lists for link/image/media/template dialogs
+                template_external_list_url : 'js/template_list.js',
+                external_link_list_url : 'js/link_list.js',
+                external_image_list_url : 'js/image_list.js',
+                media_external_list_url : 'js/media_list.js',
+
+                // Replace values for the template plugin
+                template_replace_values : {
+                  username : 'Some User',
+                  staffid : '991234'
+                }
+            });
+
+            </script><script type='text/javascript'>
+							function ButtonSaveMemo(){
+	    					btnCompanyClickHandler('btnCompany_btnSave', event);
+							}
+            </script>
+			     <title>Company details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+<script type="text/javascript" charset="UTF-8">
+/* <![CDATA[ */
+try { if (undefined == xajax.config) xajax.config = {}; } catch (e) { xajax = {}; xajax.config = {}; };
+xajax.config.requestURI = "/clientarea/company_details.php";
+xajax.config.statusMessages = false;
+xajax.config.waitCursor = true;
+xajax.config.version = "xajax 0.5";
+xajax.config.legacy = false;
+xajax.config.defaultMode = "asynchronous";
+xajax.config.defaultMethod = "POST";
+/* ]]> */
+</script>
+<script type="text/javascript" src="rpcl/xajax/xajax_js/xajax_core.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+/* <![CDATA[ */
+window.setTimeout(
+ function() {
+  var scriptExists = false;
+  try { if (xajax.isLoaded) scriptExists = true; }
+  catch (e) {}
+  if (!scriptExists) {
+   alert("Error: the xajax Javascript component could not be included. Perhaps the URL is incorrect?\nURL: rpcl/xajax/xajax_js/xajax_core.js");
+  }
+ }, 2000);
+/* ]]> */
+</script>
+
+<script type='text/javascript' charset='UTF-8'>
+/* <![CDATA[ */
+xajax_ajaxProcess = function() { return xajax.request( { xjxfun: 'ajaxProcess' }, { parameters: arguments } ); };
+/* ]]> */
+</script>
+<script type="text/javascript" src="rpcl/js/common.js"></script>
+<script type="text/javascript">var company_details=new Object(Object);</script>
+<script type="text/javascript">
+<!--
+function fmstrongJSLoad(event)
+{
+
+var event = event || window.event;
+var params=null;
+        //begin js
+        var msgError = '';
+        var msgSuccess = '';
+        var msgWarning = '';
+
+        if (msgError) {
+          TINY.box.show({html:msgError,animate:true,close:true,boxid:'error'});
+        }
+
+        if (msgSuccess) {
+          TINY.box.show({html:msgSuccess,animate:true,close:false,boxid:'success',mask:false,autohide:5});
+        }
+
+        if (msgWarning) {
+          TINY.box.show({html:msgWarning,animate:true,close:false,boxid:'warning',mask:true,top:-15});
+        }
+        //end
+        
+}
+
+function msgErrorJSChange(event)
+{
+
+var event = event || window.event;
+var params=null;
+        //begin js
+        if (msgError) {
+          TINY.box.show({html:msgError,animate:true,close:true,boxid:'error',height:'auto',width:'300px'});
+        }
+				//end
+        
+}
+
+function btnCompanyJSClick( toolButtonID, event )
+{
+    var event = event || window.event;
+    var params = new Array( getEventTarget( event ).id );
+        //begin js
+          var info = getEventTarget( event ).id.split( "_" );
+          var toolButton = info[ 0 ];
+          var toolButtonName = info[ 1 ];
+
+          if (toolButton == 'btnCompany'){
+            if (toolButtonName == 'btnDeleteCompany') {
+                return confirm("Want to delete the selected information?");
+            }
+          }
+
+        //end
+        
+}
+
+function btnCompanyClickHandler( toolButtonID, e )
+{
+  if( btnCompanyJSClick( toolButtonID, e ) == false )
+    return;
+  var event = e || window.event;
+  var id = toolButtonID;
+  var f = document.company_details;
+  f.btnCompanySubmitEvent.value = id;
+  if( ( f.onsubmit ) && ( typeof( f.onsubmit ) == 'function' ) )
+    f.onsubmit();
+  f.submit();
+}
+
+if (typeof (monthNames) == "undefined")
+    monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+if (typeof (abbrevMonthNames) == "undefined")
+    abbrevMonthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+if (typeof (dayNames) == "undefined")
+    dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+if (typeof (abbrevDayNames) == "undefined")
+    abbrevDayNames = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+if (typeof (singleDayNames) == "undefined")
+    singleDayNames = ["S","M","T","W","T","F","S"];
+function gridCompany_activity_codeRequestor()
+{
+gridCompany_activity_code._showWaitWindow();
+var params = [];
+ xajax_ajaxProcess('company_details','gridCompany_activity_code',params,'ClassName',xajax.getFormValues('company_details'),["gridCompany_activity_code"]);
+ }
+function gridCompany_administratorRequestor()
+{
+gridCompany_administrator._showWaitWindow();
+var params = [];
+ xajax_ajaxProcess('company_details','gridCompany_administrator',params,'ClassName',xajax.getFormValues('company_details'),["gridCompany_administrator"]);
+ }
+function btnActivityJSClick( toolButtonID, event )
+{
+    var event = event || window.event;
+    var params = new Array( getEventTarget( event ).id );
+        //begin js
+          var info = getEventTarget( event ).id.split( "_" );
+          var toolButton = info[ 0 ];
+          var toolButtonName = info[ 1 ];
+          var row = gridCompany_activity_code.getSelectedPrimaryKey();
+
+          if (toolButton == 'btnActivity'){
+            if (toolButtonName == 'btnDeleteActivity') {
+                if ((row != "-1") && (row != "")) { return confirm("Want to delete the selected information?");}
+                else return false;
+            }
+          }
+        //end
+        
+}
+
+function btnActivityClickHandler( toolButtonID, e )
+{
+  if( btnActivityJSClick( toolButtonID, e ) == false )
+    return;
+  var event = e || window.event;
+  var id = toolButtonID;
+  var f = document.company_details;
+  f.btnActivitySubmitEvent.value = id;
+  if( ( f.onsubmit ) && ( typeof( f.onsubmit ) == 'function' ) )
+    f.onsubmit();
+  f.submit();
+}
+
+function btnCreateNewClickWrapper(event, hiddenfield, submitvalue, wrappedfunc)
+{
+
+var event = event || window.event;
+submit1=true;
+submit2=true;
+if (typeof(wrappedfunc) == 'function') submit1=wrappedfunc(event);
+form = hiddenfield.form;
+if ((form) && (form.onsubmit) && (typeof(form.onsubmit) == 'function')) submit2=form.onsubmit();
+if ((submit1) && (submit2)) { hiddenfield.value = submitvalue; form.submit(); }
+return false;
+
+}
+
+-->
+</script>
+<style type="text/css">
+<!--
+#gridCompany_activity_code .EvenRowStyle td
+{
+}
+#gridCompany_activity_code .EvenRowStyle td a
+{
+}
+#gridCompany_activity_code .OddRowStyle td
+{
+}
+#gridCompany_activity_code .OddRowStyle td a
+{
+}
+#gridCompany_activity_code .inttable tbody tr .selected, #gridCompany_activity_code .inttable tbody .rowselected td
+{
+}
+#gridCompany_activity_code .columnheader td
+{
+}
+
+-->
+</style>
+<style type="text/css">
+<!--
+#gridCompany_administrator .EvenRowStyle td
+{
+}
+#gridCompany_administrator .EvenRowStyle td a
+{
+}
+#gridCompany_administrator .OddRowStyle td
+{
+}
+#gridCompany_administrator .OddRowStyle td a
+{
+}
+#gridCompany_administrator .inttable tbody tr .selected, #gridCompany_administrator .inttable tbody .rowselected td
+{
+}
+#gridCompany_administrator .columnheader td
+{
+}
+
+-->
+</style>
+<link href="rpcl/components4phpfull/themes/common/merged.css" rel="stylesheet" type="text/css" />
+<link href="rpcl/components4phpfull/themes/lightgrey/merged.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/jquery-1.4.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/scripts.js"></script>
+<script language="JavaScript" type="text/javascript">
+var JTThemeWebDir = "rpcl/components4phpfull/themes/lightgrey/";
+</script>
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/JTPlatinumGrid.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/JTDateTimePicker.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/JTComboBox.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcl/components4phpfull/themes/common/JTDivWindow.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+JTInitAnchorUpdate();
+// -->
+</script>
+</head>
+
+<body  style=" margin-left: 0px;  margin-top: 0px;  margin-right: 0px;  margin-bottom: 0px; "   onload="return fmstrongJSLoad(event)" >
+<form style="margin-bottom: 0" id="company_details" name="company_details" method="post"   action="/clientarea/company_details.php"><input type="hidden" name="serverevent" value=""><input type="hidden" name="serverparams" value=""><input type="hidden" id="btnCreateNewSubmitEvent" name="btnCreateNewSubmitEvent" value="" /><div id="msgSuccess_outer" style="position: absolute; z-index: 0; left: 208px; top: 64px; width: 200px; height: 18px;">
+<input type="hidden" id="msgSuccess" name="msgSuccess" value="" />
+</div>
+<div id="msgError_outer" style="position: absolute; z-index: 1; left: 208px; top: 32px; width: 200px; height: 18px;">
+<input type="hidden" id="msgError" name="msgError" value="" />
+</div>
+<div id="msgWarning_outer" style="position: absolute; z-index: 2; left: 208px; top: 104px; width: 200px; height: 18px;">
+<input type="hidden" id="msgWarning" name="msgWarning" value="" />
+</div>
+<div id="company_id_outer" style="position: absolute; z-index: 4; left: 519px; top: -26px; width: 91px; height: 18px;">
+<input type="hidden" id="company_id" name="company_id" value="1665" />
+</div>
+<div id="btnCompany_outer" style="position: absolute; z-index: 5; left: 0px; top: 3px; right: 12px; width: expression(offsetParent.clientWidth-12); height: 29px;">
+<div id="btnCompany_outerdiv">
+<div id="btnCompany" class="jttoolbar " style="width: 100%;">
+  <div id="btnCompany_inner" class="jttoolbar_inside">
+    <div id="btnCompany_inner2" class="jttoolbarinner2">
+      <div id="btnCompany_scroller" class="jttoolbarscroller">
+        <table border="0" cellpadding="0" cellspacing="0" class="jttoolbaritemtable">
+          <tr>
+            <td id="btnCompany_btnSave" class="jtbb jtfont jttoolbutton" onmouseover="JTToolButtonOver( 'btnCompany_btnSave' )" onmouseout="JTToolButtonOut( 'btnCompany_btnSave' )" onmousedown="JTToolButtonDown( 'btnCompany_btnSave' )" onmouseup="JTToolButtonUp( 'btnCompany_btnSave' )" onclick="btnCompanyClickHandler('btnCompany_btnSave', event)">
+  <div id="btnCompany_btnSave_inner" class="jtbb jttoolbuttoninner">
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="btnCompany_btnSave_imagetd" style="padding-right: 5px;">
+			<img id="btnCompany_btnSave_img" src="images/button/save_16x16.png" alt="" />
+		</td><td id="btnCompany_btnSave_contenttd">
+			Save
+		</td>
+	</tr></table>
+	</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td><td id="btnCompany_btnCancel" class="jtbb jtfont jttoolbutton" onmouseover="JTToolButtonOver( 'btnCompany_btnCancel' )" onmouseout="JTToolButtonOut( 'btnCompany_btnCancel' )" onmousedown="JTToolButtonDown( 'btnCompany_btnCancel' )" onmouseup="JTToolButtonUp( 'btnCompany_btnCancel' )" onclick="btnCompanyClickHandler('btnCompany_btnCancel', event)">
+  <div id="btnCompany_btnCancel_inner" class="jtbb jttoolbuttoninner">
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="btnCompany_btnCancel_imagetd" style="padding-right: 5px;">
+			<img id="btnCompany_btnCancel_img" src="images/button/cancel_16x16.png" alt="" />
+		</td><td id="btnCompany_btnCancel_contenttd">
+			Cancel
+		</td>
+	</tr></table>
+	</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td><td id="btnCompany_btnDownloadCompanyFile" class="jtbb jtfont jttoolbutton" onmouseover="JTToolButtonOver( 'btnCompany_btnDownloadCompanyFile' )" onmouseout="JTToolButtonOut( 'btnCompany_btnDownloadCompanyFile' )" onmousedown="JTToolButtonDown( 'btnCompany_btnDownloadCompanyFile' )" onmouseup="JTToolButtonUp( 'btnCompany_btnDownloadCompanyFile' )" onclick="btnCompanyClickHandler('btnCompany_btnDownloadCompanyFile', event)">
+  <div id="btnCompany_btnDownloadCompanyFile_inner" class="jtbb jttoolbuttoninner">Download all files in the company</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="btnCompany_fwdscroller" class="jtbb jttoolbarfwdscroller" onmouseover="JTToolBarScrollLeftStart('btnCompany');" onmouseout="JTToolBarScrollLeftStop('btnCompany');">&nbsp;</div>
+    <div id="btnCompany_revscroller" class="jtbb jttoolbarrevscroller" onmouseover="JTToolBarScrollRightStart('btnCompany');" onmouseout="JTToolBarScrollRightStop('btnCompany');">&nbsp;</div>
+  </div>
+</div></div>
+<script language="JavaScript" type="text/javascript"><!--
+JTToolBarInitialize( 'btnCompany' );
+// -->
+</script>
+<input type="hidden" name="btnCompanySubmitEvent" value="" />
+
+</div>
+<div id="contact_list_id_outer" style="position: absolute; z-index: 6; left: 630px; top: -25px; width: 110px; height: 16px;">
+<input type="hidden" id="contact_list_id" name="contact_list_id" value="1807" />
+</div>
+<div id="lbCompany_name_outer" style="position: absolute; z-index: 7; left: 5px; top: 40px; width: 100px; height: 15px;">
+<div id="lbCompany_name_outerdiv" style="height: 100%; width: 100%;">
+<div id="lbCompany_name" class="fsDefault " style="cursor: default; overflow: hidden; width:100%; height:100%;">Company full name</div></div>
+
+</div>
+<div id="gbConstitution_outer" style="position: absolute; z-index: 8; left: 5px; top: 382px; width: 451px; height: 358px;">
+<div id="gbConstitution_outerdiv" style="height: 100%; width: 100%;">
+<fieldset id="gbConstitution" class="jtgroupbox " style="width: 100%; height: 100%;">
+  <legend class="jtfont jtgroupboxcaption">Constitution</legend>
+  <div class="jtgroupboxcontents">
+    <div id="const_dt_outer" style="Z-INDEX: 0; LEFT: 59px; WIDTH: 91px; POSITION: absolute; TOP: 18px; HEIGHT: 24px">
+<div id="const_dt_outerdiv">
+<div id="const_dt_container" class="jtdatepicker " style="width: 91px;">
+  <input name="const_dt" id="const_dt" type="hidden" value="2016-06-20" disabled="disabled">
+  <table id="const_dt_table" border="0" cellpadding="0" cellspacing="0" class="jtdatepickertable">
+    <tr>
+      <td class="jtdatepickerinputcell"><input name="const_dt_view" id="const_dt_view" class="jtbb jtdatepickerinput" type="text" size="1" maxlength="10" disabled="disabled" style="font-size: 11px;" value="2016-06-20" tabindex="25" readonly="readonly" /></td>
+      <td class="jtdatepickerarrowcell" onclick="JTDatePickerShowCalendar( 'const_dt', true )"><div id="const_dt_arrowinner" class="jtbb jtdatepickerdropdownarrow"></div></td>
+    </tr>
+  </table>
+</div>
+<div id="const_dt_calendar" class="jtbb jtdatepickercalendar" style="display: none;" tabindex="25">
+  <div class="jtbb jtdatepickercalendarinner">
+    <div class="jtbb jtdatepickercalendartitle">
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarprevyear" onmouseup="JTDatePickerPrevYear( 'const_dt' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarprevmonth" onmouseup="JTDatePickerPrevMonth( 'const_dt' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarnextyear" onmouseup="JTDatePickerNextYear( 'const_dt' )">&nbsp;</div>
+      <div class="jtbb jtdatepickerbutton jtdatepickercalendarnextmonth" onmouseup="JTDatePickerNextMonth( 'const_dt' )">&nbsp;</div>
+      <div id="const_dt_calendartitle" class="jtbb jtfont jtdatepickercalendartitleinner">&nbsp;</div>
+    </div>
+    <div id="const_dt_calendartable" class="jtdatepickercaltable">&nbsp;</div>
+    <div class="jtbb jtdatepickerbottombar">
+      <div class="jtbb jtfont jtdatepickerbottomlink">
+        <a href="javascript: ;" title="Go to today's month." onclick="JTDatePickerToday( 'const_dt' )">Today</a> | 
+        <a href="javascript: ;" title="Clear date." onclick="JTDatePickerClear( 'const_dt' )">Clear</a></div>
+    </div>
+  </div>
+</div></div>
+<script language="JavaScript" type="text/javascript">
+JTDatePickerInitialize( 'const_dt',null,null,null,'Y-m-d' );
+</script>
+
+</div>
+<div id="lbConst_dt_outer" style="Z-INDEX: 1; LEFT: 6px; WIDTH: 43px; POSITION: absolute; TOP: 21px; HEIGHT: 18px">
+<div id="lbConst_dt_outerdiv">
+<div id="lbConst_dt" class="fsDefault " style="cursor: default; overflow: hidden; width:43px; height:18px;">Date</div></div>
+
+</div>
+<div id="lbConst_notary_outer" style="Z-INDEX: 2; LEFT: 167px; WIDTH: 43px; POSITION: absolute; TOP: 18px; HEIGHT: 18px">
+<div id="lbConst_notary_outerdiv">
+<div id="lbConst_notary" class="fsDefault " style="cursor: default; overflow: hidden; width:43px; height:18px;">Notary</div></div>
+
+</div>
+<div id="const_notary_outer" style="Z-INDEX: 3; LEFT: 224px; WIDTH: 219px; POSITION: absolute; TOP: 15px; HEIGHT: 24px">
+<div id="const_notary_outerdiv">
+<input name="const_notary" id="const_notary" type="text" size="1" disabled maxlength="50" class="jtbb jtfont " style="cursor: default; float: left; width: 219px;" value="Manuel Angel Martinez Garcia" tabindex="26"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'const_notary', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="tomo_outer" style="Z-INDEX: 4; LEFT: 59px; WIDTH: 91px; POSITION: absolute; TOP: 43px; HEIGHT: 24px">
+<div id="tomo_outerdiv">
+<input name="tomo" id="tomo" type="text" size="1" disabled maxlength="10" class="jtbb jtfont " style="cursor: default; float: left; width: 91px;" value="45498" tabindex="27"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'tomo', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbTomo_outer" style="Z-INDEX: 5; LEFT: 6px; WIDTH: 45px; POSITION: absolute; TOP: 46px; HEIGHT: 18px">
+<div id="lbTomo_outerdiv">
+<div id="lbTomo" class="fsDefault " style="cursor: default; overflow: hidden; width:45px; height:18px;">Tomo</div></div>
+
+</div>
+<div id="lbFolio_outer" style="Z-INDEX: 6; LEFT: 167px; WIDTH: 56px; POSITION: absolute; TOP: 46px; HEIGHT: 18px">
+<div id="lbFolio_outerdiv">
+<div id="lbFolio" class="fsDefault " style="cursor: default; overflow: hidden; width:56px; height:18px;">Folio</div></div>
+
+</div>
+<div id="folio_outer" style="Z-INDEX: 7; LEFT: 224px; WIDTH: 65px; POSITION: absolute; TOP: 43px; HEIGHT: 24px">
+<div id="folio_outerdiv">
+<input name="folio" id="folio" type="text" size="1" disabled maxlength="10" class="jtbb jtfont " style="cursor: default; float: left; width: 65px;" value="154" tabindex="28"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'folio', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbHoja_outer" style="Z-INDEX: 8; LEFT: 309px; WIDTH: 43px; POSITION: absolute; TOP: 46px; HEIGHT: 18px">
+<div id="lbHoja_outerdiv">
+<div id="lbHoja" class="fsDefault " style="cursor: default; overflow: hidden; width:43px; height:18px;">Hoja</div></div>
+
+</div>
+<div id="gridCompany_activity_code_outer" style="Z-INDEX: 9; LEFT: 6px; WIDTH: 437px; POSITION: absolute; TOP: 201px; HEIGHT: 128px">
+<div id="gridCompany_activity_code_outerdiv">
+<div id="gridCompany_activity_code" class="jtadvgrid jtfont scrolling" tabindex="0" style="height: 128px;">
+  <div class="toppager">
+    
+  </div>
+  
+  
+  <div class="scrollcontainer">
+    <div id="gridCompany_activity_code_Header" class="header">
+      <div class="intheader">
+        <table id="gridCompany_activity_code_HeaderTable" border="0" cellpadding="0" cellspacing="0" class="intheadertable horzlines vertlines fillwidth">
+          <colgroup>
+            <col id="gridCompany_activity_code_colitem_hdr_select" width="25" /><col id="gridCompany_activity_code_colitem_hdr_0" width="180" /><col id="gridCompany_activity_code_colitem_hdr_1" width="78" /><col id="gridCompany_activity_code_colitem_hdr_2" width="78" /><col id="gridCompany_activity_code_colitem_hdr_3" width="50" /><col id="gridCompany_activity_code_colitem_hdr_4" width="50" /><col id="gridCompany_activity_code_colitem_hdr_5" width="40" />
+          </colgroup>
+          <tbody id="gridCompany_activity_code_IntTableHead">
+    <tr id="gridCompany_activity_code_HeaderTableColumnHeader" class="columnheader">
+  <td id="gridCompany_activity_code_SelectColHeader" class="headercell selectcolheader"><input id="gridCompany_activity_code_SelectAll" name="gridCompany_activity_code_SelectAll" type="checkbox" title="Select All Rows" onclick="gridCompany_activity_code.selectAll(this.checked);" /></td><td id="gridCompany_activity_code_header_0" class="headercell " style="width: 180px;"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td style="overflow: hidden;"><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td id="gridCompany_activity_code_header_0_caption">Economic activity</td></tr></table></div></td><td class="resizercell" width="7"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,0);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_1" class="headercell " style="width: 78px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv aligncenter"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_1_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'start_dt', 'ASC');">Start date</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,1);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_2" class="headercell " style="width: 78px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv aligncenter"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_2_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'end_dt', 'DESC');">End date</span></td><td class="srt"><img src="rpcl/components4phpfull/themes/lightgrey/images/grid_sort_asc.gif" title="Sorted Ascending" /></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,2);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_3" class="headercell " style="width: 50px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv aligncenter"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_3_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'iae_cd', 'ASC');">IAE</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,3);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_4" class="headercell " style="width: 50px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv aligncenter"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_4_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'cnae_cd', 'ASC');">CNAE</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,4);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_5" class="headercell " style="width: 40px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv aligncenter"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_5_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'main_activity_yn', 'ASC');">Main</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,5);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_header_6" class="headercell novisible" style="width: px;" onmousedown="gridCompany_activity_code._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_activity_code_header_6_caption" class="link" onclick="return gridCompany_activity_code._HeaderClick(event, 'company_activity_code_id', 'ASC');"></span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_activity_code._scr(event,6);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_activity_code_Phc" class="phc"></td>
+</tr>
+    
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="gridCompany_activity_code_ScrollerDiv" class="scrollerdiv" style="width: auto;" onscroll="gridCompany_activity_code._divScroll()">
+      <table id="gridCompany_activity_code_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable horzlines vertlines fillwidth">
+        <colgroup>
+          <col id="gridCompany_activity_code_colitem_body_select" width="25" /><col id="gridCompany_activity_code_colitem_body_0" width="180" /><col id="gridCompany_activity_code_colitem_body_1" width="78" /><col id="gridCompany_activity_code_colitem_body_2" width="78" /><col id="gridCompany_activity_code_colitem_body_3" width="50" /><col id="gridCompany_activity_code_colitem_body_4" width="50" /><col id="gridCompany_activity_code_colitem_body_5" width="40" />
+        </colgroup>
+        <tbody id="gridCompany_activity_code_IntTableBody" class="inttablebody" onclick="gridCompany_activity_code._dtcc(event,this)" ondblclick="gridCompany_activity_code._dtcdc(event,this)">
+          
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="gridCompany_activity_code_SummaryCont" class="summary-container">
+    <table id="gridCompany_activity_code_Summary" class="summary" cellspacing="0" cellpadding="0">
+      
+    </table>
+  </div>
+  <div id="gridCompany_activity_code_ColMover" class="jtfont colmover"></div>
+  <div id="gridCompany_activity_code_ColPositioner" class="colpositioner">
+    <div class="colpositionertop"></div>
+    <div class="colpositionerbottom"></div>
+  </div>
+  <div id="gridCompany_activity_code_DragSelect" class="dragselect"></div>
+  
+  
+  
+  <div id="gridCompany_activity_code_wait" class="waitwindow"></div>
+</div></div>
+<input id="gridCompany_activity_code_Selection" name="gridCompany_activity_code_Selection" type="hidden" value="" />
+<input id="gridCompany_activity_code_Cmd" name="gridCompany_activity_code_Cmd" type="hidden" value="" />
+<input id="gridCompany_activity_code_Pager" name="gridCompany_activity_code_Pager" type="hidden" value="" />
+<input id="gridCompany_activity_code_ColSizes" name="gridCompany_activity_code_ColSizes" type="hidden" value="" />
+<input id="gridCompany_activity_code_PrimaryKeys" name="gridCompany_activity_code_PrimaryKeys" type="hidden" value="" />
+<script language="JavaScript" type="text/javascript">
+JTPlatinumGridInitialize( 'gridCompany_activity_code', [false,false,false,true,true,false,true,true,true,"null",7,"null","Inline",[{"Name":"economic_activity_name","DataField":"economic_activity_name","CanEdit":false,"CanSelect":true},{"Name":"start_dt","DataField":"start_dt","CanEdit":true,"CanSelect":true},{"Name":"end_dt","DataField":"end_dt","CanEdit":true,"CanSelect":true},{"Name":"iae_cd","DataField":"iae_cd","CanEdit":false,"CanSelect":true},{"Name":"cnae_cd","DataField":"cnae_cd","CanEdit":false,"CanSelect":true},{"Name":"main_activity_yn","DataField":"main_activity_yn","CanEdit":false,"CanSelect":true},{"Name":"company_activity_code_id","DataField":"company_activity_code_id","CanEdit":false,"CanSelect":true}],"company_activity_code_id","","end_dt","null",-1,"null","","0",0,false,true,"null",false,false,false,"null",1000,"null",true,"null",0], gridCompany_activity_codeRequestor, 'rpcl/components4phpfull/themes/lightgrey/' );
+</script>
+
+</div>
+<div id="gridCompany_administrator_outer" style="Z-INDEX: 10; LEFT: 6px; WIDTH: 437px; POSITION: absolute; TOP: 91px; HEIGHT: 99px">
+<div id="gridCompany_administrator_outerdiv">
+<div id="gridCompany_administrator" class="jtadvgrid jtfont scrolling" tabindex="0" style="height: 99px;">
+  <div class="toppager">
+    
+  </div>
+  
+  
+  <div class="scrollcontainer">
+    <div id="gridCompany_administrator_Header" class="header">
+      <div class="intheader">
+        <table id="gridCompany_administrator_HeaderTable" border="0" cellpadding="0" cellspacing="0" class="intheadertable horzlines vertlines fillwidth">
+          <colgroup>
+            <col id="gridCompany_administrator_colitem_hdr_0" width="150" /><col id="gridCompany_administrator_colitem_hdr_1" width="150" /><col id="gridCompany_administrator_colitem_hdr_2" width="100" />
+          </colgroup>
+          <tbody id="gridCompany_administrator_IntTableHead">
+    <tr id="gridCompany_administrator_HeaderTableColumnHeader" class="columnheader">
+  <td id="gridCompany_administrator_header_0" class="headercell " style="width: 150px;" onmousedown="gridCompany_administrator._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_administrator_header_0_caption" class="link" onclick="return gridCompany_administrator._HeaderClick(event, 'first_name', 'ASC');">First name</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_administrator._scr(event,0);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_administrator_header_1" class="headercell " style="width: 150px;" onmousedown="gridCompany_administrator._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_administrator_header_1_caption" class="link" onclick="return gridCompany_administrator._HeaderClick(event, 'last_name', 'ASC');">Last name</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_administrator._scr(event,1);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_administrator_header_2" class="headercell " style="width: 100px;" onmousedown="gridCompany_administrator._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_administrator_header_2_caption" class="link" onclick="return gridCompany_administrator._HeaderClick(event, 'tax_ident', 'ASC');">Tax ID</span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_administrator._scr(event,2);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_administrator_header_3" class="headercell novisible" style="width: 0px;" onmousedown="gridCompany_administrator._scm(event, this)"><table border="0" cellpadding="0" cellspacing="0" class="intcolheadercelltable"><tr><td><div class="intcolheaderdiv alignleft"><table border="0" cellpadding="0" cellspacing="0" class="intcolheader"><tr><td><span id="gridCompany_administrator_header_3_caption" class="link" onclick="return gridCompany_administrator._HeaderClick(event, 'contact_id', 'ASC');"></span></td></tr></table></div></td><td class="resizercell" width="3"><div class="cellresizeborder"><div onmousedown="gridCompany_administrator._scr(event,3);"></div></td></tr></table><div class="intcolheaderspacer" style="height: 0;"></div>
+</td><td id="gridCompany_administrator_Phc" class="phc"></td>
+</tr>
+    
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="gridCompany_administrator_ScrollerDiv" class="scrollerdiv" style="width: auto;" onscroll="gridCompany_administrator._divScroll()">
+      <table id="gridCompany_administrator_IntTable" border="0" cellpadding="0" cellspacing="0" class="inttable horzlines vertlines fillwidth">
+        <colgroup>
+          <col id="gridCompany_administrator_colitem_body_0" width="150" /><col id="gridCompany_administrator_colitem_body_1" width="150" /><col id="gridCompany_administrator_colitem_body_2" width="100" />
+        </colgroup>
+        <tbody id="gridCompany_administrator_IntTableBody" class="inttablebody" onclick="gridCompany_administrator._dtcc(event,this)" ondblclick="gridCompany_administrator._dtcdc(event,this)">
+          
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="gridCompany_administrator_SummaryCont" class="summary-container">
+    <table id="gridCompany_administrator_Summary" class="summary" cellspacing="0" cellpadding="0">
+      
+    </table>
+  </div>
+  <div id="gridCompany_administrator_ColMover" class="jtfont colmover"></div>
+  <div id="gridCompany_administrator_ColPositioner" class="colpositioner">
+    <div class="colpositionertop"></div>
+    <div class="colpositionerbottom"></div>
+  </div>
+  <div id="gridCompany_administrator_DragSelect" class="dragselect"></div>
+  
+  
+  
+  <div id="gridCompany_administrator_wait" class="waitwindow"></div>
+</div></div>
+<input id="gridCompany_administrator_Selection" name="gridCompany_administrator_Selection" type="hidden" value="" />
+<input id="gridCompany_administrator_Cmd" name="gridCompany_administrator_Cmd" type="hidden" value="" />
+<input id="gridCompany_administrator_Pager" name="gridCompany_administrator_Pager" type="hidden" value="" />
+<input id="gridCompany_administrator_ColSizes" name="gridCompany_administrator_ColSizes" type="hidden" value="" />
+<input id="gridCompany_administrator_PrimaryKeys" name="gridCompany_administrator_PrimaryKeys" type="hidden" value="" />
+<script language="JavaScript" type="text/javascript">
+JTPlatinumGridInitialize( 'gridCompany_administrator', [false,false,false,true,true,false,true,true,true,"null",4,"null","Inline",[{"Name":"first_name","DataField":"first_name","CanEdit":false,"CanSelect":true},{"Name":"last_name","DataField":"last_name","CanEdit":false,"CanSelect":true},{"Name":"tax_ident","DataField":"tax_ident","CanEdit":false,"CanSelect":true},{"Name":"contact_id","DataField":"contact_id","CanEdit":false,"CanSelect":true}],"contact_id","","","null",-1,"null","","0","0",false,true,"null",false,false,false,"null",1000,"null",true,"null",0], gridCompany_administratorRequestor, 'rpcl/components4phpfull/themes/lightgrey/' );
+</script>
+
+</div>
+<div id="lbAdministrators_outer" style="Z-INDEX: 11; LEFT: 6px; WIDTH: 100px; POSITION: absolute; TOP: 73px; HEIGHT: 18px">
+<div id="lbAdministrators_outerdiv">
+<div id="lbAdministrators" class="fsDefault " style="cursor: default; overflow: hidden; width:100px; height:18px;">Administrators</div></div>
+
+</div>
+<div id="company_activity_code_id_outer" style="Z-INDEX: 12; LEFT: 198px; WIDTH: 200px; POSITION: absolute; TOP: 73px; HEIGHT: 18px">
+<input type="hidden" id="company_activity_code_id" name="company_activity_code_id" value="0" />
+</div>
+<div id="hoja_outer" style="Z-INDEX: 13; LEFT: 371px; WIDTH: 72px; POSITION: absolute; TOP: 43px; HEIGHT: 24px">
+<div id="hoja_outerdiv">
+<input name="hoja" id="hoja" type="text" size="1" disabled maxlength="10" class="jtbb jtfont " style="cursor: default; float: left; width: 72px;" value="B-489862" tabindex="29"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'hoja', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="btnActivity_outer" style="Z-INDEX: 14; LEFT: 6px; WIDTH: 437px; POSITION: absolute; TOP: 328px; HEIGHT: 27px">
+<div id="btnActivity_outerdiv">
+<div id="btnActivity" class="jttoolbar " style="width: 437px;">
+  <div id="btnActivity_inner" class="jttoolbar_inside">
+    <div id="btnActivity_inner2" class="jttoolbarinner2">
+      <div id="btnActivity_scroller" class="jttoolbarscroller">
+        <table border="0" cellpadding="0" cellspacing="0" class="jttoolbaritemtable">
+          <tr>
+            <td id="btnActivity_btnAdd" class="jtbb jtfont jttoolbutton jttoolbutton_disabled">
+  <div id="btnActivity_btnAdd_inner" class="jtbb jttoolbuttoninner">
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="btnActivity_btnAdd_imagetd" style="padding-right: 5px;">
+			<img id="btnActivity_btnAdd_img" src="images/button/add_16x16.png" alt="" />
+		</td><td id="btnActivity_btnAdd_contenttd">
+			Add
+		</td>
+	</tr></table>
+	</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td><td id="btnActivity_btnDeleteActivity" class="jtbb jtfont jttoolbutton jttoolbutton_disabled">
+  <div id="btnActivity_btnDeleteActivity_inner" class="jtbb jttoolbuttoninner">
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="btnActivity_btnDeleteActivity_imagetd" style="padding-right: 5px;">
+			<img id="btnActivity_btnDeleteActivity_img" src="images/button/delete_16x16.png" alt="" />
+		</td><td id="btnActivity_btnDeleteActivity_contenttd">
+			Delete
+		</td>
+	</tr></table>
+	</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td><td id="btnActivity_btnEdit" class="jtbb jtfont jttoolbutton jttoolbutton_disabled">
+  <div id="btnActivity_btnEdit_inner" class="jtbb jttoolbuttoninner">
+	<table class="jttoolbar_innertable" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto"><tr>
+		<td id="btnActivity_btnEdit_imagetd" style="padding-right: 5px;">
+			<img id="btnActivity_btnEdit_img" src="images/button/edit_16x16.png" alt="" />
+		</td><td id="btnActivity_btnEdit_contenttd">
+			Edit
+		</td>
+	</tr></table>
+	</div>
+</td>
+<td class="jtbb jttoolbuttonspacer">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="btnActivity_fwdscroller" class="jtbb jttoolbarfwdscroller" onmouseover="JTToolBarScrollLeftStart('btnActivity');" onmouseout="JTToolBarScrollLeftStop('btnActivity');">&nbsp;</div>
+    <div id="btnActivity_revscroller" class="jtbb jttoolbarrevscroller" onmouseover="JTToolBarScrollRightStart('btnActivity');" onmouseout="JTToolBarScrollRightStop('btnActivity');">&nbsp;</div>
+  </div>
+</div></div>
+<script language="JavaScript" type="text/javascript"><!--
+JTToolBarInitialize( 'btnActivity' );
+// -->
+</script>
+<input type="hidden" name="btnActivitySubmitEvent" value="" />
+
+</div>
+
+  </div>
+</fieldset></div>
+
+</div>
+<div id="gbRegistered_address_outer" style="position: absolute; z-index: 10; left: 5px; top: 89px; width: 451px; height: 163px;">
+<div id="gbRegistered_address_outerdiv" style="height: 100%; width: 100%;">
+<fieldset id="gbRegistered_address" class="jtgroupbox " style="width: 100%; height: 100%;">
+  <legend class="jtfont jtgroupboxcaption">Registered address</legend>
+  <div class="jtgroupboxcontents">
+    <div id="regaddress_floor_outer" style="Z-INDEX: 0; LEFT: 231px; WIDTH: 43px; POSITION: absolute; TOP: 64px; HEIGHT: 21px">
+<div id="regaddress_floor_outerdiv">
+<input name="regaddress_floor" id="regaddress_floor" type="text" size="1" maxlength="2" class="jtbb jtfont " style="cursor: default; float: left; width: 43px;font-size: 11px;" value="4" tabindex="8"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_floor', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="regaddress_door_outer" style="Z-INDEX: 1; LEFT: 400px; WIDTH: 43px; POSITION: absolute; TOP: 64px; HEIGHT: 21px">
+<div id="regaddress_door_outerdiv">
+<input name="regaddress_door" id="regaddress_door" type="text" size="1" maxlength="2" class="jtbb jtfont " style="cursor: default; float: left; width: 43px;font-size: 11px;" value="" tabindex="9"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_door', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="regaddress_city_outer" style="Z-INDEX: 2; LEFT: 110px; WIDTH: 333px; POSITION: absolute; TOP: 88px; HEIGHT: 21px">
+<div id="regaddress_city_outerdiv">
+<input name="regaddress_city" id="regaddress_city" type="text" size="1" maxlength="50" class="jtbb jtfont " style="cursor: default; float: left; width: 333px;font-size: 11px;" value="Barcelona" tabindex="10"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_city', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbRegaddress_street_outer" style="Z-INDEX: 3; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 42px; HEIGHT: 18px">
+<div id="lbRegaddress_street_outerdiv">
+<div id="lbRegaddress_street" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Street address</div></div>
+
+</div>
+<div id="lbRegaddress_street_no_outer" style="Z-INDEX: 4; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 65px; HEIGHT: 18px">
+<div id="lbRegaddress_street_no_outerdiv">
+<div id="lbRegaddress_street_no" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Number</div></div>
+
+</div>
+<div id="lbRegaddress_city_outer" style="Z-INDEX: 5; LEFT: 7px; WIDTH: 58px; POSITION: absolute; TOP: 89px; HEIGHT: 18px">
+<div id="lbRegaddress_city_outerdiv">
+<div id="lbRegaddress_city" class="fsDefault " style="cursor: default; overflow: hidden; width:58px; height:18px;">City</div></div>
+
+</div>
+<div id="regaddress_street_no_outer" style="Z-INDEX: 6; LEFT: 110px; WIDTH: 51px; POSITION: absolute; TOP: 64px; HEIGHT: 21px">
+<div id="regaddress_street_no_outerdiv">
+<input name="regaddress_street_no" id="regaddress_street_no" type="text" size="1" maxlength="5" class="jtbb jtfont " style="cursor: default; float: left; width: 51px;font-size: 11px;" value="157" tabindex="6"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_street_no', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="regaddress_street_type_id_outer" style="Z-INDEX: 7; LEFT: 110px; WIDTH: 123px; POSITION: absolute; TOP: 16px; HEIGHT: 24px">
+<select name="regaddress_street_type_id" id="regaddress_street_type_id" size="1" tabindex="4" class="jtbb " style="float: left; width: 123px;font-size: 11px;">
+  <option value=""></option><option value="1">Alameda</option><option value="2">Aldea</option><option value="3">Apartamento</option><option value="4">Area,arrabal</option><option value="5">Arroyo</option><option value="6">Avenida</option><option value="7">Bajada</option><option value="8">Barranco</option><option value="9">Barrio</option><option value="10">Bloque</option><option value="11" selected="selected">Calle</option><option value="12">Calleja</option><option value="13">Camino</option><option value="14">Carretera</option><option value="15">Caserio</option><option value="20">Chalet</option><option value="16">Colegio</option><option value="17">Colonia</option><option value="18">Conjunto</option><option value="19">Cuesta</option><option value="21">Edificio</option><option value="22">Entrada</option><option value="23">Escalinata</option><option value="24">Explanada</option><option value="25">Extramuros</option><option value="26">Extrarradio</option><option value="27">Ferrocarril</option><option value="28">Glorieta</option><option value="29">Gran via</option><option value="30">Grupo</option><option value="31">Huerta</option><option value="32">Jardines</option><option value="33">Lado</option><option value="34">Lugar</option><option value="35">Manzana</option><option value="36">Masia</option><option value="37">Mercado</option><option value="38">Monte</option><option value="39">Muelle</option><option value="40">Municipio</option><option value="41">Parcela</option><option value="42">Parque</option><option value="43">Parroquia</option><option value="44">Partida</option><option value="45">Pasaje</option><option value="46">Paseo</option><option value="47">Plaza</option><option value="48">Poblado</option><option value="49">Poligono</option><option value="50">Prolongacion</option><option value="51">Puente</option><option value="52">Puerta</option><option value="53">Quinta</option><option value="54">Ramal</option><option value="55">Rambla</option><option value="56">Rampa</option><option value="57">Riera</option><option value="58">Rincon</option><option value="59">Ronda</option><option value="60">Rua</option><option value="61">Salida</option><option value="62">Sector,seccion</option><option value="63">Senda</option><option value="64">Solar,salon</option><option value="65">Subida</option><option value="66">Terrenos</option><option value="67">Torrente</option><option value="68">Travesia</option><option value="69">Urbanizacion</option><option value="70">Via</option><option value="71">Via publica</option>
+</select>
+</div>
+<div id="regaddress_street_outer" style="Z-INDEX: 8; LEFT: 110px; WIDTH: 333px; POSITION: absolute; TOP: 41px; HEIGHT: 21px">
+<div id="regaddress_street_outerdiv">
+<input name="regaddress_street" id="regaddress_street" type="text" size="1" maxlength="40" class="jtbb jtfont " style="cursor: default; float: left; width: 333px;" value="Tarragona" tabindex="5"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_street', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbRegaddress_floor_outer" style="Z-INDEX: 9; LEFT: 184px; WIDTH: 43px; POSITION: absolute; TOP: 65px; HEIGHT: 18px">
+<div id="lbRegaddress_floor_outerdiv">
+<div id="lbRegaddress_floor" class="fsDefault reg" style="cursor: default; overflow: hidden; width:43px; height:18px;">Floor</div></div>
+
+</div>
+<div id="lbRegaddress_door_outer" style="Z-INDEX: 10; LEFT: 322px; WIDTH: 51px; POSITION: absolute; TOP: 65px; HEIGHT: 18px">
+<div id="lbRegaddress_door_outerdiv">
+<div id="lbRegaddress_door" class="fsDefault " style="cursor: default; overflow: hidden; width:51px; height:18px;">Door</div></div>
+
+</div>
+<div id="lbRegaddress_province_outer" style="Z-INDEX: 11; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 113px; HEIGHT: 18px">
+<div id="lbRegaddress_province_outerdiv">
+<div id="lbRegaddress_province" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Province</div></div>
+
+</div>
+<div id="regaddress_province_outer" style="Z-INDEX: 12; LEFT: 110px; WIDTH: 333px; POSITION: absolute; TOP: 112px; HEIGHT: 21px">
+<div id="regaddress_province_outerdiv">
+<input name="regaddress_province" id="regaddress_province" type="text" size="1" maxlength="25" class="jtbb jtfont " style="cursor: default; float: left; width: 333px;font-size: 11px;" value="Barcelona" tabindex="11"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_province', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbStreet_type_outer" style="Z-INDEX: 13; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 19px; HEIGHT: 18px">
+<div id="lbStreet_type_outerdiv">
+<div id="lbStreet_type" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Street type</div></div>
+
+</div>
+<div id="lbRegaddress_post_code_outer" style="Z-INDEX: 14; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 137px; HEIGHT: 18px">
+<div id="lbRegaddress_post_code_outerdiv">
+<div id="lbRegaddress_post_code" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Post code</div></div>
+
+</div>
+<div id="regaddress_post_code_outer" style="Z-INDEX: 15; LEFT: 110px; WIDTH: 85px; POSITION: absolute; TOP: 136px; HEIGHT: 21px">
+<div id="regaddress_post_code_outerdiv">
+<input name="regaddress_post_code" id="regaddress_post_code" type="text" size="1" maxlength="15" class="jtbb jtfont " style="cursor: default; float: left; width: 85px;font-size: 11px;" value="08014" tabindex="12"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'regaddress_post_code', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+
+  </div>
+</fieldset></div>
+
+</div>
+<div id="tax_ident_type_cd_outer" style="position: absolute; z-index: 11; left: 107px; top: 63px; width: 143px; height: 21px;">
+<select name="tax_ident_type_cd" id="tax_ident_type_cd" size="1" style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:19px;width:143px;" disabled="disabled"  tabindex="2"    >	<option value="0"  ></option>
+	<option value="1" selected="selected"  >Company tax ID</option>
+	<option value="2"  >Personal tax ID</option>
+	<option value="3"  >Non-resident VAT</option>
+	<option value="4"  >Passport</option>
+	<option value="5"  >Foreign VAT</option>
+</select>
+</div>
+<div id="company_name_outer" style="position: absolute; z-index: 12; left: 107px; top: 36px; width: 291px; height: 24px;">
+<div id="company_name_outerdiv">
+<input name="company_name" id="company_name" type="text" size="1" disabled class="jtbb jtfont " style="cursor: default; float: left; width: 100%;" value="Accutor Business Consultancy, S.L. " tabindex="1"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'company_name', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="gbParameter_outer" style="position: absolute; z-index: 13; left: 464px; top: 89px; width: 277px; height: 197px;">
+<div id="gbParameter_outerdiv" style="height: 100%; width: 100%;">
+<fieldset id="gbParameter" class="jtgroupbox " style="width: 100%; height: 100%;">
+  <legend class="jtfont jtgroupboxcaption">Parameter</legend>
+  <div class="jtgroupboxcontents">
+    <div id="lbUsername_outer" style="Z-INDEX: 2; LEFT: 6px; WIDTH: 76px; POSITION: absolute; TOP: 68px; HEIGHT: 15px">
+<div id="lbUsername_outerdiv">
+<div id="lbUsername" class="fsDefault " style="cursor: default; overflow: hidden; width:76px; height:15px;">User name</div></div>
+
+</div>
+<div id="user_id_outer" style="Z-INDEX: 3; LEFT: 124px; WIDTH: 145px; POSITION: absolute; TOP: 65px; HEIGHT: 24px">
+<select name="user_id" id="user_id" size="1" disabled tabindex="21" class="jtbb " style="float: left; width: 145px;font-size: 11px;">
+  <option value=""></option><option value="437">24seven</option><option value="739">2Bpublished</option><option value="140">360 enterprises</option><option value="244">3form</option><option value="10058">42crunch</option><option value="222">aahad</option><option value="354">aako</option><option value="990">aaron, matthew</option><option value="665">ab connectors</option><option value="82">abelia</option><option value="1221">abiskus</option><option value="10323">abrocaya</option><option value="1014">abs </option><option value="165">absolute</option><option value="506">acacia</option><option value="966">accredonet holding</option><option value="818" selected="selected">accutor</option><option value="57">acsentra</option><option value="671">actp</option><option value="10121">actyx</option><option value="10157">adal, aynur</option><option value="81">adare</option><option value="752">adare old</option><option value="649">addition plus</option><option value="10052">adevia</option><option value="753">admiral</option><option value="330">adnani, kunal</option><option value="10079">adnitt</option><option value="169">adoro</option><option value="10327">adservice</option><option value="10066">aesthetic</option><option value="1222">agema</option><option value="10291">agema-bar</option><option value="10290">agema-mad</option><option value="158">agi</option><option value="954">aginion</option><option value="683">agro juice</option><option value="329">ahmadi, farzin</option><option value="647">aidintour</option><option value="10107">airsorted</option><option value="1169">akademie</option><option value="748">akademie loderbauer</option><option value="801">akopa</option><option value="634">alcobia</option><option value="10262">algouni</option><option value="10212">alhadithi</option><option value="1085">alhoeriny njood</option><option value="896">alidas</option><option value="258">allied</option><option value="1">almacen</option><option value="920">almagro</option><option value="577">almendra</option><option value="802">alpha</option><option value="1126">alphasights</option><option value="472">alsarhan, haider</option><option value="484">alshukri, hayder</option><option value="1022">alsutan</option><option value="1086">althera</option><option value="1020">alti</option><option value="10265">alwz</option><option value="131">amada</option><option value="545">ambasana, kaushal</option><option value="1065">amg search</option><option value="261">amour</option><option value="10091">animure</option><option value="10188">antenna</option><option value="10269">antenna-bar-fun</option><option value="10270">antenna-bar-ofi</option><option value="10271">antenna-mad</option><option value="10272">antenna-val</option><option value="554">anzidei, paolo</option><option value="10222">app software</option><option value="10139">appian</option><option value="2">applied manufacturing</option><option value="118">applied market</option><option value="1183">apprise</option><option value="850">appromoters</option><option value="10223">appsoft</option><option value="465">arcadyan</option><option value="3">ariesforth</option><option value="1176">arios</option><option value="58">arquitec</option><option value="171">arrow</option><option value="951">asaa maja</option><option value="10284">asg</option><option value="10208">ashton</option><option value="780">asimov</option><option value="995">aspire</option><option value="157">asproma</option><option value="911">asterion</option><option value="148">astoria</option><option value="10081">atelier</option><option value="141">atg airports</option><option value="514">atg europe</option><option value="757">atlas </option><option value="1128">aubert, julien</option><option value="930">austin</option><option value="853">avask</option><option value="10203">avaso</option><option value="121">avastage</option><option value="4">avesna</option><option value="10143">avocado</option><option value="278">avuteq</option><option value="581">axelsen</option><option value="830">axpm</option><option value="580">axtia</option><option value="778">axxess marine</option><option value="196">axxiome</option><option value="1007">aya</option><option value="928">azahara</option><option value="685">babcock</option><option value="387">bailey</option><option value="586">baki, selcuk</option><option value="626">balchem</option><option value="997">ballena</option><option value="607">bancore</option><option value="579">baohua</option><option value="344">barbary</option><option value="151">barnes consulting</option><option value="10087">bascunan, luis</option><option value="894">basebuilder</option><option value="234">bcn cuts</option><option value="901">BCN Data </option><option value="160">bcnelmi</option><option value="332">bcnido</option><option value="1019">bear-id</option><option value="10230">bearbox</option><option value="471">bearham</option><option value="657">beatus</option><option value="10256">beaumont, stephen</option><option value="1077">beck alexander</option><option value="1076">becks properties</option><option value="109">bed</option><option value="239">bee</option><option value="961">bellapierre</option><option value="710">benedix</option><option value="936">beneficios mundiales</option><option value="207">bennett, diana</option><option value="1141">bentz, david</option><option value="476">benzler</option><option value="860">berezhnyi, sergii</option><option value="675">bespoke furniture</option><option value="1146">bestgames</option><option value="10277">bettercoal</option><option value="10217">bettes</option><option value="820">bicilona</option><option value="145">big deal</option><option value="325">bignell, jonathan</option><option value="10083">binfinity</option><option value="1069">biomedix</option><option value="46">biosensors</option><option value="745">birchman, alex</option><option value="945">bitacora</option><option value="977">bixolon</option><option value="784">bjw</option><option value="124">blackbox</option><option value="395">blackbox bv</option><option value="331">blackford, sharon</option><option value="435">blackshaw</option><option value="1170">blanco</option><option value="189">blanco sol y agua</option><option value="47">bleach</option><option value="77">bleach distribution</option><option value="803">blue mountain</option><option value="1136">blue rose</option><option value="215">bochenski, paul</option><option value="10162">bodian, stephan</option><option value="10298">body camp</option><option value="1143">bohosiewicz, michal</option><option value="10238">bolero</option><option value="357">booley, melvyn</option><option value="10198">bos, barbara</option><option value="433">boudewijn</option><option value="10041">box</option><option value="826">bq trading</option><option value="886">branch, david</option><option value="695">brandsvillage</option><option value="743">brappies</option><option value="887">bras, patrick</option><option value="662">bresco, maria</option><option value="561">bressloff</option><option value="1002">broadnet</option><option value="782">brodiseno</option><option value="733">brook, fiona</option><option value="184">bruce, mike</option><option value="10048">btcd</option><option value="5">buch invest</option><option value="1058">buengo</option><option value="786">burkart</option><option value="10204">burtoft, robert</option><option value="740">business centric</option><option value="10156">button</option><option value="874">byfy</option><option value="791">byteland</option><option value="204">c leary</option><option value="10095">cafe sommelier</option><option value="210">calder, douglas</option><option value="10276">calisky</option><option value="861">callanta, bienvenido</option><option value="59">cambria</option><option value="624">camellia</option><option value="1095">cameron ruth</option><option value="735">can trade connections ltd.</option><option value="1042">canalo</option><option value="1102">candor</option><option value="247">cannabis</option><option value="584">capo horn</option><option value="447">capps, eric</option><option value="812">caresse</option><option value="250">cari</option><option value="10112">carlsanto</option><option value="468">caroline</option><option value="747">carretero, ivan</option><option value="265">casa brillante</option><option value="1167">casa chica</option><option value="6">casa homesearch</option><option value="10084">casa vida</option><option value="10142">cascination</option><option value="44">cashmaster</option><option value="453">cassilly, giovanna</option><option value="7">catalysis</option><option value="147">ceac</option><option value="1003">ceste kft</option><option value="528">chaaban</option><option value="487">chahine, nisrine</option><option value="652">chargeads</option><option value="10141">chd</option><option value="48">chemviron</option><option value="522">chinawine</option><option value="10252">chl</option><option value="1073">choi, alice</option><option value="1063">christo</option><option value="544">cibon</option><option value="10237">cigar</option><option value="10078">circulus</option><option value="765">client</option><option value="897">clifford, wilson</option><option value="428">clorofila</option><option value="1021">cloudline</option><option value="1017">cloudwarepro</option><option value="10234">cls consultants</option><option value="170">coaching</option><option value="262">codebay</option><option value="814">codurance</option><option value="601">cohen, eran</option><option value="125">colibera</option><option value="526">colligan, alicia</option><option value="1013">colorado</option><option value="616">colverson, david james</option><option value="267">comercializadora</option><option value="734">comercio aroma</option><option value="164">comfimo</option><option value="1134">commonwealth</option><option value="95">compass</option><option value="10296">comprehension</option><option value="203">confor</option><option value="49">contranet</option><option value="1145">cookie</option><option value="10125">coppieters, felix</option><option value="684">corefreight</option><option value="770">cornelius </option><option value="632">corporate and people</option><option value="1155">corsair</option><option value="324">cosswiss</option><option value="1219">costa</option><option value="644">costa, eduardo</option><option value="876">counterweave</option><option value="432">country distributor</option><option value="1004">county</option><option value="496">courcenet, maureen</option><option value="865">cover-more</option><option value="998">crazy lab</option><option value="1115">crazy running</option><option value="10326">creative</option><option value="10175">cresco</option><option value="790">cresson</option><option value="235">crocs</option><option value="797">crossmarket</option><option value="490">croxford jayne</option><option value="10153">csi farrouj</option><option value="1075">csirik janos</option><option value="8">culture</option><option value="608">cunningham</option><option value="754">curbside</option><option value="252">cyber</option><option value="218">cypher</option><option value="952">d2l </option><option value="1093">daltun diarmuid</option><option value="451">danconia</option><option value="627">daniel, simona</option><option value="10043">danish air </option><option value="705">dannora, boshra</option><option value="558">danya</option><option value="849">dap bcn </option><option value="115">daramic sas</option><option value="965">daria</option><option value="10044">darkhorse</option><option value="798">data science dojo</option><option value="1171">datascience</option><option value="430">david elvira</option><option value="1092">davies sarah</option><option value="643">dawi, anas</option><option value="925">dbc</option><option value="137">dcs building</option><option value="1209">de heij</option><option value="884">debbah, abdelali</option><option value="444">deeks, jonathan george</option><option value="474">delemonte</option><option value="10201">delgado, clara</option><option value="10197">deli</option><option value="238">demo</option><option value="508">dental oxford</option><option value="595">dermalab</option><option value="694">dermosciences</option><option value="388">descons</option><option value="10319">deugene</option><option value="1051">deva logistics</option><option value="1094">devex spain slu</option><option value="1048">devgurus</option><option value="156">diagnostic alliance</option><option value="482">dias, alex</option><option value="1030">digital assets</option><option value="709">digital kreations</option><option value="79">dipon</option><option value="195">direct diagnostic</option><option value="10131">dj</option><option value="10135">dl trading</option><option value="1124">dmt</option><option value="179">dobney, saul</option><option value="719">docherty</option><option value="10205">dog</option><option value="1090">dolan thomas</option><option value="10159">domingues, vanessa</option><option value="604">dominguez</option><option value="328">dominguez, rosa</option><option value="631">donovan, ian russel</option><option value="1027">dorey, xavier</option><option value="731">double first ltd</option><option value="9">downsouth</option><option value="789">dreamspace</option><option value="464">dreamz</option><option value="1197">driveshaft</option><option value="1035">duma</option><option value="1162">dynasty</option><option value="771">e-leather</option><option value="10">eastman</option><option value="774">eastwind aps</option><option value="773">eastwind spain sl</option><option value="10305">ebate</option><option value="1119">eclectic gallery</option><option value="525">eclipse</option><option value="1016">eco nuevo</option><option value="123">ecolutia</option><option value="937">Ecuaproducts</option><option value="718">edgeler</option><option value="828">edpire</option><option value="668">edwards & russell</option><option value="755">efamily</option><option value="958">egali</option><option value="10110">eigenstruct</option><option value="531">eimn</option><option value="927">el afifi</option><option value="485">elam, yohay</option><option value="670">elber</option><option value="11">elisa</option><option value="10070">elistia</option><option value="546">elite cosmetix</option><option value="590">ellner, henrik</option><option value="213">emerson, duane</option><option value="365">emkay</option><option value="10097">encode </option><option value="1110">energetic</option><option value="12">enormo</option><option value="13">ensystex</option><option value="390">entropy</option><option value="758">eoz</option><option value="934">epi ups</option><option value="878">epic</option><option value="14">equipt</option><option value="10051">escobal, lorenzo</option><option value="326">esmercio</option><option value="166">esp express</option><option value="10090">espagne</option><option value="1023">espana road service</option><option value="1059">espanaroad</option><option value="551">espigol</option><option value="1113">estaciones</option><option value="1182">estern</option><option value="154">etrawler</option><option value="1034">ets</option><option value="15">eurekabridge</option><option value="1116">european car</option><option value="999">european container</option><option value="617">european investment</option><option value="959">eurven</option><option value="950">eurvenca</option><option value="523">evandro</option><option value="1152">ever win</option><option value="491">everitt, sarah</option><option value="10118">everystay</option><option value="10216">evgeny</option><option value="502">exactmed</option><option value="641">exonor</option><option value="382">extra pub</option><option value="1032">eyl, dieter</option><option value="135">F-Secure</option><option value="10219">f2s</option><option value="50">factboy</option><option value="119">factboy virtual</option><option value="10174">falcato</option><option value="336">farid, ramy</option><option value="446">farkas, petra</option><option value="10299">farrpoint</option><option value="513">faruk, akhmed</option><option value="543">fashion</option><option value="547">fast track</option><option value="772">fazakerley - sally</option><option value="875">felix trade</option><option value="837">fengyi</option><option value="946">fergrosa</option><option value="855">ferrer - hector</option><option value="217">findlay, michael</option><option value="299">fipotex</option><option value="106">fisbo</option><option value="225">fish</option><option value="991">fitzpatrick, robert</option><option value="10257">fjord, nanna</option><option value="153">fletcher</option><option value="521">flujograma</option><option value="606">flybythewall</option><option value="1040">foot detection</option><option value="10138">formidable</option><option value="190">formosa</option><option value="174">forthales</option><option value="1127">fortumo</option><option value="1047">fortuna epsilon</option><option value="550">foundation</option><option value="1089">fox micah</option><option value="483">foyle, geraoid</option><option value="335">fradique</option><option value="221">fragancia</option><option value="582">frederic ronge</option><option value="512">frenzi wear</option><option value="486">friend sam</option><option value="1043">front consulting</option><option value="60">frontline</option><option value="835">frosmo </option><option value="16">fuelfor</option><option value="122">fuhrlander</option><option value="1178">full</option><option value="478">fusyon</option><option value="10089">future</option><option value="456">futuro medico</option><option value="919">gacio</option><option value="509">gallagher, peter</option><option value="17">gamaeronautics</option><option value="933">gamevy</option><option value="10297">garcia, sebastian</option><option value="505">garrett, clive</option><option value="10168">gascaquen</option><option value="61">gate aerospace</option><option value="888">GB trading</option><option value="970">gbg </option><option value="931">genesis </option><option value="162">gent</option><option value="18">geoadvent</option><option value="1191">ger-estate</option><option value="1028">gilbert, daniel</option><option value="1205">global beverage</option><option value="19">global by design</option><option value="422">global energy</option><option value="10137">global gig</option><option value="133">global green</option><option value="136">global technical</option><option value="116">global track</option><option value="359">global trackn</option><option value="569">global travel</option><option value="903">glovis</option><option value="389">go4movil</option><option value="1156">goedhart, aram</option><option value="674">gold 360</option><option value="371">goldex</option><option value="191">goldman</option><option value="890">goodpack</option><option value="10054">goralczyk, dominik</option><option value="1200">gordon, paul</option><option value="427">granja</option><option value="707">great earthman</option><option value="439">green usa</option><option value="104">grimm</option><option value="942">griset, joie</option><option value="555">gronina</option><option value="273">grundy</option><option value="932">grundy, susan</option><option value="751">grupo catch</option><option value="21">grupo dexxar</option><option value="144">grupo ledoma</option><option value="20">grupo lynne</option><option value="72">gspk</option><option value="10308">gt fuel</option><option value="1173">gta</option><option value="155">gtp investment</option><option value="507">guareschi</option><option value="825">guillaume</option><option value="725">h2o</option><option value="10259">haines, laura</option><option value="1080">hakim aijaz</option><option value="224">haloterapia</option><option value="625">hanmasi</option><option value="360">hanmax</option><option value="22">happiness</option><option value="563">happytoserve</option><option value="10050">harvey, esther</option><option value="518">hashem, amr</option><option value="796">hayat</option><option value="834">hbh </option><option value="799">hburt</option><option value="669">health 2.0</option><option value="126">healthcare</option><option value="10133">healy</option><option value="10140">healyuae</option><option value="493">helbig, koren</option><option value="280">heritage</option><option value="728">hermann</option><option value="1037">herrero, eva</option><option value="10215">high supplies</option><option value="1041">highend</option><option value="1066">highland</option><option value="10096">hilbert</option><option value="193">hitec</option><option value="56">hits website</option><option value="622">hlp</option><option value="211">hodges, adrian</option><option value="10273">hoegger </option><option value="697">holger</option><option value="535">hollywood</option><option value="10173">honey</option><option value="41">hooyberghs, guy</option><option value="564">horton</option><option value="594">howard</option><option value="10045">hr guest</option><option value="10189">hub</option><option value="503">hurwitz, tamar</option><option value="10088">hypercentage</option><option value="128">i-paye</option><option value="968">i2</option><option value="411">iberica</option><option value="602">iberlink</option><option value="361">ibersport</option><option value="1039">ibiza waterfront</option><option value="1078">ibrahim ahmed</option><option value="737">ico</option><option value="10061">icono</option><option value="62">idea consulting</option><option value="844">idodecide</option><option value="228">imex</option><option value="477">imi bulgaria</option><option value="588">immodisseny</option><option value="1166">impact trading</option><option value="112">import export</option><option value="808">Inaxium</option><option value="429">inbound</option><option value="1111">incwell intl sl</option><option value="702">indasia</option><option value="863">indico</option><option value="10114">infinite</option><option value="107">infiniti</option><option value="10303">influencer</option><option value="302">infratects</option><option value="343">innovacio i recerca</option><option value="10263">inoltra</option><option value="724">insided bv</option><option value="272">instituto</option><option value="10192">integration</option><option value="10304">integrity</option><option value="263">intelblast</option><option value="101">inter angels</option><option value="23">interfaz</option><option value="24">intermedia</option><option value="996">international knife</option><option value="25">intl hair</option><option value="10130">intl institute</option><option value="114">intl sources</option><option value="1053">intosales</option><option value="51">inttra</option><option value="84">inv peradalta</option><option value="1026">invasix </option><option value="949">investvalor</option><option value="1079">iruvuri jagadish</option><option value="621">it xchange</option><option value="10071">itiviti</option><option value="1180">izabela</option><option value="517">jac</option><option value="480">jager, roland</option><option value="63">james cameron research</option><option value="214">janssen, eric</option><option value="10046">japan remit</option><option value="1031">jared, ali</option><option value="469">jeremic, nikola</option><option value="598">jervinge</option><option value="693">jeux</option><option value="885">jian wang pan</option><option value="1139">jiangsu</option><option value="1036">jing, juan</option><option value="10247">jmr</option><option value="629">jones, sarah</option><option value="42">jonsson, rognvaldur</option><option value="1194">jordan, eugenio</option><option value="10077">journey</option><option value="226">joven</option><option value="749">jsp </option><option value="245">jura</option><option value="26">just network</option><option value="902">k2ne</option><option value="462">kabanova, elena</option><option value="585">kacik</option><option value="270">kaimia</option><option value="827">kakigori</option><option value="10146">kamhawi</option><option value="10170">kanada</option><option value="348">kanesho</option><option value="599">kanna</option><option value="10047">kapoor, anthony</option><option value="209">kara, shani</option><option value="978">karaba</option><option value="1112">karellia</option><option value="592">kaupo</option><option value="461">kbc</option><option value="1224">kehlhofer, tony</option><option value="642">kelly, heat</option><option value="746">kenny, paul</option><option value="1056">kentmanni</option><option value="540">kermix</option><option value="654">kersley stephen</option><option value="639">kharma, mohamed</option><option value="249">killahcom</option><option value="351">kilpatrick, dustin</option><option value="150">kin-tec</option><option value="10285">king, martin</option><option value="10103">kingarcher</option><option value="10060">kingdom</option><option value="64">kingsford</option><option value="574">kira</option><option value="732">kolby, per</option><option value="589">koszegi</option><option value="1012">kpit</option><option value="237">kryon</option><option value="862">krystal europe</option><option value="494">kung, tina</option><option value="463">kuzmina, svetlana</option><option value="10039">la villa</option><option value="1087">laakso jani</option><option value="720">lane</option><option value="149">lascano</option><option value="172">lb brunelli</option><option value="347">lee, jae nam</option><option value="340">lee, jaehwan</option><option value="573">leo paper</option><option value="899">leppanen, jouko</option><option value="385">leto travel</option><option value="377">liberpuente</option><option value="681">libon</option><option value="1091">liburd paul</option><option value="948">licht</option><option value="1060">lieberman</option><option value="85">lights out</option><option value="822">linda marketing</option><option value="27">line level</option><option value="353">linread</option><option value="10199">lironaor</option><option value="381">lloyd consulting</option><option value="750">localization</option><option value="964">localization institute</option><option value="10098">lords</option><option value="989">louis roger</option><option value="867">lowell</option><option value="756">lowes, david</option><option value="1201">lsc</option><option value="10152">ludo</option><option value="819">luniska</option><option value="742">luther, william</option><option value="10307">luttenberger</option><option value="219">luxury</option><option value="1088">mackenzie maya</option><option value="231">mackinnon, iain</option><option value="10171">madre naturaleza</option><option value="10194">madzuli</option><option value="940">maestro</option><option value="829">Maghreb</option><option value="479">magna</option><option value="10163">magnetic</option><option value="549">mahler</option><option value="1133">maire, fabienne</option><option value="442">maldonado, jose luis</option><option value="10053">mam</option><option value="635">mancusi, adelchi</option><option value="10287">mantic</option><option value="1070">mapp media</option><option value="1213">mapp media-gaillard</option><option value="1212">mapp media-louzan</option><option value="1215">mapp media-rubio</option><option value="1214">marali</option><option value="10227">marcha</option><option value="43">marcinkevicius, dalius</option><option value="923">mareaperto</option><option value="1103">marine science</option><option value="401">marinsa</option><option value="243">maripio</option><option value="915">marista</option><option value="10328">marona</option><option value="454">marquez, jesus</option><option value="366">martin quintanilla, oscar</option><option value="1150">martin, carlos</option><option value="1015">martinez, brigitte</option><option value="10225">martorell</option><option value="953">marysia</option><option value="1105">masterpay24</option><option value="1147">materiales negoce</option><option value="700">mckenzie, keith</option><option value="956">media tiger</option><option value="880">medistim</option><option value="908">medistim-duran</option><option value="1135">medistim-escudero</option><option value="909">medistim-nunez</option><option value="1006">meet amulen</option><option value="805">mega cloud</option><option value="1181">mehlem</option><option value="276">melba</option><option value="10120">melgeonl</option><option value="872">mellanox</option><option value="793">mellius</option><option value="1071">meraj</option><option value="714">mercateo</option><option value="1011">mercatosportivo</option><option value="1109">mercury1</option><option value="349">meridium</option><option value="1108">metas</option><option value="396">metroeuropa</option><option value="10128">mexilla</option><option value="846">meycy</option><option value="548">meyringer</option><option value="975">migmig</option><option value="807">minghui, jiang</option><option value="682">minterr</option><option value="1101">mirabilis</option><option value="672">miralles, daniel</option><option value="52">miranda</option><option value="175">mivistream</option><option value="659">moana</option><option value="103">mobile tanning</option><option value="28">molist</option><option value="185">mollema, marc</option><option value="1186">monteblanco</option><option value="610">morieux</option><option value="591">morley, christopher</option><option value="1010">morris traduction</option><option value="10292">motif</option><option value="10099">motivate</option><option value="870">mountassir</option><option value="492">moustafa ahmed</option><option value="775">mpc software solutions</option><option value="1049">ms sport</option><option value="99">mulvig</option><option value="194">my best</option><option value="10086">myers, paul</option><option value="571">nabayjoti</option><option value="346">nacelles</option><option value="10042">nadlan</option><option value="917">nalder, tim</option><option value="924">nande </option><option value="1121">narimani, alireza</option><option value="1161">nastasa, laurentiu</option><option value="264">natural</option><option value="972">nature realm</option><option value="1072">nauer, melany</option><option value="1118">nautical</option><option value="1187">nectar</option><option value="10151">neere</option><option value="268">nemez</option><option value="984">neon angel</option><option value="516">nesheva, neli</option><option value="188">netcorp media</option><option value="944">netwerven</option><option value="962">neven, hans</option><option value="1174">new international</option><option value="676">next generation</option><option value="677">nextlink</option><option value="10144">night</option><option value="412">nlp</option><option value="992">no name</option><option value="236">nobel</option><option value="10124">nordic elite</option><option value="320">nordic media</option><option value="355">nowak, linda</option><option value="568">nydren</option><option value="29">oak leaf</option><option value="139">oceanic saunas</option><option value="1159">ofika</option><option value="1068">olacom</option><option value="78">olea</option><option value="350">oliva</option><option value="1074">olivera maite</option><option value="406">olivia</option><option value="489">oloru, lucia</option><option value="255">omega</option><option value="10279">omegainvestment</option><option value="10117">one world</option><option value="1038">oohwii</option><option value="955">opalia</option><option value="783">opple</option><option value="994">orangeberry</option><option value="10278">orchard</option><option value="1220">organics</option><option value="10181">orion</option><option value="10122">oso</option><option value="10105">osullivan</option><option value="10073">otelms</option><option value="856">ott, laura</option><option value="208">outram, richard</option><option value="10186">ovidel</option><option value="761">oxalis</option><option value="30">oystertrade</option><option value="266">palacio</option><option value="788">palmbird</option><option value="10244">palmer, lucie</option><option value="769">palotes</option><option value="466">panoyan, lee</option><option value="187">papel</option><option value="311">papellon</option><option value="1130">paper street</option><option value="198">paralab</option><option value="1054">park2fly</option><option value="542">parker, adam</option><option value="559">parque</option><option value="31">pars</option><option value="696">Paso</option><option value="1168">pass</option><option value="1046">passion</option><option value="10249">patagonia</option><option value="180">paulmann, ralph</option><option value="10281">pct lab</option><option value="434">pd cargo</option><option value="611">peg europe</option><option value="10068">pegasus</option><option value="10108">pegasus old</option><option value="722">pejic, igor</option><option value="408">pekar</option><option value="10221">peninsula</option><option value="129">penn</option><option value="323">pensofarma</option><option value="851">peo</option><option value="766">pepito </option><option value="678">perera, conrad</option><option value="721">performancesk8</option><option value="898">performancesk8 spain</option><option value="904">perfumes</option><option value="32">perl doctor</option><option value="736">perrot</option><option value="127">petrobuild</option><option value="436">petrus</option><option value="10063">pg3</option><option value="367">phenomena</option><option value="110">phoneback</option><option value="10260">picknweight</option><option value="10207">piedra</option><option value="10229">pineca</option><option value="10228">pineca madera</option><option value="838">pires</option><option value="10313">pitts, aaron</option><option value="646">piwowar, kenneth</option><option value="10080">pixels</option><option value="69">plougmann</option><option value="963">pokkinen, miia</option><option value="205">pollara, joshua</option><option value="655">polysto</option><option value="65">pool fence</option><option value="92">porrig</option><option value="10057">portas</option><option value="1179">portcullis</option><option value="794">portier</option><option value="481">potapenko, svetlana</option><option value="216">potts, michael</option><option value="947">poulbot</option><option value="33">praesepe</option><option value="400">prakash</option><option value="10165">predictive</option><option value="858">prestarme</option><option value="113">primex</option><option value="10206">proekt</option><option value="197">profirst</option><option value="143">project development</option><option value="1009">project think</option><option value="939">propellerbit</option><option value="220">property connect</option><option value="34">property investors</option><option value="260">pse corp</option><option value="303">puentefuturo</option><option value="10064">pulpe</option><option value="795">pulposition</option><option value="536">puneet</option><option value="988">QandA</option><option value="1184">qrenta</option><option value="10065">quality</option><option value="269">quantum</option><option value="1057">quest import</option><option value="416">quiding</option><option value="813">quintos</option><option value="10258">qurated</option><option value="321">rabbitjo, joanne</option><option value="633">rabin, diana louise</option><option value="974">raffemet</option><option value="570">ramalho</option><option value="532">rasiah, rajesh</option><option value="553">rathore</option><option value="10239">red</option><option value="132">redzen</option><option value="618">rees, geraint paul</option><option value="836">reis</option><option value="10092">reloadly</option><option value="640">respuesta a los negocios digit</option><option value="687">reyes, franklin</option><option value="230">reynoso</option><option value="10072">ridecell</option><option value="358">ridgway,tim</option><option value="345">riele</option><option value="452">robertson, troy</option><option value="1154">rocksphere</option><option value="587">rodriquez</option><option value="1001">roha food</option><option value="470">roiseland</option><option value="716">rokyn europe</option><option value="10161">roman, alejandra</option><option value="833">romulus</option><option value="275">rouhbakhsh</option><option value="10226">roundshield</option><option value="53">route 66</option><option value="603">rowe, herb</option><option value="206">roy, andre</option><option value="1185">royal dutch</option><option value="201">ruitenberg</option><option value="74">rushmo</option><option value="524">rutland, charlotte</option><option value="352">ryapolov, anton</option><option value="192">sabchan</option><option value="895">sabik</option><option value="83">safer</option><option value="242">sagro</option><option value="941">sampaio</option><option value="475">sandner, william</option><option value="10094">santo, marina</option><option value="1122">sarin, rahul</option><option value="623">sarkozy</option><option value="35">sasouma</option><option value="922">sauzamoneton</option><option value="848">scfi </option><option value="1125">schmidt</option><option value="857">scme</option><option value="630">se informatica</option><option value="102">seabreeze</option><option value="10111">sealink</option><option value="86">search sitges</option><option value="1000">securite incendie</option><option value="256">seffco</option><option value="322">seffco iberia</option><option value="529">selected union</option><option value="692">sencia</option><option value="593">seo care</option><option value="36">seroks</option><option value="881">serps</option><option value="334">serv renovacion</option><option value="333">shammas, wael</option><option value="37">shanthi</option><option value="1144">shinaar, gideon</option><option value="98">shopping</option><option value="534">sia</option><option value="583">sigma</option><option value="10169">sigma1</option><option value="1142">sigmalux</option><option value="1216">siltec</option><option value="186">silver, marianne</option><option value="726">sincarne</option><option value="271">singapore</option><option value="138">siniborada</option><option value="1217">sirbu, angela</option><option value="987">siteways</option><option value="1210">sj hendry</option><option value="161">skincode</option><option value="729">skyline</option><option value="1055">slcom </option><option value="10209">smart</option><option value="10248">smile</option><option value="760">sms</option><option value="10246">socialicity </option><option value="10283">socksmith</option><option value="914">sofisoes</option><option value="457">soj enterprise</option><option value="688">sojama</option><option value="10302">solar trading</option><option value="369">sole, felipe</option><option value="565">solways</option><option value="727">somosnube</option><option value="873">south american</option><option value="10093">sp metals</option><option value="177">spainbike</option><option value="223">spanglobe</option><option value="71">spankmo</option><option value="10232">spencer, mark</option><option value="386">spilman, bernard</option><option value="871">spinning</option><option value="54">spirent</option><option value="259">sport bike</option><option value="986">stanbury</option><option value="146">static</option><option value="985">stea media</option><option value="363">stella</option><option value="929">stichting</option><option value="520">stifel</option><option value="938">stinson</option><option value="10059">stipenda </option><option value="246">stock house</option><option value="673">stolle</option><option value="183">stroe, mihai</option><option value="254">strong weber</option><option value="1033">stuck on you</option><option value="142">studio 3db2o</option><option value="232">studioilse</option><option value="768">submit, s.l.</option><option value="200">summerport</option><option value="66">sundial</option><option value="893">sunshine</option><option value="1117">superiorstock13</option><option value="10106">swamp</option><option value="341">swissderma</option><option value="562">system cleaners</option><option value="443">sysxnet</option><option value="10085">t8</option><option value="10241">taboada, ricardo</option><option value="10321">takalisce</option><option value="10158">tako</option><option value="227">talentina</option><option value="738">tariq, mashal</option><option value="1225">tatcher, nick</option><option value="10129">tax justice</option><option value="10191">taxify</option><option value="229">taximmo</option><option value="597">taxmen</option><option value="10295">taylor, george</option><option value="663">tbsr international</option><option value="10082">tcr</option><option value="10177">teamwork</option><option value="712">techdevelopyong</option><option value="10166">tecla</option><option value="792">teknochem</option><option value="176">telvax</option><option value="274">tenudjaja, setiawan</option><option value="869">tequilatrade</option><option value="10280">terpene</option><option value="159">terramar</option><option value="10240">tezzhull</option><option value="1226">thatcher</option><option value="10127">the northern</option><option value="711">thinkwrap</option><option value="1081">thorne cathal</option><option value="723">thornley</option><option value="912">thornton adria</option><option value="10310">ticket boom</option><option value="690">tigabytes</option><option value="717">tillster</option><option value="342">tivall</option><option value="600">tjeerd bootsma</option><option value="648">tobiesen</option><option value="356">tolltickets</option><option value="459">tolstoy, nadia</option><option value="10100">tomorrow </option><option value="1050">tonin plus</option><option value="504">torben, nielsen</option><option value="664">touch</option><option value="163">tourvest</option><option value="67">tradacero</option><option value="10049">trade pro</option><option value="10145">tradegenius</option><option value="1195">trafalgar</option><option value="960">traffic </option><option value="859">transiris</option><option value="426">transmarco</option><option value="973">transportation public </option><option value="831">travaux</option><option value="680">traveltek</option><option value="257">tree</option><option value="614">trek travel</option><option value="94">tresag</option><option value="1025">trezna</option><option value="698">trgt </option><option value="202">triffy</option><option value="87">trium</option><option value="620">trmg</option><option value="10314">trustyou </option><option value="1175">tse</option><option value="1192">tuk</option><option value="130">tuomi, taru</option><option value="448">txtnation</option><option value="39">txvia</option><option value="362">umbono</option><option value="615">umbonogmbh</option><option value="10040">unique</option><option value="715">unirea</option><option value="1005">unispace</option><option value="241">unitel</option><option value="764">universal system group</option><option value="1177">uri</option><option value="1129">usana</option><option value="787">v, victor</option><option value="40">valefrome</option><option value="883">valencia classic </option><option value="368">van deemter, kees</option><option value="1018">van hellemont, nille</option><option value="10164">vandermensbrugghe, joelle</option><option value="251">vanguardistas</option><option value="515">vas</option><option value="1223">vechale</option><option value="55">vegas</option><option value="943">vela diagnostics</option><option value="1190">venga</option><option value="1140">venta epoxy</option><option value="10231">venue</option><option value="10312">vernaza, jose</option><option value="821">vidriocon</option><option value="327">vieira, melissa</option><option value="199">vina</option><option value="97">vistajet</option><option value="73">viva</option><option value="10056">vivaio</option><option value="519">vlasov, mikhail</option><option value="383">vocaltech</option><option value="70">volem</option><option value="134">volfox</option><option value="1120">voltwall</option><option value="96">vordel</option><option value="167">vordel mauny</option><option value="866">vuillaume, christophe</option><option value="619">wakefield, carole</option><option value="993">wallor </option><option value="539">warmup</option><option value="935">warshay</option><option value="679">waterpuff</option><option value="152">wave gate</option><option value="763">wawaw</option><option value="425">weaver, lee</option><option value="1008">wedorentals</option><option value="1172">weft</option><option value="918">wegapixel</option><option value="708">welaxio</option><option value="181">werner, thomas</option><option value="10195">wesbro</option><option value="407">wessels, stefan</option><option value="889">west trampoline</option><option value="840">whenever</option><option value="438">white horizon</option><option value="413">whitewater</option><option value="1157">wicker, kurt</option><option value="10218">wikifactory</option><option value="495">williams, ann</option><option value="1123">wilson, clifford</option><option value="281">wine</option><option value="1160">wire</option><option value="10115">wisdom</option><option value="10236">wissma</option><option value="423">wn aviation</option><option value="1188">woas</option><option value="969">Work </option><option value="392">world medical</option><option value="842">worldsports</option><option value="10264">worldwide</option><option value="364">worldwide business</option><option value="378">wrapmunster</option><option value="560">wright</option><option value="240">wso2</option><option value="80">xchanging</option><option value="1052">xml</option><option value="10268">xpect</option><option value="178">yao, andrew</option><option value="706">yocifrar</option><option value="667">yoo</option><option value="212">young, scott william</option><option value="741">young, stephen</option><option value="810">yu, bahoua</option><option value="10275">yuen, austin</option><option value="173">yuzuku</option><option value="645">z-chem</option><option value="689">zafirova, zdravka</option><option value="68">zamilia</option><option value="1165">zensounds</option><option value="556">zigzag</option><option value="864">zumo</option>
+</select>
+</div>
+<div id="short_name_outer" style="Z-INDEX: 4; LEFT: 124px; WIDTH: 142px; POSITION: absolute; TOP: 40px; HEIGHT: 24px">
+<div id="short_name_outerdiv">
+<input name="short_name" id="short_name" type="text" size="1" disabled maxlength="50" class="jtbb jtfont " style="cursor: default; float: left; width: 142px;" value="accutor" tabindex="19"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'short_name', '', '_', '#', '^[A-Z0-9 ]*$', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbShort_name_outer" style="Z-INDEX: 5; LEFT: 6px; WIDTH: 76px; POSITION: absolute; TOP: 45px; HEIGHT: 15px">
+<div id="lbShort_name_outerdiv">
+<div id="lbShort_name" class="fsDefault " style="cursor: default; overflow: hidden; width:76px; height:15px;">Short name</div></div>
+
+</div>
+<div id="lbAcct_manager_id_outer" style="Z-INDEX: 6; LEFT: 6px; WIDTH: 91px; POSITION: absolute; TOP: 93px; HEIGHT: 15px">
+<div id="lbAcct_manager_id_outerdiv">
+<div id="lbAcct_manager_id" class="fsDefault " style="cursor: default; overflow: hidden; width:91px; height:15px;">Account manager</div></div>
+
+</div>
+<div id="acct_manager_id_outer" style="Z-INDEX: 7; LEFT: 124px; WIDTH: 145px; POSITION: absolute; TOP: 89px; HEIGHT: 24px">
+<select name="acct_manager_id" id="acct_manager_id" size="1" disabled tabindex="22" class="jtbb " style="float: left; width: 145px;font-size: 11px;">
+  <option value=""></option><option value="609">Adel Mohssen</option><option value="1158">Adrian Strong</option><option value="636">Adriana Belei</option><option value="10315">Alfonso Perez</option><option value="300">Ana Lorente</option><option value="552">Beatriz Roca</option><option value="339">Binkai Fan</option><option value="638">Carolina Pascual</option><option value="290">Corina Cobo</option><option value="391">Daniel Romo</option><option value="399">Daniela Maynez</option><option value="809">David del Valle</option><option value="916">Diana Leon</option><option value="656">Edwin Jebbink</option><option value="10282">Eka Gvenetadze</option><option value="982">Ekaterina Kovalenko</option><option value="804">Eric Espi</option><option value="10320">Estefania Duque</option><option value="298">Herman Camargo</option><option value="576">Ignacio Loring</option><option value="1137">Janna Dutaud</option><option value="1045">Joan Guinart</option><option value="10233">Jose Aguilar</option><option value="10261">Juan Egea</option><option value="370">Lina LLorente</option><option value="467">Lorenzo Viu</option><option value="854">Luca Ruggeri</option><option value="976">Macarena Garcia</option><option value="637">Mark Carr</option><option value="10322">Marta Sanchez</option><option value="10116">Max Ruano</option><option value="10102">Monica Rodriguez</option><option value="10101">Monica Sevillano</option><option value="759" selected="selected">Paula Toledo</option><option value="293">Pedro Da Cruz</option><option value="309">Pura Strong</option><option value="971">Sharon Sitzer</option><option value="10267">Tamara de los Silos</option><option value="900">Tarja Krehic</option><option value="294">Teresa Vera</option><option value="308">Tom Strong</option><option value="455">Victor Alvarez</option><option value="410">Wig van der Munnik</option>
+</select>
+</div>
+<div id="lbAccounting_provider_id_outer" style="Z-INDEX: 8; LEFT: 6px; WIDTH: 100px; POSITION: absolute; TOP: 118px; HEIGHT: 15px">
+<div id="lbAccounting_provider_id_outerdiv">
+<div id="lbAccounting_provider_id" class="fsDefault " style="cursor: default; overflow: hidden; width:100px; height:15px;">Accounting provider</div></div>
+
+</div>
+<div id="accounting_provider_id_outer" style="Z-INDEX: 9; LEFT: 124px; WIDTH: 145px; POSITION: absolute; TOP: 114px; HEIGHT: 24px">
+<select name="accounting_provider_id" id="accounting_provider_id" size="1" disabled tabindex="23" class="jtbb " style="float: left; width: 145px;font-size: 11px;">
+  <option value=""></option><option value="636">Adriana Belei</option><option value="10243">Alfonso Martinez</option><option value="1193">Beatriz Diaz</option><option value="391">Daniel Romo</option><option value="10282">Eka Gvenetadze</option><option value="10320">Estefania Duque</option><option value="877">Fabrizio Andreocci</option><option value="298">Herman Camargo</option><option value="1137">Janna Dutaud</option><option value="10180">Javier Benitez</option><option value="10067">John Myers</option><option value="10233">Jose Aguilar</option><option value="467">Lorenzo Viu</option><option value="10267">Tamara de los Silos</option><option value="1064">Yeri Braut</option>
+</select>
+</div>
+<div id="lbPayroll_provider_id_outer" style="Z-INDEX: 10; LEFT: 6px; WIDTH: 100px; POSITION: absolute; TOP: 143px; HEIGHT: 15px">
+<div id="lbPayroll_provider_id_outerdiv">
+<div id="lbPayroll_provider_id" class="fsDefault " style="cursor: default; overflow: hidden; width:100px; height:15px;">Payroll provider</div></div>
+
+</div>
+<div id="payroll_provider_id_outer" style="Z-INDEX: 11; LEFT: 124px; WIDTH: 145px; POSITION: absolute; TOP: 139px; HEIGHT: 24px">
+<select name="payroll_provider_id" id="payroll_provider_id" size="1" disabled tabindex="24" class="jtbb " style="float: left; width: 145px;font-size: 11px;">
+  <option value=""></option><option value="566">Carmen March</option><option value="877">Fabrizio Andreocci</option><option value="298">Herman Camargo</option><option value="1044">Isabel Perez</option><option value="10233">Jose Aguilar</option><option value="307" selected="selected">Maria Luisa Sánchez</option><option value="879">Rebeca Bao</option><option value="10267">Tamara de los Silos</option>
+</select>
+</div>
+<div id="is_default_company_yn_outer" style="Z-INDEX: 12; LEFT: 6px; WIDTH: 155px; POSITION: absolute; TOP: 16px; HEIGHT: 21px">
+<table cellpadding="0" cellspacing="0" id="is_default_company_yn_table" style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:20px;width:155px;" >
+<tr><td><label for="is_default_company_yn"  >Show this company first</label></td><td width="20"><input type="checkbox" name="is_default_company_yn" value="Show this company first"  style=" font-family: Tahoma; font-size: 11px;   cursor: default;"   tabindex="13"  id="is_default_company_yn"   /></td></tr>
+</table>
+
+</div>
+
+  </div>
+</fieldset></div>
+
+</div>
+<div id="lbTax_ident_type_cd_outer" style="position: absolute; z-index: 14; left: 5px; top: 65px; width: 100px; height: 15px;">
+<div id="lbTax_ident_type_cd_outerdiv" style="height: 100%; width: 100%;">
+<div id="lbTax_ident_type_cd" class="fsDefault " style="cursor: default; overflow: hidden; width:100%; height:100%;">Document type</div></div>
+
+</div>
+<div id="lbTax_ident_outer" style="position: absolute; z-index: 15; left: 266px; top: 65px; width: 43px; height: 15px;">
+<div id="lbTax_ident_outerdiv" style="height: 100%; width: 100%;">
+<div id="lbTax_ident" class="fsDefault " style="cursor: default; overflow: hidden; width:100%; height:100%;">Tax ID</div></div>
+
+</div>
+<div id="tax_ident_outer" style="position: absolute; z-index: 16; left: 313px; top: 62px; width: 130px; height: 24px;">
+<div id="tax_ident_outerdiv">
+<input name="tax_ident" id="tax_ident" type="text" size="1" disabled class="jtbb jtfont " style="cursor: default; float: left; width: 100%;" value="B66806712" tabindex="3"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'tax_ident', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="gbCreated_outer" style="position: absolute; z-index: 17; left: 464px; top: 33px; width: 277px; height: 51px;">
+<div id="gbCreated_outerdiv" style="height: 100%; width: 100%;">
+<fieldset id="gbCreated" class="jtgroupbox " style="width: 100%; height: 100%;">
+  <legend class="jtfont jtgroupboxcaption">Created by</legend>
+  <div class="jtgroupboxcontents">
+    <div id="created_by_user_outer" style="Z-INDEX: 0; LEFT: 6px; WIDTH: 134px; POSITION: absolute; TOP: 21px; HEIGHT: 21px">
+<div id="created_by_user_outerdiv">
+<input name="created_by_user" id="created_by_user" type="text" size="1" disabled class="jtbb jtfont " style="cursor: default; float: left; width: 134px;font-size: 11px;" value="paula" tabindex="0"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'created_by_user', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="created_dt_outer" style="Z-INDEX: 1; LEFT: 160px; WIDTH: 109px; POSITION: absolute; TOP: 21px; HEIGHT: 21px">
+<div id="created_dt_outerdiv">
+<input name="created_dt" id="created_dt" type="text" size="1" disabled class="jtbb jtfont " style="cursor: default; float: left; width: 109px;font-size: 11px;" value="2016-06-15 11:43:37" tabindex="0"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'created_dt', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+
+  </div>
+</fieldset></div>
+
+</div>
+<div id="gbMailing_address_outer" style="position: absolute; z-index: 18; left: 5px; top: 257px; width: 451px; height: 118px;">
+<div id="gbMailing_address_outerdiv" style="height: 100%; width: 100%;">
+<fieldset id="gbMailing_address" class="jtgroupbox " style="width: 100%; height: 100%;">
+  <legend class="jtfont jtgroupboxcaption">Mailing address (if different from Registered address)</legend>
+  <div class="jtgroupboxcontents">
+    <div id="lbMail_street_address_outer" style="Z-INDEX: 0; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 18px; HEIGHT: 18px">
+<div id="lbMail_street_address_outerdiv">
+<div id="lbMail_street_address" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Street address</div></div>
+
+</div>
+<div id="lbMail_city_outer" style="Z-INDEX: 1; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 42px; HEIGHT: 18px">
+<div id="lbMail_city_outerdiv">
+<div id="lbMail_city" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">City</div></div>
+
+</div>
+<div id="lbMail_province_outer" style="Z-INDEX: 2; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 65px; HEIGHT: 18px">
+<div id="lbMail_province_outerdiv">
+<div id="lbMail_province" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Province</div></div>
+
+</div>
+<div id="lbMail_post_code_outer" style="Z-INDEX: 3; LEFT: 7px; WIDTH: 80px; POSITION: absolute; TOP: 90px; HEIGHT: 18px">
+<div id="lbMail_post_code_outerdiv">
+<div id="lbMail_post_code" class="fsDefault " style="cursor: default; overflow: hidden; width:80px; height:18px;">Post code</div></div>
+
+</div>
+<div id="lbMail_country_id_outer" style="Z-INDEX: 4; LEFT: 224px; WIDTH: 50px; POSITION: absolute; TOP: 90px; HEIGHT: 18px">
+<div id="lbMail_country_id_outerdiv">
+<div id="lbMail_country_id" class="fsDefault " style="cursor: default; overflow: hidden; width:50px; height:18px;">Country</div></div>
+
+</div>
+<div id="mail_city_outer" style="Z-INDEX: 5; LEFT: 109px; WIDTH: 334px; POSITION: absolute; TOP: 39px; HEIGHT: 24px">
+<div id="mail_city_outerdiv">
+<input name="mail_city" id="mail_city" type="text" size="1" maxlength="25" class="jtbb jtfont " style="cursor: default; float: left; width: 334px;font-size: 11px;" value="Affoltern am Albis" tabindex="15"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'mail_city', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="mail_post_code_outer" style="Z-INDEX: 6; LEFT: 109px; WIDTH: 85px; POSITION: absolute; TOP: 87px; HEIGHT: 24px">
+<div id="mail_post_code_outerdiv">
+<input name="mail_post_code" id="mail_post_code" type="text" size="1" maxlength="15" class="jtbb jtfont " style="cursor: default; float: left; width: 85px;font-size: 11px;" value="8910" tabindex="17"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'mail_post_code', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="mail_street_address_outer" style="Z-INDEX: 7; LEFT: 109px; WIDTH: 334px; POSITION: absolute; TOP: 15px; HEIGHT: 24px">
+<div id="mail_street_address_outerdiv">
+<input name="mail_street_address" id="mail_street_address" type="text" size="1" maxlength="255" class="jtbb jtfont " style="cursor: default; float: left; width: 334px;" value="Obstgartenstrasse 5" tabindex="14"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'mail_street_address', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="mail_province_outer" style="Z-INDEX: 8; LEFT: 109px; WIDTH: 334px; POSITION: absolute; TOP: 62px; HEIGHT: 24px">
+<div id="mail_province_outerdiv">
+<input name="mail_province" id="mail_province" type="text" size="1" maxlength="25" class="jtbb jtfont " style="cursor: default; float: left; width: 334px;font-size: 11px;" value="" tabindex="16"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'mail_province', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="mail_country_id_outer" style="Z-INDEX: 9; LEFT: 283px; WIDTH: 160px; POSITION: absolute; TOP: 90px; HEIGHT: 24px">
+<select name="mail_country_id" id="mail_country_id" size="1" tabindex="18" class="jtbb " style="float: left; width: 160px;font-size: 11px;">
+  <option value=""></option><option value="4">Afghanistan</option><option value="8">Albania</option><option value="12">Algeria</option><option value="20">Andorra</option><option value="24">Angola</option><option value="660">Anguilla</option><option value="28">Antigua and Barbuda</option><option value="32">Argentina</option><option value="51">Armenia</option><option value="533">Aruba</option><option value="36">Australia</option><option value="40">Austria</option><option value="31">Azerbaijan</option><option value="44">Bahamas</option><option value="48">Bahrain</option><option value="50">Bangladesh</option><option value="52">Barbados</option><option value="112">Belarus</option><option value="56">Belgium</option><option value="84">Belize</option><option value="204">Benin</option><option value="60">Bermuda</option><option value="64">Bhutan</option><option value="68">Bolivia</option><option value="70">Bosnia and Herzegovina</option><option value="72">Botswana</option><option value="74">Bouvet Island</option><option value="76">Brazil</option><option value="86">British Indian Ocean Territory</option><option value="96">Brunei Darussalam</option><option value="100">Bulgaria</option><option value="854">Burkina Faso</option><option value="108">Burundi</option><option value="116">Cambodia</option><option value="120">Cameroon</option><option value="124">Canada</option><option value="132">Cape Verde</option><option value="136">Cayman Islands</option><option value="140">Central African Republic</option><option value="148">Chad</option><option value="152">Chile</option><option value="156">China</option><option value="162">Christmas Island</option><option value="166">Cocos (Keeling) Islands</option><option value="170">Colombia</option><option value="174">Comoros</option><option value="178">Congo</option><option value="188">Costa Rica</option><option value="384">Cote D'Ivoire</option><option value="191">Croatia</option><option value="192">Cuba</option><option value="196">Cyprus</option><option value="203">Czech Republic</option><option value="208">Denmark</option><option value="262">Djibouti</option><option value="212">Dominica</option><option value="214">Dominican Republic</option><option value="218">Ecuador</option><option value="818">Egypt</option><option value="222">El Salvador</option><option value="226">Equatorial Guinea</option><option value="233">Estonia</option><option value="231">Ethiopia</option><option value="238">Falkland Islands (Malvinas)</option><option value="242">Fiji</option><option value="246">Finland</option><option value="250">France</option><option value="254">French Guiana</option><option value="258">French Polynesia</option><option value="260">French Southern Territories</option><option value="266">Gabon</option><option value="270">Gambia</option><option value="268">Georgia</option><option value="276">Germany</option><option value="288">Ghana</option><option value="1202">Gibraltar</option><option value="300">Greece</option><option value="304">Greenland</option><option value="308">Grenada</option><option value="312">Guadeloupe</option><option value="320">Guatemala</option><option value="324">Guinea</option><option value="624">Guinea-Bissau</option><option value="328">Guyana</option><option value="332">Haiti</option><option value="334">Heard Island and Mcdonald Islands</option><option value="336">Holy See (Vatican City State)</option><option value="340">Honduras</option><option value="344">Hong Kong</option><option value="348">Hungary</option><option value="352">Iceland</option><option value="356">India</option><option value="360">Indonesia</option><option value="364">Iran, Islamic Republic of</option><option value="368">Iraq</option><option value="372">Ireland</option><option value="376">Israel</option><option value="380">Italy</option><option value="388">Jamaica</option><option value="392">Japan</option><option value="400">Jordan</option><option value="398">Kazakhstan</option><option value="404">Kenya</option><option value="296">Kiribati</option><option value="408">Korea, Democratic People's Republic of</option><option value="410">Korea, Republic of</option><option value="414">Kuwait</option><option value="417">Kyrgyzstan</option><option value="418">Lao People's Democratic Republic</option><option value="428">Latvia</option><option value="422">Lebanon</option><option value="426">Lesotho</option><option value="430">Liberia</option><option value="434">Libyan Arab Jamahiriya</option><option value="438">Liechtenstein</option><option value="440">Lithuania</option><option value="442">Luxembourg</option><option value="446">Macao</option><option value="450">Madagascar</option><option value="454">Malawi</option><option value="458">Malaysia</option><option value="462">Maldives</option><option value="466">Mali</option><option value="470">Malta</option><option value="474">Martinique</option><option value="478">Mauritania</option><option value="480">Mauritius</option><option value="175">Mayotte</option><option value="484">Mexico</option><option value="498">Moldova, Republic of</option><option value="496">Mongolia</option><option value="499">Montenegro</option><option value="504">Morocco</option><option value="508">Mozambique</option><option value="104">Myanmar</option><option value="516">Namibia</option><option value="520">Nauru</option><option value="524">Nepal</option><option value="528">Netherlands</option><option value="530">Netherlands Antilles</option><option value="540">New Caledonia</option><option value="554">New Zealand</option><option value="558">Nicaragua</option><option value="562">Niger</option><option value="566">Nigeria</option><option value="578">Norway</option><option value="512">Oman</option><option value="586">Pakistan</option><option value="591">Panama</option><option value="598">Papua New Guinea</option><option value="600">Paraguay</option><option value="604">Peru</option><option value="608">Philippines</option><option value="612">Pitcairn</option><option value="616">Poland</option><option value="620">Portugal</option><option value="630">Puerto Rico</option><option value="634">Qatar</option><option value="638">Reunion</option><option value="642">Romania</option><option value="643">Russian Federation</option><option value="646">Rwanda</option><option value="654">Saint Helena</option><option value="659">Saint Kitts and Nevis</option><option value="662">Saint Lucia</option><option value="666">Saint Pierre and Miquelon</option><option value="670">Saint Vincent and the Grenadines</option><option value="882">Samoa</option><option value="678">Sao Tome and Principe</option><option value="682">Saudi Arabia</option><option value="686">Senegal</option><option value="688">Serbia</option><option value="690">Seychelles</option><option value="694">Sierra Leone</option><option value="702">Singapore</option><option value="703">Slovakia</option><option value="705">Slovenia</option><option value="90">Solomon Islands</option><option value="706">Somalia</option><option value="710">South Africa</option><option value="724">Spain</option><option value="1200">Spain - Canary Island </option><option value="1201">Spain - Ceuta and Melilla</option><option value="144">Sri Lanka</option><option value="275">State of Palestinian</option><option value="736">Sudan</option><option value="740">Suriname</option><option value="748">Swaziland</option><option value="752">Sweden</option><option value="756" selected="selected">Switzerland</option><option value="760">Syrian Arab Republic</option><option value="158">Taiwan, Province of China</option><option value="762">Tajikistan</option><option value="834">Tanzania, United Republic of</option><option value="764">Thailand</option><option value="626">Timor-Leste</option><option value="768">Togo</option><option value="776">Tonga</option><option value="780">Trinidad and Tobago</option><option value="788">Tunisia</option><option value="792">Turkey</option><option value="795">Turkmenistan</option><option value="796">Turks and Caicos Islands</option><option value="798">Tuvalu</option><option value="800">Uganda</option><option value="804">Ukraine</option><option value="784">United Arab Emirates</option><option value="826">United Kingdom</option><option value="840">United States</option><option value="858">Uruguay</option><option value="860">Uzbekistan</option><option value="548">Vanuatu</option><option value="862">Venezuela</option><option value="704">Viet Nam</option><option value="92">Virgin Islands, British</option><option value="850">Virgin Islands, U.s.</option><option value="876">Wallis and Futuna</option><option value="887">Yemen</option><option value="894">Zambia</option><option value="716">Zimbabwe</option>
+</select>
+</div>
+
+  </div>
+</fieldset></div>
+
+</div>
+<div id="company_cd_outer" style="position: absolute; z-index: 19; left: 409px; top: 36px; width: 34px; height: 24px;">
+<div id="company_cd_outerdiv">
+<input name="company_cd" id="company_cd" type="text" size="1" disabled class="jtbb jtfont " style="cursor: default; float: left; width: 100%;font-size: 11px; text-align: right;" value="1665" tabindex="0"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'company_cd', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="btnCreateNew_outer" style="position: absolute; z-index: 20; left: 562px; top: 156px; width: 16px; height: 16px;">
+<div id="btnCreateNew_container" style=" width: 16px;  height: 16px; cursor: default;overflow: hidden;" ><img id="btnCreateNew" src="images/button/add_16x16_disable.png"  width="16"  height="16"  border="0"    title="Create new user" alt="Create new user"   /></div>
+</div>
+<div id="winCompanyTemp_outer" style="position: absolute; z-index: 23; left: 199px; top: 763px; width: 475px; height: 125px;">
+<div id="winCompanyTemp_outerdiv" style="height: 100%; width: 100%;">
+<div id="winCompanyTemp" class="jtbb jtdivwindow jtdivwindow_bsSingle dc " style="width: 475px; height: 125px; display: none;">
+  <!-- <div class="jtbb jtdivwindowshadowcontainer"> -->
+    <div class="jtbb jtdivwindowshadowtop"></div>
+    <div class="jtbb jtdivwindowshadowbottom"></div>
+    <div class="jtbb jtdivwindowshadowleft"></div>
+    <div class="jtbb jtdivwindowshadowright"></div>
+    <div class="jtbb jtdivwindowshadowtopleft"></div>
+    <div class="jtbb jtdivwindowshadowtopright"></div>
+    <div class="jtbb jtdivwindowshadowbottomleft"></div>
+    <div class="jtbb jtdivwindowshadowbottomright"></div>
+  <!-- </div> -->
+  <div class="jtbb jtdivwindowcont">
+    <div class="jtbb jtdivwindowcontinner">
+      <div id="winCompanyTemp_inner" class="jtbb jtdivwindowinner jtdivwindowinner_bsSingle">
+        <div id="winCompanyTemp_titlebar" class="jtbb jtdivwindowtitlebar jtdivwindowtitlebar_bsSingle">
+  <div class="jtdivwindowtitlebarinner">
+    
+    <div id="winCompanyTemp_caption" class="jtbb jtfont jtdivwindowcaption">Enter email</div>
+  </div>
+</div>
+        <div class="jtbb jtdivwindowcontentsouterframe">
+          <div id="winCompanyTemp_frame" class="jtbb jtdivwindowcontentsframe">
+            <div class="jtbb jtdivwindowcontentsframeleft">&nbsp;</div>
+            <div class="jtbb jtdivwindowcontentsframetopleft">&nbsp;</div>
+            <div id="winCompanyTemp_contents" class="jtbb jtfont jtdivwindowcontents" style="overflow: hidden;">
+              <html  DIR=ltr >
+<head>
+<title>Enter email</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript">var enter_email=new Object(Object);</script>
+<script type="text/javascript">
+<!--
+function get_confirm_emailJSKeyUp(event)
+{
+
+var event = event || window.event;
+var params=null;
+        //begin js
+        var email_enter = document.getElementById("get_enter_email").value;
+        var email_confirm = document.getElementById("get_confirm_email").value;
+        document.getElementById("btnEnter_email").disabled=true;
+        document.getElementById("lbError_email").innerHTML = "";
+
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,10})+$/.test(email_enter)) || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,10})+$/.test(email_confirm))){
+           document.getElementById("lbError_email").innerHTML = "Email format is not correct";
+        }
+
+        if ((email_enter.length > 0) && (email_confirm.length > 0) && (email_enter == email_confirm)){
+          document.getElementById("btnEnter_email").disabled= (document.getElementById("lbError_email").innerHTML != "");
+        }
+        //end
+        
+}
+
+-->
+</script>
+</head>
+
+<body  style=" margin-left: 0px;  margin-top: 0px;  margin-right: 0px;  margin-bottom: 0px; "  >
+<form style="margin-bottom: 0" id="enter_email" name="enter_email" method="post"   action="/clientarea/company_details.php"><input type="hidden" name="serverevent" value=""><input type="hidden" name="serverparams" value="">
+<table  width="475"   style="height:116px"  border="0" cellpadding="0" cellspacing="0"  ><tr><td valign="top">
+<div id="get_confirm_email_outer" style="Z-INDEX: 0; LEFT: 105px; WIDTH: 355px; POSITION: absolute; TOP: 37px; HEIGHT: 21px">
+<div id="get_confirm_email_outerdiv">
+<input name="get_confirm_email" id="get_confirm_email" type="text" size="1" class="jtbb jtfont " style="cursor: default; float: left; width: 355px;" onchange="return get_confirm_emailJSKeyUp(event)"  onkeyup="return get_confirm_emailJSKeyUp(event)"  value="" tabindex="0"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'get_confirm_email', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="get_enter_email_outer" style="Z-INDEX: 1; LEFT: 105px; WIDTH: 355px; POSITION: absolute; TOP: 5px; HEIGHT: 21px">
+<div id="get_enter_email_outerdiv">
+<input name="get_enter_email" id="get_enter_email" type="text" size="1" class="jtbb jtfont " style="cursor: default; float: left; width: 355px;" onchange="return get_confirm_emailJSKeyUp(event)"  onkeyup="return get_confirm_emailJSKeyUp(event)"  value="" tabindex="0"></div>
+<script language="JavaScript" type="text/javascript">
+JTAdvEditInitialize( 'get_enter_email', '', '_', '#', '', null, 'You did not enter a valid value for this field. Please try again.' );
+</script>
+
+</div>
+<div id="lbEnter_email_outer" style="Z-INDEX: 2; LEFT: 12px; WIDTH: 75px; POSITION: absolute; TOP: 9px; HEIGHT: 13px">
+<div id="lbEnter_email" style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:13px;width:75px;"    >Enter Email</div>
+</div>
+<div id="lbConfirm_email_outer" style="Z-INDEX: 3; LEFT: 12px; WIDTH: 75px; POSITION: absolute; TOP: 45px; HEIGHT: 13px">
+<div id="lbConfirm_email" style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:13px;width:75px;"    >Confirm Email</div>
+</div>
+<div id="btnEnter_email_outer" style="Z-INDEX: 4; LEFT: 305px; WIDTH: 75px; POSITION: absolute; TOP: 70px; HEIGHT: 25px">
+<input type="submit" name="btnEnter_email" value="Submit"  style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:25px;width:75px;"  disabled="disabled" tabindex="0"  id="btnEnter_email"   />
+</div>
+<div id="btnClose_email_outer" style="Z-INDEX: 5; LEFT: 385px; WIDTH: 75px; POSITION: absolute; TOP: 70px; HEIGHT: 25px">
+<input type="submit" name="btnClose_email" value="Close"  style=" font-family: Tahoma; font-size: 11px;   cursor: default;height:25px;width:75px;"   tabindex="0"  id="btnClose_email"   />
+</div>
+<div id="lbError_email_outer" style="Z-INDEX: 6; LEFT: 12px; WIDTH: 267px; POSITION: absolute; TOP: 76px; HEIGHT: 13px">
+<div id="lbError_email" style=" font-family: Tahoma; font-size: 11px;  color: Red; cursor: default;"    ></div>
+</div>
+</td></tr></table>
+</form></body>
+</html>
+<!-- enter_email end -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- IE6- hack to fix <select> tags from floating above everything else. -->
+    <iframe scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+  <div id="winCompanyTemp_topborder" class="jtbb jtdivwindowtopborder jtdivwindowtopborder_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_leftborder" class="jtbb jtdivwindowleftborder jtdivwindowleftborder_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_bottomborder" class="jtbb jtdivwindowbottomborder jtdivwindowbottomborder_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_rightborder" class="jtbb jtdivwindowrightborder jtdivwindowrightborder_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_topleftcorner" class="jtbb jtbb jtdivwindowtopleftcorner jtdivwindowtopleftcorner_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_toprightcorner" class="jtbb jtdivwindowtoprightcorner jtdivwindowtoprightcorner_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_bottomleftcorner" class="jtbb jtdivwindowbottomleftcorner jtdivwindowbottomleftcorner_bsSingle">&nbsp;</div>
+  <div id="winCompanyTemp_bottomrightcorner" class="jtbb jtdivwindowbottomrightcorner jtdivwindowbottomrightcorner_bsSingle">&nbsp;</div>
+</div></div>
+<script language="JavaScript" type="text/javascript">
+JTDivWindowInitialize( "winCompanyTemp", "poBrowserCenter", "bsSingle", true, false );
+document.getElementById( "winCompanyTemp" ).OnShow = null;
+document.getElementById( "winCompanyTemp" ).OnHide = null;
+document.getElementById( "winCompanyTemp" ).OnResize = null;
+document.getElementById( "winCompanyTemp" ).OnHelp = null;
+document.getElementById( "winCompanyTemp" ).OnMove = null;
+</script>
+
+</div>
+</form></body>
+</html>
+<!-- company_details end -->

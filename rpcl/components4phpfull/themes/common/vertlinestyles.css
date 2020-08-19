@@ -1,0 +1,11 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtvertline
+{
+  overflow: hidden;
+  width: 1px;
+  background-color: #C1C1C1;
+}

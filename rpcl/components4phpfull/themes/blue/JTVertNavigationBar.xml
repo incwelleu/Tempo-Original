@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- JomiTech Components For PHP Theme File Copyright © JomiTech 2007. All Rights Reserved. -->
+<skins>
+  <!-- The default skin for this navigation bar theme -->
+  <skin id="default">
+    <code id="vert_back">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CONTENT}:         Navigation bar contents.
+	  {$CSSSTYLE}: 		  Custom CSS class.
+      -->
+      <![CDATA[
+<div id="{$NAME}" class="jtbb jtfont jtvnavbar {$CSSCLASS} {$IMGCLASS}" style="width: {$WIDTH}; height: {$HEIGHT};" tabindex="{$TABINDEX}">
+  <div class="jtvnavbarborder jtvnavbarborder_l">&nbsp;</div>
+  <div class="jtvnavbarborder jtvnavbarborder_t">&nbsp;</div>
+  <div class="jtvnavbarborder jtvnavbarborder_r">&nbsp;</div>
+  <div class="jtvnavbarborder jtvnavbarborder_b">&nbsp;</div>
+  <div class="jtvnavbarcorner jtvnavbarcorner_tl">&nbsp;</div>
+  <div class="jtvnavbarcorner jtvnavbarcorner_tr">&nbsp;</div>
+  <div class="jtvnavbarcorner jtvnavbarcorner_bl">&nbsp;</div>
+  <div class="jtvnavbarcorner jtvnavbarcorner_br">&nbsp;</div>
+  {$HEADER}
+  <ul>
+  {$CONTENT}
+  </ul>
+</div>
+      ]]>
+    </code>
+    <code id="vert_item">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$ITEMNAME}:        Name of this navigation item.
+      {$STATE}:           State of this navigation item. (active/default)
+      {$STYLE}:           CSS font override for navigation bar.
+      {$EVENTS}:          JavaScript events used by the navigation bar.
+      {$CONTENT}:         Navigation bar item caption.
+      {$TABINDEX}:        Tab index override.
+      -->
+      <![CDATA[
+<li id="{$ITEMNAME}" class="jtfont jtvnavbar_button_{$STATE}" tag="{$TAG}"{$STYLE}>
+  <a href="{$LINK}" style="background-image: url({$IMAGE});">{$CONTENT}</a>
+  <ul>
+    {$SUBITEMS}
+  </ul>
+</li>
+      ]]>
+    </code>
+    <code id="vert_divider">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      -->
+      <![CDATA[
+<li class="jtvnavbar_divider">&nbsp;</li>
+      ]]>
+    </code>
+    <code id="header">
+      <!--
+      Available variables:
+      {$NAME}:            Name of component.
+      {$WIDTH}:           Width of component.
+      {$HEIGHT}:          Height of component.
+      {$CAPTION}:         Header caption.
+      -->
+      <![CDATA[
+<div id="{$NAME}_caption" class="jtvnavbar_caption">
+  <div class="jtbb jtvnavheader_left">&nbsp;</div>
+  <div class="jtbb jtvnavheader_right">&nbsp;</div>
+  <span>{$CAPTION}</span>
+</div>
+      ]]>
+    </code>
+  </skin>
+</skins>

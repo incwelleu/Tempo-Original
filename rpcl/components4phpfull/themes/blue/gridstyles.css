@@ -1,0 +1,162 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+.jtgrid {
+  border: none;
+}
+
+.jtgridnoscroll
+{
+  height: auto;
+  overflow: visible;
+}
+
+.jtgrid_frame
+{
+  border: solid 1px #9EB9D4;
+  height: 100%;
+  padding: 2px;
+  width: 100%;
+}
+
+.jtgrid_framenoscroll
+{
+  height: auto;
+  overflow: visible;
+}
+
+.jtgrid_header_div {
+  background-color: White;
+  background-image: url(images/grid_header.gif);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  border-bottom: none;
+  overflow: hidden; 
+}
+
+.jtgrid_header_cell {
+  border-right: none;
+  border-bottom: solid 1px #9EB9D4;
+  color: white;
+  padding-right: 0;
+  padding-bottom: 9px;
+  padding-top: 3px;
+  height: auto;
+}
+
+.jtgrid_cell_col0
+{
+  border-left: solid 1px #9EB9D4;
+}
+
+.jtgrid_data_cell {
+  border-right: solid 1px #9EB9D4;
+  border-bottom: solid 1px #9EB9D4;
+  color: #2F455B;
+}
+
+.jtgrid_row_odd {
+  background: #E5ECF5;
+}
+
+.jtgrid_cell_selected {
+  background: #F9D6BC;
+  color: #2F455B;
+}
+
+.jtgridtl
+{
+  background: url(images/grid_tl.gif);
+  height: 7px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 7px;
+  z-index: 10;
+}
+
+.jtgridtr
+{
+  background: url(images/grid_tr.gif);
+  height: 7px;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 7px;
+  z-index: 10;
+}
+
+.jtgrid_hborders
+{
+  height: 1px;
+  left: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtgrid_topborder
+{
+  background: #9EB9D4;
+  height: 1px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jtgrid_vborders
+{
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  padding-top: 7px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jtgrid_leftborder
+{
+  background: #9EB9D4;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+}
+
+.jtgrid_rightborder
+{
+  background: #9EB9D4;
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+}
+
+.jtgrid_bottomborder
+{
+  background: #9EB9D4;
+  height: 1px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jtgridhdrtr
+{
+  background: url(images/gridhdr_tr.gif);
+  height: 4px;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  z-index: 10;
+}

@@ -1,0 +1,189 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtdatepicker
+{
+	background: white;
+	border: solid 1px #5D7EB0;
+}
+
+.jtdatepicker .jtdatepickertable {
+	width: 100%;
+}
+
+.jtdatepicker .jtdatepickertable .jtdatepickerinputcell .jtdatepickerinput {
+	border: none;
+	border-width: 0px;
+	width: 100%;
+}
+
+.jtdatepicker .jtdatepickertable .jtdatepickerinputcell {
+	background: white;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.jtdatepicker .jtdatepickertable .jtdatepickerarrowcell {
+	background: url(images/dropdown_back.gif) repeat-x center center;
+	border: solid 1px white;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	width: 15px;
+}
+
+.jtdatepickerdropdownarrow {
+	background-position: center center;
+	background-image: url(images/dropdownarrow.gif);
+	background-repeat: no-repeat;
+	font-size: 0;
+	height: 5px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.jtdatepickercalendar
+{
+	background: white;
+	border: solid 1px #5D7EB0;
+	padding: 1px;
+	position: absolute;
+	width: 250px;
+}
+
+.jtdatepickercalendarinner
+{
+	padding: 0;
+	width: auto;
+}
+
+.jtdatepickercalendartitle
+{
+	background: url(images/grid_dark_grad.gif) repeat-x center center;
+	border-bottom: solid 1px #C5D3EC;
+	color: #505151;
+	height: 20px;
+	padding-top: 1px;
+	width: auto;
+}
+
+.jtdatepickerbutton
+{
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height: 16px;
+	-moz-user-select: none;
+	user-select: none;
+	width: 16px;
+}
+
+.jtdatepickercalendarprevyear
+{
+	background: url(images/doubleleftarrow.gif) no-repeat center center;
+	float: left;
+}
+
+.jtdatepickercalendarprevmonth
+{
+	background: url(images/leftarrow.gif) no-repeat center center;
+	float: left;
+}
+
+.jtdatepickercalendarnextyear
+{
+	background: url(images/doublerightarrow.gif) no-repeat center center;
+	float: right;
+}
+
+.jtdatepickercalendarnextmonth
+{
+	background: url(images/rightarrow.gif) no-repeat center center;
+	float: right;
+}
+
+.jtdatepickercalendartitleinner
+{
+	font-size: 10pt;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	width: auto;
+}
+
+.jtdatepickercalendartable
+{
+	height: 150px;
+	width: 100%;
+}
+
+.jtdatepickercalendartable td
+{
+	font-size: 8pt;
+	text-align: center;
+}
+
+.jtdatepickercalendarheader
+{
+	background: #F2F7FF;
+}
+
+.jtdatepickercalendarheader td
+{
+	color: #515050;
+	height: 20px;
+}
+
+.jtdatepickercalendarcell
+{
+	cursor: pointer;
+}
+
+.jtdatepickerselected
+{
+	background-color: #DBE4F5;
+	color: black;
+}
+
+.jtdatepickertoday
+{
+	border: solid 1px red;
+}
+
+.jtdatepickerbottombar
+{
+	background: #F2F7FF;
+	/*bottom: 0;*/
+	height: 16px;
+	/*left: 0;*/
+	overflow: hidden;
+	/*position: absolute;*/
+	width: 100%;
+}
+
+.jtdatepickerbottomlink
+{
+	color: #515050;
+	font-size: 8pt;
+	margin-left: 1px;
+	margin-top: 1px;
+}
+
+.jtdatepickerbottomlink a
+{
+	color: #515050;
+	text-decoration: underline;
+}
+
+.jtdatepickercaltable
+{
+	height: 180px;
+}
+
+.jtdatepickerinputdiv
+{
+	width: auto;
+}

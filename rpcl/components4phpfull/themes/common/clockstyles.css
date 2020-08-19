@@ -1,0 +1,100 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtdigitalclock {
+  background-image: url(images/clock_dig_back.gif);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.jtdigitalclock_digit {
+  height: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  width: 19px;
+}
+
+.jtdigitalclock_h1 {
+  left: 1px;
+}
+
+.jtdigitalclock_h2 {
+  left: 19px;
+}
+
+.jtdigitalclock_m1 {
+  left: 51px;
+}
+
+.jtdigitalclock_m2 {
+  left: 69px;
+}
+
+.jtdigitalclock_s1 {
+  left: 102px;
+}
+
+.jtdigitalclock_s2 {
+  left: 120px;
+}
+
+.jtdigitalclock_apm {
+  height: 29px;
+  left: 153px;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  width: 37px;
+}
+
+.jtdigitalclock_d0 {
+	background: url(images/clock_dig_0.gif);
+}
+
+.jtdigitalclock_d1 {
+	background: url(images/clock_dig_1.gif);
+}
+
+.jtdigitalclock_d2 {
+	background: url(images/clock_dig_2.gif);
+}
+
+.jtdigitalclock_d3 {
+	background: url(images/clock_dig_3.gif);
+}
+
+.jtdigitalclock_d4 {
+	background: url(images/clock_dig_4.gif);
+}
+
+.jtdigitalclock_d5 {
+	background: url(images/clock_dig_5.gif);
+}
+
+.jtdigitalclock_d6 {
+	background: url(images/clock_dig_6.gif);
+}
+
+.jtdigitalclock_d7 {
+	background: url(images/clock_dig_7.gif);
+}
+
+.jtdigitalclock_d8 {
+	background: url(images/clock_dig_8.gif);
+}
+
+.jtdigitalclock_d9 {
+	background: url(images/clock_dig_9.gif);
+}
+
+.jtdigitalclock_am {
+	background: url(images/clock_dig_am.gif);
+}
+
+.jtdigitalclock_pm {
+	background: url(images/clock_dig_pm.gif);
+}

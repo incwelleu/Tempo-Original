@@ -1,0 +1,17 @@
+﻿/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+
+.jtbulletlist
+{
+  margin-top: 0px;
+  margin-left: 20px;
+  padding-left: 0px;
+}
+
+.jtbulletlist li
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

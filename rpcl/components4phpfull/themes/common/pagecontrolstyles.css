@@ -1,0 +1,107 @@
+/*********************************************************************************/
+/*                   JomiTech Components For PHP Stylesheet                      */
+/*               Copyright © JomiTech 2007. All Rights Reserved.                 */
+/*********************************************************************************/
+@import "sitethemestyles.css";
+
+.jtpagecontrol {
+  background: white;
+  position: relative;
+}
+
+.jtpagecontroltabs td {
+	height: 24px;
+}
+
+.jttabbuttons {
+  height: 26px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jttab
+{
+  color: #515050;
+  cursor: default;
+  font-size: 9pt;
+}
+
+.jttab_active
+{
+  background: white;
+  border-left: solid 1px #5D7EB0;
+  border-right: solid 1px #5D7EB0;
+  border-top: solid 1px #5D7EB0;
+}
+
+.jttab_inactive
+{
+  border-bottom: solid 1px #5D7EB0;
+  vertical-align: bottom;
+}
+
+.jttabinner_active {  
+  height: 25px;
+  margin-top: 1px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.jttabinner_before {
+	border-left: solid 1px #5D7EB0;
+}
+
+.jttabinner_after {
+	border-right: solid 1px #5D7EB0;
+}
+
+.jttabinner2_inactive
+{
+  background: url(images/grid_dark_grad.gif);
+	border-top: solid 1px #5D7EB0;
+  height: 20px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.jtpagecontrolcontentcell {
+	border-bottom: solid 1px #5D7EB0;
+	border-left: solid 1px #5D7EB0;
+	border-right: solid 1px #5D7EB0;
+	height: 99%;
+}
+
+.jttabcontainer {
+	background: white;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+
+.jttabcontainerinner
+{
+	height: 100%;
+	/* overflow: hidden; : Removed to fix a bug with IE6. */
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.jttabsheet
+{
+  background: white;
+  font-size: 10pt;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jttabframecontainer
+{
+	overflow: hidden;
+}

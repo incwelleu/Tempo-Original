@@ -1,0 +1,44 @@
+.jtmonthcalendar {
+    border: solid 1px #555555;
+}
+
+.jtmonthcalendar table {
+    border-bottom: solid 1px #555555;
+}
+
+.jtmonthcalendartitle {
+    background-image: url(images/gradient.gif);
+    border-bottom: solid 1px #555555;
+    color: #555555;
+}
+
+.jtmonthcalendarheadrow {
+    background: #f0f0f0;
+}
+
+.jtmonthcalendarheadrow td {
+    border-left: solid 1px #555555;
+    color: #555555;
+}
+
+.jtmonthcalendarheadlastcell {
+    border-right: solid 1px #555555;
+}
+
+.jtmonthcalendarcell {
+    border-left: solid 1px #555555;
+    border-top: solid 1px #555555;
+    color: #555555;
+}
+
+.jtmonthcalendarcell6 {
+    border-right: solid 1px #555555;
+}
+
+.jtmonthcalendarcell_blank {
+    background-color: #CCCCCC;
+}
+
+.jtmonthcalendarcellselected {
+    background-color: #AAAAAA;
+}
